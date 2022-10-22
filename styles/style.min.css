@@ -1,7 +1,14 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+*::-moz-selection {
+  background-color: rgba(40, 40, 40, 0.3882352941);
+}
+*::selection {
+  background-color: rgba(40, 40, 40, 0.3882352941);
 }
 
 @font-face {
@@ -32,6 +39,15 @@ body {
   font-family: "Inter-regular";
   color: #282828;
   background: #EDEDED;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 li {
@@ -75,8 +91,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
   background: #EDEDED;
+  font-style: 18px;
 }
 .hdr .menu {
   display: flex;
@@ -100,7 +116,6 @@ a {
   cursor: pointer;
 }
 .hdr .menu ul li {
-  font-style: 18px;
   color: #282828;
   letter-spacing: -0.5px;
   margin-right: 17px;
@@ -109,7 +124,7 @@ a {
   margin-right: 0;
 }
 .hdr .logo {
-  width: 120px;
+  width: 110px;
 }
 
 #root-index {
@@ -288,7 +303,7 @@ a {
   margin: 0 auto;
 }
 #root-index .sec-5 .tech-it {
-  font-size: 64px;
+  font-size: 56px;
   letter-spacing: -0.3rem;
   border: 2px solid #282828;
   border-radius: 84px;
