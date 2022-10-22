@@ -24,9 +24,14 @@
   font-family: "Wagon";
   src: url(../fonts/Wagon-ExtraLightItalic.otf);
 }
+.h1-a {
+  cursor: default;
+}
+
 body {
   font-family: "Inter-regular";
   color: #282828;
+  background: #EDEDED;
 }
 
 li {
@@ -65,16 +70,20 @@ a {
   width: 100%;
   left: 0;
   top: 0;
-  padding: 30px 50px 10px;
+  padding: 0 50px;
+  height: 70px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  overflow: hidden;
+  background: #EDEDED;
 }
 .hdr .menu {
   display: flex;
 }
 .hdr .menu ul {
   margin-left: 100px;
+  display: flex;
 }
 .hdr .menu ul:first-child {
   margin-left: 0;
@@ -87,19 +96,29 @@ a {
   background: #282828;
   color: #EDEDED;
 }
+.hdr .menu ul .menu_btn {
+  cursor: pointer;
+}
 .hdr .menu ul li {
   font-style: 18px;
   color: #282828;
   letter-spacing: -0.5px;
-  margin-bottom: 17px;
+  margin-right: 17px;
+}
+.hdr .menu ul li:last-child {
+  margin-right: 0;
 }
 .hdr .logo {
-  width: 140px;
+  width: 120px;
 }
 
 #root-index {
   width: 100%;
+  -webkit-font-smoothing: antialiased;
   background: #EDEDED;
+  margin-bottom: 300px;
+  z-index: 1;
+  border-radius: 0 0 20px 20px;
 }
 #root-index .sec-1 {
   height: 100vh;
@@ -113,7 +132,7 @@ a {
   text-transform: uppercase;
   font-size: 102px;
   letter-spacing: -0.4rem;
-  line-height: 77.3%;
+  line-height: 84%;
 }
 #root-index .sec-1 .h1-t {
   text-align: left;
@@ -234,7 +253,7 @@ a {
   text-transform: uppercase;
   font-size: 56px;
   letter-spacing: -0.2rem;
-  line-height: 77.3%;
+  line-height: 84%;
   margin-bottom: 50px;
   text-align: right;
 }
@@ -245,9 +264,94 @@ a {
   letter-spacing: -0.5px;
   margin-bottom: 115px;
 }
-#root-index .sec-3 .showreel_wr {
+#root-index .sec-4 .showreel_wr {
   margin: 0 auto;
   height: 97vh;
   width: 45%;
   background: #282828;
+}
+#root-index .sec-5 {
+  padding: 240px 50px;
+  -webkit-border-bottom-right-radius: 100px;
+  -webkit-border-bottom-left-radius: 100px;
+  -moz-border-radius-bottomright: 100px;
+  -moz-border-radius-bottomleft: 100px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+#root-index .sec-5 .btn-title {
+  margin-bottom: 110px;
+}
+#root-index .sec-5 .tech-wr {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+#root-index .sec-5 .tech-it {
+  font-size: 64px;
+  letter-spacing: -0.3rem;
+  border: 2px solid #282828;
+  border-radius: 84px;
+  padding: 0 16px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  color: #282828;
+  transition: 0.15s;
+  cursor: pointer;
+}
+#root-index .sec-5 .tech-it:hover {
+  background: #282828;
+  color: #EDEDED;
+  transition: 0.15s;
+}
+
+.footer {
+  width: 100%;
+  background: #282828;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  padding: 40px 50px;
+  color: #EDEDED;
+  display: flex;
+  flex-direction: column;
+}
+.footer a {
+  color: #EDEDED;
+}
+.footer .h1-a {
+  position: relative;
+  font-family: "NeueMetana-Regular";
+  text-transform: uppercase;
+  font-size: 56px;
+  letter-spacing: -0.2rem;
+  line-height: 84%;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  cursor: pointer;
+}
+.footer .h1-a .more {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 15px;
+  font-size: 18px;
+  color: #282828;
+  background: #EDEDED;
+}
+.footer .inf {
+  padding-top: 27px;
+  border-top: 1px solid #EDEDED;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.footer .inf .f-g:first-child a {
+  margin-right: 40px;
+}
+.footer .inf .f-g:first-child a:hover {
+  opacity: 0.5;
+}
+.footer .inf .f-g:first-child a:last-child {
+  margin-right: 0;
 }/*# sourceMappingURL=style.min.css.map */

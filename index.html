@@ -21,22 +21,26 @@
 
         <nav class="menu">
             <ul>
-                <li>
+                <li class="menu_li">
                     <a href="#">lang</a>
                 </li>
-                <li>
+                <li class="menu_li">
                     <a href="#">about</a>
                 </li>
             </ul>
             <ul>
-                <li>
+                <li class="menu_li">
                     <a href="#">cases</a>
                 </li>
-                <li>
+                <li class="menu_li">
                     <a href="#">contact</a>
                 </li>
-                <li>
+                <li class="menu_li">
                     <a href="#">how we work</a>
+                </li>
+
+                <li class="menu_btn" style="display: none; transform: translateY(30px); opacity: 0;">
+                    MENU +
                 </li>
             </ul>
         </nav>
@@ -46,7 +50,7 @@
     <main id="root-index">
         <section class="sec-1">
             <div class="h1-a h1-t">
-                a digital web studio <br> who created
+                a digital web studio <br> creating
             </div>
     
             <div class="h6-a">
@@ -177,11 +181,81 @@
                 </div>
             </div>
 
+        </section>
+
+        <section class="sec-4">
             <div class="showreel_wr">
 
             </div>
         </section>
+
+        <section class="sec-5">
+            <a href="#" class="btn-title">
+                <div class="cont">
+                    our tech
+                </div>
+            </a>
+
+            <div class="tech-wr">
+                <div class="tech-it">
+                    UI/UX 
+                </div>
+                <div class="tech-it">
+                    CREATIVE CODING
+                </div>
+                <div class="tech-it">
+                    BACKEND
+                </div>
+                <div class="tech-it">
+                    WEBGL
+                </div>
+                <div class="tech-it">
+                    FRONTEND
+                </div>
+                <div class="tech-it">
+                    3D MODELS
+                </div>
+                <div class="tech-it">
+                    ANIMATIONS
+                </div>
+                <div class="tech-it">
+                    SEO
+                </div>
+                <!-- <div class="tech-it">
+                    INTERACTIVE
+                </div> -->
+                <div class="tech-it">
+                    WEB-DESIGN
+                </div>
+                <div class="tech-it">
+                    GENERATIVE GRAPHICS
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <a href="#" class="h1-a more-hover">
+                learn more about how <br> we work
+<!-- 
+                <div class="more">
+                    more
+                </div> -->
+            </a>
+
+            <div class="inf">
+                <div class="f-g">
+                    <a href="">ourmail@elegy.com</a>
+                    <a href="">instagram</a>
+                    <a href="">telegram</a>
+                </div>
+
+                <div class="f-g">
+                    © ELEGY, 21.10.2022
+                </div>
+            </div>
+        </footer>
     </main>
+
 
     <script src="https://unpkg.com/split-type"></script>
 
@@ -192,9 +266,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+
         gsap.registerPlugin(ScrollTrigger);
 
         const text = new SplitType('.h1-a')
+        // const menu_li = new SplitType('.menu_li')
+        const menu_li = document.querySelectorAll('.menu_li')
 
         gsap.to(".showreel_wr", {
             width: '100%',
@@ -204,10 +281,84 @@
                 start: "top center",
                 end: "top top",
                 scrub: 4,
-                markers: true,
+                // markers: true,
                 // id: "scrub"
             }
         });
+
+        const hdr = document.querySelector('.hdr')
+        
+        let ht = hdr.scrollTop
+        
+        const tl = gsap.timeline()
+
+        var prevScrollpos = window.pageYOffset;
+
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            console.log(currentScrollPos);
+
+            if (prevScrollpos < currentScrollPos) {
+                console.log('ye');
+
+                tl.to ('.menu_li', {
+                    y: -30,
+                    opacity: 0,
+                    stagger: 0.1,
+                    duration: .2
+                })
+
+                tl.to ('.menu_btn', {
+                    display: 'block',
+                    y: 0,
+                    opacity: 1,
+                    duration: .3
+                })
+
+                tl.to ('.menu_li', {
+                    display: 'none'
+                })
+            } else {
+                console.log('no');
+
+            //     tl.to ('.menu_btn', {
+            //         y: 30,
+            //         opacity: 0,
+            //         duration: .5
+            //     })
+            //     tl.to ('.menu_btn', {
+            //         display: 'none',
+            //     })
+
+            //     tl.to ('.menu_li', {
+            //         y: 0,
+            //         opacity: 1,
+            //         stagger: 0.1,
+            //         duration: .3
+            //     })
+
+            //     tl.to ('.menu_li', {
+            //         display: 'block'
+            //     })
+            // }
+            }
+            
+        }
+        
+        
+
+        // menu_li.forEach(e=> {
+        //     e.addEventListener('mousemove', ()=> {
+        //         gsap.to(e, {
+        //             y: -50
+        //         })
+        //     })
+        //     // e.addEventListener('mouseleave', ()=> {
+        //     //     gsap.to(e, {
+        //     //         y: 0
+        //     //     })
+        //     // })
+        // })
     </script>
 </body>
 </html>
