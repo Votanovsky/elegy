@@ -94,6 +94,11 @@ a {
   background: #EDEDED;
   font-style: 18px;
 }
+@media (max-width: 768px) {
+  .hdr {
+    padding: 0 20px;
+  }
+}
 .hdr .menu {
   display: flex;
 }
@@ -142,12 +147,40 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  #root-index .sec-1 {
+    padding: 130px 20px 120px;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-1 {
+    padding: 90px 20px 70px;
+    height: 80vh;
+  }
+}
 #root-index .sec-1 .h1-a {
   font-family: "NeueMetana-Regular";
   text-transform: uppercase;
   font-size: 102px;
   letter-spacing: -0.4rem;
   line-height: 84%;
+}
+@media (max-width: 992px) {
+  #root-index .sec-1 .h1-a {
+    font-size: 84px;
+    letter-spacing: -0.3rem;
+  }
+}
+@media (max-width: 768px) {
+  #root-index .sec-1 .h1-a {
+    font-size: 64px;
+    letter-spacing: -0.2rem;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-1 .h1-a {
+    font-size: 56px;
+  }
 }
 #root-index .sec-1 .h1-t {
   text-align: left;
@@ -163,30 +196,82 @@ a {
   line-height: 95%;
   letter-spacing: -0.5px;
 }
+@media (max-width: 992px) {
+  #root-index .sec-1 .h6-a {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  #root-index .sec-1 .h6-a {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-1 .h6-a {
+    margin-bottom: 90px;
+  }
+}
 #root-index .sec-2 {
   height: auto;
   padding: 120px 50px 0;
+}
+@media (max-width: 768px) {
+  #root-index .sec-2 {
+    padding: 60px 20px 0;
+  }
 }
 #root-index .sec-2 .cases_wr {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  #root-index .sec-2 .cases_wr {
+    flex-direction: column;
+  }
+}
 #root-index .sec-2 .cases_wr .it {
   height: auto;
+}
+@media (max-width: 768px) {
+  #root-index .sec-2 .cases_wr .it {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-2 .cases_wr .it {
+    background-repeat: 10px;
+  }
 }
 #root-index .sec-2 .cases_wr .it:nth-child(1) {
   padding-right: 25px;
   width: 50%;
 }
+@media (max-width: 768px) {
+  #root-index .sec-2 .cases_wr .it:nth-child(1) {
+    padding-right: 0;
+    width: 100%;
+  }
+}
 #root-index .sec-2 .cases_wr .it:nth-child(2) {
   padding-left: 25px;
   width: 50%;
+}
+@media (max-width: 768px) {
+  #root-index .sec-2 .cases_wr .it:nth-child(2) {
+    padding-left: 0;
+    width: 100%;
+  }
 }
 #root-index .sec-2 .cases_wr .it:nth-child(3) {
   padding: 0;
   width: 100%;
   margin-top: 50px;
+}
+@media (max-width: 768px) {
+  #root-index .sec-2 .cases_wr .it:nth-child(3) {
+    margin-top: 0;
+  }
 }
 #root-index .sec-2 .cases_wr .it .img-wr {
   width: 100%;
@@ -257,11 +342,26 @@ a {
   width: 100%;
   text-align: right;
 }
+@media (max-width: 768px) {
+  #root-index .sec-3 {
+    padding: 180px 0 60px;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-3 {
+    padding: 160px 0 60px;
+  }
+}
 #root-index .sec-3 .desc {
   padding: 0 50px;
 }
+@media (max-width: 768px) {
+  #root-index .sec-3 .desc {
+    padding: 0 20px;
+  }
+}
 #root-index .sec-3 .desc .btn-title {
-  margin-bottom: 110px;
+  margin-bottom: 30px;
 }
 #root-index .sec-3 .desc .h1-a {
   font-family: "NeueMetana-Regular";
@@ -271,6 +371,31 @@ a {
   line-height: 84%;
   margin-bottom: 50px;
   text-align: right;
+  width: 60%;
+  margin-left: auto;
+}
+@media (max-width: 1200px) {
+  #root-index .sec-3 .desc .h1-a {
+    width: 80%;
+  }
+}
+@media (max-width: 992px) {
+  #root-index .sec-3 .desc .h1-a {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  #root-index .sec-3 .desc .h1-a {
+    font-size: 46px;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-3 .desc .h1-a {
+    font-size: 38px;
+    letter-spacing: -0.1rem;
+  }
 }
 #root-index .sec-3 .desc .desc-text {
   font-size: 16px;
@@ -278,12 +403,34 @@ a {
   line-height: 95%;
   letter-spacing: -0.5px;
   margin-bottom: 115px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  #root-index .sec-3 .desc .desc-text {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-3 .desc .desc-text {
+    width: 80%;
+    font-size: 14px;
+  }
 }
 #root-index .sec-4 .showreel_wr {
   margin: 0 auto;
   height: 97vh;
   width: 45%;
   background: #282828;
+}
+@media (max-width: 768px) {
+  #root-index .sec-4 .showreel_wr {
+    height: 70vh;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-4 .showreel_wr {
+    height: 50vh;
+  }
 }
 #root-index .sec-5 {
   padding: 240px 50px;
@@ -294,8 +441,18 @@ a {
   border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
 }
+@media (max-width: 768px) {
+  #root-index .sec-5 {
+    padding: 180px 20px;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-5 {
+    padding: 160px 20px;
+  }
+}
 #root-index .sec-5 .btn-title {
-  margin-bottom: 110px;
+  margin-bottom: 30px;
 }
 #root-index .sec-5 .tech-wr {
   display: flex;
@@ -314,6 +471,17 @@ a {
   transition: 0.15s;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  #root-index .sec-5 .tech-it {
+    font-size: 46px;
+  }
+}
+@media (max-width: 576px) {
+  #root-index .sec-5 .tech-it {
+    font-size: 38px;
+    letter-spacing: -0.2rem;
+  }
+}
 #root-index .sec-5 .tech-it:hover {
   background: #282828;
   color: #EDEDED;
@@ -331,6 +499,11 @@ a {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+}
 .footer a {
   color: #EDEDED;
 }
@@ -344,6 +517,17 @@ a {
   margin-bottom: 50px;
   padding-top: 50px;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .footer .h1-a {
+    font-size: 46px;
+  }
+}
+@media (max-width: 576px) {
+  .footer .h1-a {
+    font-size: 38px;
+    letter-spacing: -0.1rem;
+  }
 }
 .footer .h1-a .more {
   position: absolute;
@@ -361,8 +545,26 @@ a {
   justify-content: space-between;
   font-size: 14px;
 }
+@media (max-width: 576px) {
+  .footer .inf {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .footer .inf .f-g {
+    margin-bottom: 20px;
+  }
+  .footer .inf .f-g:last-child {
+    margin-bottom: 0;
+  }
+}
 .footer .inf .f-g:first-child a {
   margin-right: 40px;
+}
+@media (max-width: 576px) {
+  .footer .inf .f-g:first-child a {
+    margin-right: 20px;
+  }
 }
 .footer .inf .f-g:first-child a:hover {
   opacity: 0.5;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/style.min.css">
 </head>
 <body>
-    <header class="hdr">
+    <header style="border-bottom: 1px solid #000;" class="hdr">
         <div class="logo">
             <svg viewBox="0 0 111 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.3765 26.0001V23.6241H3.84045V15.4881H16.2245V13.5081H3.84045V4.97605H17.3765V2.31205H0.564453V26.0001H17.3765Z" fill="#282828"/>
@@ -19,7 +19,7 @@
             </svg>
         </div>
 
-        <nav class="menu">
+        <nav style="display: none;" class="menu">
             <ul>
                 <li class="menu_li">
                     <a class="lang" href="#">english</a>
@@ -57,7 +57,7 @@
     <main id="root-index">
         <section class="sec-1">
             <div class="h1-a h1-t">
-                a digital web studio <br> creating
+                a digital web studio creating
             </div>
     
             <div class="h6-a">
@@ -180,7 +180,7 @@
                 </a>
     
                 <div class="h1-a">
-                    we are an international <br> digital web studio that <br> creates
+                    we are an international digital web studio that creates
                 </div>
      
                 <div class="desc-text showreel_trig">
@@ -328,11 +328,15 @@
             } else {
                 console.log('no');
 
+                tl.reverse()
+
             }
             
         }
         
-        
+        document.querySelector('.menu_btn').addEventListener('click',(e)=> {
+            tl.reverse()
+        })
 
         // menu_li.forEach(e=> {
         //     e.addEventListener('mousemove', ()=> {
