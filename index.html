@@ -46,11 +46,31 @@
                     <a href="#">how we work</a>
                 </li>
 
-                <li class="menu_btn" >
+                <div class="menu_btn" >
                     MENU +
-                </li>
+                </div>
             </ul>
         </nav>
+
+        <div class="menu_layout">
+            <ul>
+                <li class="menu_li_lay">
+                    <a href="#">eng</a>
+                </li>
+                <li class="menu_li_lay menu_li_lay-active">
+                    <a href="#">index</a>
+                </li>
+                <li class="menu_li_lay">
+                    <a href="#">about</a>
+                </li>
+                <li class="menu_li_lay">
+                    <a href="#">cases</a>
+                </li>
+                <li class="menu_li_lay">
+                    <a href="#">how we work</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
 
@@ -317,17 +337,18 @@
         
         let ht = hdr.scrollTop
         
-        const tl = gsap.timeline()
+        
 
 
         // Menu Animation 
-        // var prevScrollpos = window.pageYOffset;
+
+        // let prevScrollpos = window.pageYOffset;
 
         // window.onscroll = function() {
-        //     var currentScrollPos = window.pageYOffset;
+        //     let currentScrollPos = window.pageYOffset;
         //     console.log(currentScrollPos);
 
-        //     if (prevScrollpos < currentScrollPos) {
+        //     if (prevScrollpos !== currentScrollPos) {
         //         console.log('ye');
 
         //         tl.to ('.menu_li', {
@@ -347,10 +368,24 @@
         //         tl.to ('.menu_li', {
         //             display: 'none'
         //         })
-        //     } else {
+        //     } else if (prevScrollpos == currentScrollPos) {
+
         //         console.log('no');
 
-        //         tl.reverse()
+        //         gsap.to ('.menu_li', {
+        //             y: 0,
+        //             opacity: 1,
+        //             stagger: 0.1,
+        //             duration: .2,
+        //             display: 'block'
+        //         })
+
+        //         gsap.to ('.menu_btn', {
+        //             display: 'none',
+        //             y: 30,
+        //             opacity: 0,
+        //             duration: .3
+        //         })
 
         //     }
             
@@ -360,18 +395,92 @@
         //     tl.reverse()
         // })
 
-        // menu_li.forEach(e=> {
-        //     e.addEventListener('mousemove', ()=> {
-        //         gsap.to(e, {
-        //             y: -50
-        //         })
-        //     })
-        //     // e.addEventListener('mouseleave', ()=> {
-        //     //     gsap.to(e, {
-        //     //         y: 0
-        //     //     })
-        //     // })
-        // })
+                 
+
+        if (window.innerWidth >= 992) {
+            const tl = gsap.timeline()
+
+            tl.to(".menu_li", {
+            scrollTrigger: {
+                trigger: ".h1-t",
+                start: "top 70",
+                end: "top bottom",
+                toggleActions: "play none reverse none",
+                // markers: true
+            },
+            y: -30,
+            opacity: 0,
+            stagger: 0.1,
+            });
+
+            tl.to(".menu_btn", {
+            scrollTrigger: {
+                trigger: ".h1-t",
+                start: "top 70",
+                end: "top bottom",
+                toggleActions: "play none reverse none",
+                // markers: true,
+            },
+            y: 0,
+            // display: 'block',
+            opacity: 1,
+            });
+
+        }
+
+
+
+        if (window.innerWidth <= 992) {
+
+            const toggleMenu = document.querySelector('.menu_btn')
+            let toggleMenuIsOpen = false
+
+            const menu_tl = gsap.timeline()
+
+            toggleMenu.addEventListener('click', ()=> {
+                if (toggleMenuIsOpen == false) {
+
+                    menu_tl.to('.menu_layout', {
+                        height: '100%',
+                        display: 'block',
+                        y: 0,
+                        ease: "expo.InOut",
+                        duration: .7
+                    })
+
+                    menu_tl.from('.menu_li_lay', {
+                        y: 30,
+                        opacity: 0,
+                        stagger: .1,
+                        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                        duration: .7
+                    })
+
+                    toggleMenuIsOpen = true
+                } else{
+
+                    menu_tl.to('.menu_layout', {
+                        height: '0%',
+                        display: 'none',
+                        y: -200,
+                        ease: "expo.InOut",
+                        duration: .7
+                    })
+
+                    toggleMenuIsOpen = false
+                }
+            })
+            // document.querySelector('.menu_btn').addEventListener('click', ()=> {
+            //     gsap.to('.menu_layout', {
+            //         height: '100%',
+            //         display: 'block'
+            //     })
+            // })
+        }
+
+
+
+
     </script>
 </body>
 </html>
