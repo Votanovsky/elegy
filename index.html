@@ -297,16 +297,16 @@
         gsap.registerPlugin(ScrollTrigger);
 
         const text = new SplitType('.h1-a')
-        // const menu_li = new SplitType('.menu_li')
 
         gsap.to('.word', {
             // height: 'auto',
             y: 0,
-            stagger: .1,
-            delay: 0.5,
-            duration: 1.7,
-            ease: "power4.inOut",
+            stagger: .15,
+            // delay: 0.8,
+            duration: 1.4,
+            ease: "power4.out",
             clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
+            // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
         })
 
         gsap.to('.load_anim', {
@@ -333,15 +333,92 @@
             }
         });
 
-        const hdr = document.querySelector('.hdr')
         
-        let ht = hdr.scrollTop
-        
-        
+        // Scroll menu animation on desctop version
+        if (window.innerWidth >= 992) {
+            const tl = gsap.timeline()
+
+            tl.to(".menu_li", {
+            scrollTrigger: {
+                trigger: ".h1-t",
+                start: "top 70",
+                end: "top bottom",
+                toggleActions: "play none reverse none",
+                // markers: true
+            },
+            y: -30,
+            opacity: 0,
+            stagger: 0.1,
+            });
+
+            tl.to(".menu_btn", {
+            scrollTrigger: {
+                trigger: ".h1-t",
+                start: "top 70",
+                end: "top bottom",
+                toggleActions: "play none reverse none",
+                // markers: true,
+            },
+            y: 0,
+            // display: 'block',
+            opacity: 1,
+            });
+
+        }
 
 
-        // Menu Animation 
+        // Toggle menu animation on mobile version
+        if (window.innerWidth <= 992) {
 
+            const toggleMenu = document.querySelector('.menu_btn')
+            let toggleMenuIsOpen = false
+
+            const menu_tl = gsap.timeline()
+
+            toggleMenu.addEventListener('click', ()=> {
+                if (toggleMenuIsOpen == false) {
+
+                    toggleMenu.textContent = 'Close -'
+
+                    menu_tl.to('.menu_layout', {
+                        height: '100%',
+                        display: 'block',
+                        y: 0,
+                        ease: "expo.InOut",
+                        duration: .7
+                    })
+
+                    menu_tl.from('.menu_li_lay', {
+                        y: 30,
+                        opacity: 0,
+                        stagger: .1,
+                        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                        duration: .7
+                    })
+
+                    toggleMenuIsOpen = true
+                } else{
+
+                    toggleMenu.textContent = 'Menu +'
+
+                    menu_tl.to('.menu_layout', {
+                        height: '0%',
+                        display: 'none',
+                        y: -200,
+                        ease: "expo.InOut",
+                        duration: .7
+                    })
+
+                    toggleMenuIsOpen = false
+                }
+            })
+        }
+
+
+        // Menu Animation (now work)
+        // const hdr = document.querySelector('.hdr')
+        
+        // let ht = hdr.scrollTop
         // let prevScrollpos = window.pageYOffset;
 
         // window.onscroll = function() {
@@ -394,91 +471,6 @@
         // document.querySelector('.menu_btn').addEventListener('click',(e)=> {
         //     tl.reverse()
         // })
-
-                 
-
-        if (window.innerWidth >= 992) {
-            const tl = gsap.timeline()
-
-            tl.to(".menu_li", {
-            scrollTrigger: {
-                trigger: ".h1-t",
-                start: "top 70",
-                end: "top bottom",
-                toggleActions: "play none reverse none",
-                // markers: true
-            },
-            y: -30,
-            opacity: 0,
-            stagger: 0.1,
-            });
-
-            tl.to(".menu_btn", {
-            scrollTrigger: {
-                trigger: ".h1-t",
-                start: "top 70",
-                end: "top bottom",
-                toggleActions: "play none reverse none",
-                // markers: true,
-            },
-            y: 0,
-            // display: 'block',
-            opacity: 1,
-            });
-
-        }
-
-
-
-        if (window.innerWidth <= 992) {
-
-            const toggleMenu = document.querySelector('.menu_btn')
-            let toggleMenuIsOpen = false
-
-            const menu_tl = gsap.timeline()
-
-            toggleMenu.addEventListener('click', ()=> {
-                if (toggleMenuIsOpen == false) {
-
-                    menu_tl.to('.menu_layout', {
-                        height: '100%',
-                        display: 'block',
-                        y: 0,
-                        ease: "expo.InOut",
-                        duration: .7
-                    })
-
-                    menu_tl.from('.menu_li_lay', {
-                        y: 30,
-                        opacity: 0,
-                        stagger: .1,
-                        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                        duration: .7
-                    })
-
-                    toggleMenuIsOpen = true
-                } else{
-
-                    menu_tl.to('.menu_layout', {
-                        height: '0%',
-                        display: 'none',
-                        y: -200,
-                        ease: "expo.InOut",
-                        duration: .7
-                    })
-
-                    toggleMenuIsOpen = false
-                }
-            })
-            // document.querySelector('.menu_btn').addEventListener('click', ()=> {
-            //     gsap.to('.menu_layout', {
-            //         height: '100%',
-            //         display: 'block'
-            //     })
-            // })
-        }
-
-
 
 
     </script>

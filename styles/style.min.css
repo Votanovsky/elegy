@@ -67,9 +67,9 @@ a {
 }
 
 .word {
-  transform: translateY(20px);
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateY(40px);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .load_anim {
