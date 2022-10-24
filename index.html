@@ -46,7 +46,7 @@
                     <a href="#">how we work</a>
                 </li>
 
-                <li class="menu_btn" style="display: none; transform: translateY(30px); opacity: 0;">
+                <li class="menu_btn" >
                     MENU +
                 </li>
             </ul>
@@ -299,44 +299,46 @@
         
         const tl = gsap.timeline()
 
-        var prevScrollpos = window.pageYOffset;
 
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            console.log(currentScrollPos);
+        // Menu Animation 
+        // var prevScrollpos = window.pageYOffset;
 
-            if (prevScrollpos < currentScrollPos) {
-                console.log('ye');
+        // window.onscroll = function() {
+        //     var currentScrollPos = window.pageYOffset;
+        //     console.log(currentScrollPos);
 
-                tl.to ('.menu_li', {
-                    y: -30,
-                    opacity: 0,
-                    stagger: 0.1,
-                    duration: .2
-                })
+        //     if (prevScrollpos < currentScrollPos) {
+        //         console.log('ye');
 
-                tl.to ('.menu_btn', {
-                    display: 'block',
-                    y: 0,
-                    opacity: 1,
-                    duration: .3
-                })
+        //         tl.to ('.menu_li', {
+        //             y: -30,
+        //             opacity: 0,
+        //             stagger: 0.1,
+        //             duration: .2
+        //         })
 
-                tl.to ('.menu_li', {
-                    display: 'none'
-                })
-            } else {
-                console.log('no');
+        //         tl.to ('.menu_btn', {
+        //             display: 'block',
+        //             y: 0,
+        //             opacity: 1,
+        //             duration: .3
+        //         })
 
-                tl.reverse()
+        //         tl.to ('.menu_li', {
+        //             display: 'none'
+        //         })
+        //     } else {
+        //         console.log('no');
 
-            }
+        //         tl.reverse()
+
+        //     }
             
-        }
+        // }
         
-        document.querySelector('.menu_btn').addEventListener('click',(e)=> {
-            tl.reverse()
-        })
+        // document.querySelector('.menu_btn').addEventListener('click',(e)=> {
+        //     tl.reverse()
+        // })
 
         // menu_li.forEach(e=> {
         //     e.addEventListener('mousemove', ()=> {

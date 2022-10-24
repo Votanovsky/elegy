@@ -99,6 +99,11 @@ a {
     padding: 0 20px;
   }
 }
+@media (max-width: 576px) {
+  .hdr {
+    height: 60px;
+  }
+}
 .hdr .menu {
   display: flex;
 }
@@ -117,8 +122,27 @@ a {
   background: #282828;
   color: #EDEDED;
 }
+.hdr .menu ul .menu_li {
+  display: block;
+}
+@media (max-width: 992px) {
+  .hdr .menu ul .menu_li {
+    display: none;
+  }
+}
 .hdr .menu ul .menu_btn {
   cursor: pointer;
+  display: none;
+}
+@media (max-width: 992px) {
+  .hdr .menu ul .menu_btn {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .hdr .menu ul .menu_btn {
+    font-size: 14px;
+  }
 }
 .hdr .menu ul li {
   color: #282828;
@@ -131,6 +155,11 @@ a {
 .hdr .logo {
   width: 110px;
 }
+@media (max-width: 576px) {
+  .hdr .logo {
+    width: 80px;
+  }
+}
 
 #root-index {
   width: 100%;
@@ -139,6 +168,11 @@ a {
   margin-bottom: 300px;
   z-index: 1;
   border-radius: 0 0 20px 20px;
+}
+@media (max-width: 420px) {
+  #root-index {
+    margin-bottom: 265px;
+  }
 }
 #root-index .sec-1 {
   height: 100vh;
@@ -155,7 +189,7 @@ a {
 @media (max-width: 576px) {
   #root-index .sec-1 {
     padding: 90px 20px 70px;
-    height: 80vh;
+    height: 87vh;
   }
 }
 #root-index .sec-1 .h1-a {
@@ -209,6 +243,7 @@ a {
 @media (max-width: 576px) {
   #root-index .sec-1 .h6-a {
     margin-bottom: 90px;
+    font-size: 14px;
   }
 }
 #root-index .sec-2 {
@@ -275,12 +310,14 @@ a {
 }
 #root-index .sec-2 .cases_wr .it .img-wr {
   width: 100%;
+  border-radius: 10px;
 }
 #root-index .sec-2 .cases_wr .it .img-wr:hover img {
   border-radius: 200px;
   transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #root-index .sec-2 .cases_wr .it .img-wr img {
+  border-radius: 10px;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -294,6 +331,11 @@ a {
   align-items: center;
   letter-spacing: -0.5px;
 }
+@media (max-width: 576px) {
+  #root-index .sec-2 .cases_wr .it .name {
+    font-size: 14px;
+  }
+}
 #root-index .sec-2 .cases_wr .it .name svg {
   opacity: 0;
   margin-left: 7px;
@@ -306,13 +348,17 @@ a {
   transition: 0.2s;
 }
 #root-index .sec-2 .cases_wr .it .info {
-  margin-top: 7px;
+  margin: 7px 0;
   border-top: 1px solid #282828;
   font-size: 14px;
   padding-top: 7px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 7px;
+}
+@media (max-width: 576px) {
+  #root-index .sec-2 .cases_wr .it .info {
+    margin: 4px 0;
+  }
 }
 #root-index .sec-2 .cases_wr .it .info .category_wr {
   display: flex;
@@ -352,6 +398,11 @@ a {
     padding: 160px 0 60px;
   }
 }
+@media (max-width: 420px) {
+  #root-index .sec-3 {
+    padding: 110px 0 60px;
+  }
+}
 #root-index .sec-3 .desc {
   padding: 0 50px;
 }
@@ -368,7 +419,7 @@ a {
   text-transform: uppercase;
   font-size: 56px;
   letter-spacing: -0.2rem;
-  line-height: 84%;
+  line-height: 87%;
   margin-bottom: 50px;
   text-align: right;
   width: 60%;
@@ -393,7 +444,7 @@ a {
 }
 @media (max-width: 576px) {
   #root-index .sec-3 .desc .h1-a {
-    font-size: 38px;
+    font-size: 26px;
     letter-spacing: -0.1rem;
   }
 }
@@ -412,8 +463,13 @@ a {
 }
 @media (max-width: 576px) {
   #root-index .sec-3 .desc .desc-text {
-    width: 80%;
+    width: 87%;
     font-size: 14px;
+  }
+}
+@media (max-width: 420px) {
+  #root-index .sec-3 .desc .desc-text {
+    margin-bottom: 80px;
   }
 }
 #root-index .sec-4 .showreel_wr {
@@ -451,6 +507,11 @@ a {
     padding: 160px 20px;
   }
 }
+@media (max-width: 420px) {
+  #root-index .sec-5 {
+    padding: 110px 20px 60px;
+  }
+}
 #root-index .sec-5 .btn-title {
   margin-bottom: 30px;
 }
@@ -473,13 +534,8 @@ a {
 }
 @media (max-width: 768px) {
   #root-index .sec-5 .tech-it {
-    font-size: 46px;
-  }
-}
-@media (max-width: 576px) {
-  #root-index .sec-5 .tech-it {
-    font-size: 38px;
-    letter-spacing: -0.2rem;
+    font-size: 26px;
+    letter-spacing: -0.1rem;
   }
 }
 #root-index .sec-5 .tech-it:hover {
@@ -513,7 +569,7 @@ a {
   text-transform: uppercase;
   font-size: 56px;
   letter-spacing: -0.2rem;
-  line-height: 84%;
+  line-height: 87%;
   margin-bottom: 50px;
   padding-top: 50px;
   cursor: pointer;
@@ -525,7 +581,7 @@ a {
 }
 @media (max-width: 576px) {
   .footer .h1-a {
-    font-size: 38px;
+    font-size: 26px;
     letter-spacing: -0.1rem;
   }
 }
