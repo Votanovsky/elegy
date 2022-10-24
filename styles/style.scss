@@ -86,13 +86,25 @@ a {
 
 // UI elements
 .char {
+    // transform: translateY(60px);
+    // opacity: 0;
+    // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     &:hover {
         font-family: 'Wagon';
         letter-spacing: 0.4rem;
         // transition: .3s;
     }
 }
-
+.word {
+    transform: translateY(20px);
+    // opacity: 0;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.load_anim {
+    transform: translateY(20px);
+    // opacity: 0;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
 .btn-title {
     display: inline-block;
     padding: 7px;
@@ -212,7 +224,7 @@ a {
             text-transform: uppercase;
             font-size: 102px;
             letter-spacing: -0.4rem;
-            line-height: 84%;
+            line-height: 90%;
 
             @media  (max-width: $breakpoint-lg-min) {
                 font-size: 84px;
@@ -223,7 +235,7 @@ a {
                 letter-spacing: -0.2rem;
             }
             @media  (max-width: $breakpoint-sm-min) {
-                font-size: 56px;
+                font-size: 58px;
             }
         }
         .h1-t {
@@ -250,7 +262,7 @@ a {
             }
 
             @media  (max-width: $breakpoint-sm-min) {
-                margin-bottom: 90px;
+                margin-bottom: 170px;
                 font-size: 14px;
             }
         }
