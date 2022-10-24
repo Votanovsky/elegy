@@ -105,6 +105,7 @@ a {
   justify-content: space-between;
   background: #EDEDED;
   font-style: 18px;
+  z-index: 100;
 }
 @media (max-width: 768px) {
   .hdr {

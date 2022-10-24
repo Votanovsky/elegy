@@ -133,6 +133,7 @@ a {
     // overflow: hidden;
     background: $gray-color;
     font-style: 18px;
+    z-index: 100;
     @media  (max-width: $breakpoint-md-min) {
         padding: 0 20px;
     }
