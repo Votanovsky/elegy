@@ -46,28 +46,46 @@
                     <a href="#">how we work</a>
                 </li>
 
-                <li class="menu_btn" >
+                <div class="menu_btn" >
                     MENU +
-                </li>
+                </div>
             </ul>
         </nav>
+
+        <div class="menu_layout">
+            <ul>
+                <li class="menu_li_lay">
+                    <a href="#">eng</a>
+                </li>
+                <li class="menu_li_lay menu_li_lay-active">
+                    <a href="#">index</a>
+                </li>
+                <li class="menu_li_lay">
+                    <a href="#">about</a>
+                </li>
+                <li class="menu_li_lay">
+                    <a href="#">cases</a>
+                </li>
+                <li class="menu_li_lay">
+                    <a href="#">how we work</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
 
     <main id="root-index">
-        <section class="sec-1">
+        <section class="sec-1 sec-1--about">
             <div class="h1-a h1-t">
-                a digital web studio creating
+                create web <br> alchemy
             </div>
-    
-            <div class="h6-a load_anim">
-                We create modern
-                web-products that we would like to use ourselves.
+
+            <div class="rect">
+                
             </div>
-    
-            <div class="h1-a h1-b">
-                sites that <br>
-                cause emotion
+
+            <div class="about_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque soluta non voluptates qui, incidunt culpa perferendis esse sunt possimus numquam vero omnis, corporis natus quo assumenda nesciunt consequatur obcaecati ipsam ut commodi ducimus cumque. Distinctio voluptatum aliquid fugiat, non ipsum consectetur provident pariatur expedita aperiam numquam nam nihil. Commodi iusto dolores, corporis veritatis quasi unde repellendus aperiam molestias nesciunt eaque.
             </div>
         </section>
 
@@ -75,10 +93,6 @@
         <footer class="footer">
             <a href="#" class="h1-a more-hover">
                 learn more about how <br> we work
-<!-- 
-                <div class="more">
-                    more
-                </div> -->
             </a>
 
             <div class="inf">
@@ -94,5 +108,198 @@
             </div>
         </footer>
     </main>
+
+
+
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CSSRulePlugin.min.js" integrity="sha512-2+BGFUqT8mzxE2ifxQK7kcEhOeHaO5EOrUgRIUJ9+HoIw8zQHI+HvnVrgGjwW0qL5dpGv8ao2oZlBS7IvvCuhA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const text = new SplitType('.h1-a')
+
+        gsap.to('.word', {
+            // height: 'auto',
+            y: 0,
+            stagger: .15,
+            // delay: 0.8,
+            duration: 1.4,
+            ease: "power4.out",
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
+            // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        })
+
+        gsap.to('.load_anim', {
+            // height: 'auto',
+            y: 0,
+            delay: 1,
+            duration: 1.7,
+            ease: "power4.inOut",
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
+        })
+
+        const menu_li = document.querySelectorAll('.menu_li')
+
+        gsap.to(".showreel_wr", {
+            width: '100%',
+            ease: "power4.inOut",
+            scrollTrigger: {
+                trigger: ".showreel_trig",
+                start: "top center",
+                end: "top top",
+                scrub: 4,
+                // markers: true,
+                // id: "scrub"
+            }
+        });
+
+        
+        // Scroll menu animation on desctop version
+        if (window.innerWidth >= 992) {
+            const tl = gsap.timeline()
+
+            tl.to(".menu_li", {
+            scrollTrigger: {
+                trigger: ".h1-t",
+                start: "top 70",
+                end: "top bottom",
+                toggleActions: "play none reverse none",
+                // markers: true
+            },
+            y: -30,
+            opacity: 0,
+            stagger: 0.1,
+            });
+
+            tl.to(".menu_btn", {
+            scrollTrigger: {
+                trigger: ".h1-t",
+                start: "top 70",
+                end: "top bottom",
+                toggleActions: "play none reverse none",
+                // markers: true,
+            },
+            y: 0,
+            // display: 'block',
+            opacity: 1,
+            });
+
+        }
+
+
+        // Toggle menu animation on mobile version
+        if (window.innerWidth <= 992) {
+
+            const toggleMenu = document.querySelector('.menu_btn')
+            let toggleMenuIsOpen = false
+
+            const menu_tl = gsap.timeline()
+
+            toggleMenu.addEventListener('click', ()=> {
+                if (toggleMenuIsOpen == false) {
+
+                    toggleMenu.textContent = 'Close -'
+
+                    menu_tl.to('.menu_layout', {
+                        height: '100%',
+                        display: 'block',
+                        y: 0,
+                        ease: "expo.InOut",
+                        duration: .7
+                    })
+
+                    menu_tl.from('.menu_li_lay', {
+                        y: 30,
+                        opacity: 0,
+                        stagger: .1,
+                        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                        duration: .7
+                    })
+
+                    toggleMenuIsOpen = true
+                } else{
+
+                    toggleMenu.textContent = 'Menu +'
+
+                    menu_tl.to('.menu_layout', {
+                        height: '0%',
+                        display: 'none',
+                        y: -200,
+                        ease: "expo.InOut",
+                        duration: .7
+                    })
+
+                    toggleMenuIsOpen = false
+                }
+            })
+        }
+
+
+        // Menu Animation (now work)
+        // const hdr = document.querySelector('.hdr')
+        
+        // let ht = hdr.scrollTop
+        // let prevScrollpos = window.pageYOffset;
+
+        // window.onscroll = function() {
+        //     let currentScrollPos = window.pageYOffset;
+        //     console.log(currentScrollPos);
+
+        //     if (prevScrollpos !== currentScrollPos) {
+        //         console.log('ye');
+
+        //         tl.to ('.menu_li', {
+        //             y: -30,
+        //             opacity: 0,
+        //             stagger: 0.1,
+        //             duration: .2
+        //         })
+
+        //         tl.to ('.menu_btn', {
+        //             display: 'block',
+        //             y: 0,
+        //             opacity: 1,
+        //             duration: .3
+        //         })
+
+        //         tl.to ('.menu_li', {
+        //             display: 'none'
+        //         })
+        //     } else if (prevScrollpos == currentScrollPos) {
+
+        //         console.log('no');
+
+        //         gsap.to ('.menu_li', {
+        //             y: 0,
+        //             opacity: 1,
+        //             stagger: 0.1,
+        //             duration: .2,
+        //             display: 'block'
+        //         })
+
+        //         gsap.to ('.menu_btn', {
+        //             display: 'none',
+        //             y: 30,
+        //             opacity: 0,
+        //             duration: .3
+        //         })
+
+        //     }
+            
+        // }
+        
+        // document.querySelector('.menu_btn').addEventListener('click',(e)=> {
+        //     tl.reverse()
+        // })
+
+
+    </script>
 </body>
 </html>

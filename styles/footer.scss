@@ -1,0 +1,78 @@
+.footer {
+    // height: 320px;
+    width: 100%;
+    background: $black-color;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    padding: 40px 50px;
+    color: $gray-color;
+    display: flex;
+    flex-direction: column;
+    @media  (max-width: $breakpoint-md-min) {
+        padding: 40px 20px;
+    }
+    a {
+        color: $gray-color;
+    }
+    .h1-a {
+        position: relative;
+        font-family: 'NeueMetana-Regular';
+        text-transform: uppercase;
+        font-size: 56px;
+        letter-spacing: -0.2rem;
+        line-height: 87%;
+        margin-bottom: 50px;
+        padding-top: 50px;
+        cursor: pointer;
+        @media  (max-width: $breakpoint-md-min) {
+            font-size: 46px;
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            font-size: 26px;
+            letter-spacing: -0.1rem;
+            line-height: 90%;
+        }
+        .more {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 0 15px;
+            font-size: 18px;
+            color: $black-color;
+            background: $gray-color;
+        }
+    }
+    .inf {
+        padding-top: 27px;
+        border-top: 1px solid $gray-color;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        @media  (max-width: $breakpoint-sm-min) {
+            flex-direction: column;
+        }
+        .f-g {
+            @media  (max-width: $breakpoint-sm-min) {
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            &:first-child {
+                a {
+                    margin-right: 40px;
+                    @media  (max-width: $breakpoint-sm-min) {
+                        margin-right: 20px;
+                    }
+                    &:hover {
+                        opacity: .5;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
