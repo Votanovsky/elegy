@@ -434,6 +434,7 @@ a {
                 @media  (max-width: $breakpoint-sm-min) {
                     font-size: 26px;
                     letter-spacing: -0.1rem;
+                    line-height: 90%;
                 }
             }
     
@@ -566,6 +567,7 @@ a {
         @media  (max-width: $breakpoint-sm-min) {
             font-size: 26px;
             letter-spacing: -0.1rem;
+            line-height: 90%;
         }
         .more {
             position: absolute;

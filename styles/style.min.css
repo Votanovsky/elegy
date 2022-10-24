@@ -446,6 +446,7 @@ a {
   #root-index .sec-3 .desc .h1-a {
     font-size: 26px;
     letter-spacing: -0.1rem;
+    line-height: 90%;
   }
 }
 #root-index .sec-3 .desc .desc-text {
@@ -583,6 +584,7 @@ a {
   .footer .h1-a {
     font-size: 26px;
     letter-spacing: -0.1rem;
+    line-height: 90%;
   }
 }
 .footer .h1-a .more {
