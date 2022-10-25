@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "gsap": "^3.11.3",
+    "mathutils": "^0.0.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "simplex-noise": "^4.0.1",
+    "three": "^0.145.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "dev": "webpack --config webpack.config.js"
+  }
+}
