@@ -34,6 +34,9 @@
             </ul>
             <ul>
                 <li class="menu_li">
+                    <a href="#">index</a>
+                </li>
+                <li class="menu_li">
                     <a href="#">about</a>
                 </li>
                 <li class="menu_li">
@@ -41,9 +44,6 @@
                 </li>
                 <li class="menu_li">
                     <a href="#">contact</a>
-                </li>
-                <li class="menu_li">
-                    <a href="#">how we work</a>
                 </li>
 
                 <div class="menu_btn" >
@@ -296,8 +296,10 @@
 
         gsap.registerPlugin(ScrollTrigger);
 
-        const text = new SplitType('.h1-a')
 
+        // Разделение h1 заголовков на главной странице и анимация их повяления
+        const text = new SplitType('.h1-a')
+        
         gsap.to('.word', {
             // height: 'auto',
             y: 0,
@@ -317,8 +319,11 @@
             ease: "power4.inOut",
             clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
         })
-
+        // /Разделение h1 заголовков на главной странице и анимация их повяления
         
+
+
+        // Анимация пояления/расширения шоурила на главном экране (пока там просто черный блок)
         gsap.to(".showreel_wr", {
             width: '100%',
             ease: "power4.inOut",
@@ -331,9 +336,10 @@
                 // id: "scrub"
             }
         });
-
+        // /Анимация пояления/расширения шоурила на главном экране (пока там просто черный блок)
         
-        // Scroll menu animation on desctop version
+
+        // анимация появления и ухода меню на десктопе
         if (window.innerWidth >= 992) {
             const tl = gsap.timeline()
 
@@ -364,9 +370,10 @@
             });
 
         }
+        // /анимация появления и ухода меню на десктопе
 
 
-        // Toggle menu animation on mobile version
+        // Мобильное меню
         if (window.innerWidth <= 992) {
 
             const toggleMenu = document.querySelector('.menu_btn')
@@ -412,8 +419,10 @@
                 }
             })
         }
+        // Мобильное меню
 
 
+        
         // Menu Animation (now work)
         // const hdr = document.querySelector('.hdr')
         

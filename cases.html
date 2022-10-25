@@ -34,6 +34,9 @@
             </ul>
             <ul>
                 <li class="menu_li">
+                    <a href="#">index</a>
+                </li>
+                <li class="menu_li">
                     <a href="#">about</a>
                 </li>
                 <li class="menu_li">
@@ -41,9 +44,6 @@
                 </li>
                 <li class="menu_li">
                     <a href="#">contact</a>
-                </li>
-                <li class="menu_li">
-                    <a href="#">how we work</a>
                 </li>
 
                 <div class="menu_btn" >
@@ -93,7 +93,7 @@
             </div>
 
             <div class="cs_wrap ">
-                <div class="pre_it">
+                <div class="pre_it bg_color-trigger">
 
                     <div class="border_width"></div>
 
@@ -112,20 +112,41 @@
                                 <div class="name">
                                     QENLY
                                 </div>
+
+                                <div class="descr">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit maxime laboriosam, dolor temporibus enim error fuga odit veritatis tenetur aspernatur in id sequi, nemo soluta repellendus, inventore totam ratione! Cupiditate, rem iure distinctio perferendis consectetur molestias enim accusantium architecto veniam neque repellat ratione maiores cumque!
+                                </div>
+
+                                <div class="do">
+                                    <div class="category_wr">
+                                        <div class="category">
+                                            Research
+                                        </div>
+                                        <div class="category">
+                                            Development
+                                        </div>
+                                        <div class="category">
+                                            SEO
+                                        </div>
+                                    </div>
+            
+                                    <div class="date">
+                                        2021
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="pre_it bg_color-trigger">
+                <div class="pre_it">
 
                     <div class="border_width"></div>
 
                     <div class="it">
+                        
                         <div class="img_wrap">
-                            
-
+                            <div class="blur"></div>
                             <img src="/media/img/smth.png" alt="">
                         </div>
         
@@ -137,19 +158,42 @@
                                 <div class="name">
                                     smth.0111
                                 </div>
+
+                                <div class="descr">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit maxime laboriosam, dolor temporibus enim error fuga odit veritatis tenetur aspernatur in id sequi, nemo soluta repellendus, inventore totam ratione! Cupiditate, rem iure distinctio perferendis consectetur molestias enim accusantium architecto veniam neque repellat ratione maiores cumque!
+                                </div>
+
+                                <div class="do">
+                                    <div class="category_wr">
+                                        <div class="category">
+                                            Research
+                                        </div>
+                                        <div class="category">
+                                            Development
+                                        </div>
+                                        <div class="category">
+                                            SEO
+                                        </div>
+                                    </div>
+            
+                                    <div class="date">
+                                        2021
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
 
                 <div class="pre_it">
 
                     <div class="border_width"></div>
 
                     <div class="it">
+                        
                         <div class="img_wrap">
-                            <img src="/media/img/qenly.png" alt="">
+                            <div class="blur"></div>
+                            <img src="/media/img/island.png" alt="">
                         </div>
         
                         <div class="info_wrap">
@@ -158,13 +202,34 @@
 
                             <div class="info">
                                 <div class="name">
-                                    QENLY
+                                    island dw
+                                </div>
+
+                                <div class="descr">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit maxime laboriosam, dolor temporibus enim error fuga odit veritatis tenetur aspernatur in id sequi, nemo soluta repellendus, inventore totam ratione! Cupiditate, rem iure distinctio perferendis consectetur molestias enim accusantium architecto veniam neque repellat ratione maiores cumque!
+                                </div>
+
+                                <div class="do">
+                                    <div class="category_wr">
+                                        <div class="category">
+                                            Research
+                                        </div>
+                                        <div class="category">
+                                            Development
+                                        </div>
+                                        <div class="category">
+                                            SEO
+                                        </div>
+                                    </div>
+            
+                                    <div class="date">
+                                        2021
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -198,10 +263,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
+    <!-- js только для страницы кейсов -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-
+        // Появления бордеров у проектов по триггеру
         gsap.to(".border_width", {
             clipPath: "polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%)",
             // ease: "expo.inOut",
@@ -233,8 +299,9 @@
                 // id: "scrub"
             }
         });
+        // /Появления бордеров у проектов по триггеру
 
-
+        // Смена цвета страницы и цвета хедера
         gsap.to("#root-index", {
             background: 'rgb(135,129,123)',
             // ease: "expo.inOut",
@@ -266,19 +333,21 @@
                 // id: "scrub"
             }
         });
-
+        // /Смена цвета страницы и цвета хедера
 
 
     </script>
-
+    <!-- js только для страницы кейсов -->
 
 
     <script>
 
         gsap.registerPlugin(ScrollTrigger);
 
-        const text = new SplitType('.h1-a')
 
+        // Разделение h1 заголовков на главной странице и анимация их повяления
+        const text = new SplitType('.h1-a')
+        
         gsap.to('.word', {
             // height: 'auto',
             y: 0,
@@ -298,9 +367,11 @@
             ease: "power4.inOut",
             clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
         })
+        // /Разделение h1 заголовков на главной странице и анимация их повяления
+        
 
-        const menu_li = document.querySelectorAll('.menu_li')
 
+        // Анимация пояления/расширения шоурила на главном экране (пока там просто черный блок)
         gsap.to(".showreel_wr", {
             width: '100%',
             ease: "power4.inOut",
@@ -313,9 +384,10 @@
                 // id: "scrub"
             }
         });
-
+        // /Анимация пояления/расширения шоурила на главном экране (пока там просто черный блок)
         
-        // Scroll menu animation on desctop version
+
+        // анимация появления и ухода меню на десктопе
         if (window.innerWidth >= 992) {
             const tl = gsap.timeline()
 
@@ -346,9 +418,10 @@
             });
 
         }
+        // /анимация появления и ухода меню на десктопе
 
 
-        // Toggle menu animation on mobile version
+        // Мобильное меню
         if (window.innerWidth <= 992) {
 
             const toggleMenu = document.querySelector('.menu_btn')
@@ -394,8 +467,10 @@
                 }
             })
         }
+        // Мобильное меню
 
 
+        
         // Menu Animation (now work)
         // const hdr = document.querySelector('.hdr')
         
