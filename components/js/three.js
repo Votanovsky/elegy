@@ -46,7 +46,7 @@ export function init() {
         // domElement: document.querySelector("canvas")
     });
     renderer.setSize(sizes.width, sizes.height);
-    renderer.setClearColor(0xcccccc, 0.5);
+    renderer.setClearColor(0xEDEDED, 0.5);
     document.body.appendChild(renderer.domElement);
 
     aspectRatio = sizes.width / sizes.height;
@@ -99,12 +99,12 @@ export function init() {
         clearcoatNormalScale: new Vector2(0.1, 0.3),
         displacementMap: displacement,
         displacementScale: 0,
-        roughness: 0.8,
+        roughness: 0.67,
         metalness: 1,
-        reflectivity: 1,
-        clearcoat: 0.7,
-        clearcoatRoughness: 0.5,
-        flatShading: 1
+        reflectivity: .79,
+        clearcoat: 0.767,
+        clearcoatRoughness: 0.431,
+        flatShading: 767
     });
     
     mesh = new THREE.Mesh(geometry2, material);
