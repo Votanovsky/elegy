@@ -9,7 +9,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-  
+
 /***/ "./components/js/cases.js":
 /*!********************************!*\
   !*** ./components/js/cases.js ***!
@@ -56,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _thr
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"localize\": () => (/* binding */ localize)\n/* harmony export */ });\nconst strings = __webpack_require__(/*! ../../lang/localization.json */ \"./lang/localization.json\");\r\n\r\nasync function localize(locale = 'en') {\r\n\r\n    for (let key in strings) {\r\n        document.querySelectorAll('#'+key)\r\n        .forEach(el => {\r\n            el.innerHTML = strings[key][locale]\r\n        });\r\n    }\r\n}\n\n//# sourceURL=webpack:///./components/js/localization.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"localize\": () => (/* binding */ localize)\n/* harmony export */ });\nconst strings = __webpack_require__(/*! ../../lang/localization.json */ \"./lang/localization.json\");\r\n\r\nconst languages = [\"en\", \"ru\"];\r\n\r\nasync function localize(locale) {\r\n\r\n    if (!languages.includes(locale))\r\n        locale = \"en\";\r\n        \r\n    for (let key in strings) {\r\n        document.querySelectorAll('#'+key)\r\n        .forEach(el => {\r\n            el.innerHTML = strings[key][locale]\r\n        });\r\n    }\r\n}\n\n//# sourceURL=webpack:///./components/js/localization.js?");
 
 /***/ }),
 
