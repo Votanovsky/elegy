@@ -4,9 +4,17 @@ import {loadCases} from './cases.js';
 import {loadFooter} from './footer.js';
 import {loadHeader} from './header.js';
 
+import {localize} from './localization.js';
+
+let locale = 'ru';
+
 gsap.registerPlugin(ScrollTrigger);
 
-function main() {
+async function main() {
+    await loadHeader();
+    await loadFooter();
+    await localize(locale);
+
     // Разделение h1 заголовков на главной странице и анимация их повяления
     const text = new SplitType('.h1-a')
 
@@ -131,13 +139,7 @@ function main() {
     }
 }
 
-window.addEventListener('load', e => {
-    main();
-});
-
-loadHeader();
-loadFooter();
-
+main();
 
 if (document.title === 'About') {
     init();

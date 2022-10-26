@@ -1,0 +1,176 @@
+{
+    "language": {
+        "en": "русский", 
+        "ru": "english"
+    },
+
+    "page-main": {
+        "en": "home", 
+        "ru": "главная"
+    },
+
+    "page-about": {
+        "en": "about", 
+        "ru": "о нас"
+    },
+
+    "page-cases": {
+        "en": "cases", 
+        "ru": "примеры"
+    },
+
+    "page-contact": {
+        "en": "contact", 
+        "ru": "контакты"
+    },
+
+    "title-1": {
+        "en": "a digital web studio <br> creating",
+        "ru": "веб-студия, которая <br> создает"
+    },
+
+    "title-2": {
+        "en": "sites that <br> cause emotion",
+        "ru": "сайты, вызывающие <br> эмоции"
+    },
+
+    "we-create": {
+        "en": "We create modern web-products that we would like to use ourselves.",
+        "ru": "Мы создаем современные веб-решения, которыми хотели бы пользоваться сами."
+    },
+
+    "research": {
+        "en": "Research",
+        "ru": "Исследование"
+    },
+    
+    "design": {
+        "en": "Design",
+        "ru": "Дизайн"
+    },
+    
+    "development": {
+        "en": "Development",
+        "ru": "Разработка"
+    },
+    
+    "seo": {
+        "en": "SEO",
+        "ru": "SEO"
+    },
+    
+    "about": {
+        "en": "about",
+        "ru": "о нас"
+    },
+    
+    "we-are-studio": {
+        "en": "We are a studio that creates",
+        "ru": "Мы - студия, которая творит"
+    },
+    
+    "showreel-desc": {
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+    },
+
+    "our-tech": {
+        "en": "our tech",
+        "ru": "наши технологии"
+    },
+    
+
+    "ui-ux": {
+        "en": "UI/UX",
+        "ru": "UI/UX"
+    },
+    
+
+    "creative-coding": {
+        "en": "CREATIVE CODING",
+        "ru": "CREATIVE CODING"
+    },
+    
+
+    "generative-graphics": {
+        "en": "GENERATIVE GRAPHICS",
+        "ru": "ГЕНЕРАТИВНАЯ ГРАФИКА"
+    },
+    
+
+    "webgl": {
+        "en": "WEBGL",
+        "ru": "WEBGL"
+    },
+    
+
+    "frontend": {
+        "en": "FRONTEND",
+        "ru": "ФРОНТЕНД"
+    },
+
+    "d-models": {
+        "en": "3D MODELS",
+        "ru": "3D МОДЕЛИ"
+    },
+    
+    "animations": {
+        "en": "ANIMATIONS",
+        "ru": "АНИМАЦИИ"
+    },
+    
+    "backend": {
+        "en": "BACKEND",
+        "ru": "БЭКЕНД"
+    },
+    
+    "web-design": {
+        "en": "WEB DESIGN", 
+        "ru": "ВЕБ-ДИЗАЙН"
+    },
+    
+    "alchemy": {
+        "en": "creating web <br> alchemy",
+        "ru": "творим веб-магию"
+    },
+
+    "about-text": {
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+    },
+
+    "our-cases": {
+        "en": "Our cases",
+        "ru": "Наши работы"
+    },
+
+    "sec-cases-1-text": {
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+    },
+
+    "case-1-descr": {
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+    },
+
+    "case-2-descr": {
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+    },
+
+    "case-3-descr": {
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+    },
+
+    "work-title": {
+        "en": "how we create and launch web projects",
+        "ru": "как мы создаем и запускаем веб-проекты"
+    },
+
+    "learn-more": {
+        "en": "learn more about how <br> we work",
+        "ru": "узнайте больше о том, <br> как мы работаем"
+    }
+}
