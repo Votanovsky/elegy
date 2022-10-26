@@ -30,15 +30,18 @@ export function init() {
 
     window.addEventListener('resize', () =>
     {
-        sizes.width = window.innerWidth;
-        sizes.height = window.innerHeight;
-
-        camera.aspect = aspectRatio;
-        camera.updateProjectionMatrix();
-
-        renderer.setSize(sizes.width, sizes.height);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    });
+        // Update sizes
+        sizes.width = window.innerWidth
+        sizes.height = window.innerHeight
+    
+        // Update camera
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+    
+        // Update renderer
+        renderer.setSize(sizes.width, sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    })
 
     renderer = new THREE.WebGLRenderer({
         antialias: true,

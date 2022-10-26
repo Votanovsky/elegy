@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::-moz-selection {
+  background-color: rgba(40, 40, 40, 0.3882352941);
+}
 *::selection {
   background-color: rgba(40, 40, 40, 0.3882352941);
 }
@@ -75,12 +78,14 @@ canvas {
 
 .word {
   transform: translateY(40px);
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .load_anim {
   transform: translateY(20px);
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
 .btn-title {
@@ -245,7 +250,8 @@ canvas {
   line-height: 90%;
   margin-bottom: 20px;
   text-transform: uppercase;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .hdr .menu_layout ul .menu_li_lay-active a {
   color: #EDEDED;
@@ -441,7 +447,16 @@ canvas {
   height: 500px;
   width: 500px;
   background: #000;
-  animation: rotate 10s linear infinite;
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 @keyframes rotate {
   0% {
@@ -554,7 +569,7 @@ canvas {
 }
 #root-index .sec-2 .cases_wr .it .img-wr:hover img {
   border-radius: 200px;
-  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 @media (max-width: 768px) {
   #root-index .sec-2 .cases_wr .it .img-wr:hover img {
@@ -564,8 +579,9 @@ canvas {
 #root-index .sec-2 .cases_wr .it .img-wr img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 @media (max-width: 768px) {
   #root-index .sec-2 .cases_wr .it .img-wr img {
@@ -858,7 +874,8 @@ canvas {
   width: 100%;
   height: 1.2px;
   background-color: #282828;
-  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+          clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 .sec_cases-2 .cs_wrap .pre_it .it {
   width: 100%;
@@ -886,7 +903,8 @@ canvas {
   display: flex;
 }
 .sec_cases-2 .cs_wrap .pre_it .it .info_wrap .border_height {
-  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
   height: 100%;
   background: #282828;
   width: 1.2px;
@@ -1002,6 +1020,4 @@ canvas {
   #root-index .sec_work-1 .h1-a {
     font-size: 58px;
   }
-}
-
-/*# sourceMappingURL=style.min.css.map */
+}/*# sourceMappingURL=style.min.css.map */
