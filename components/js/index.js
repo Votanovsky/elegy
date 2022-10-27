@@ -1,18 +1,34 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import SplitType from 'split-type';
+
 import { init, tick } from './three.js';
 import {loadCases} from './cases.js';
 
 import {loadFooter} from './footer.js';
 import {loadHeader} from './header.js';
 
-import {localize} from './localization.js';
+import {localize, switchLang, getLocale} from './localization.js';
 
-let locale = 'ru';
+let locale = 'en'; // локаль по умолчанию
+const mobileWidth = 992;
 
 gsap.registerPlugin(ScrollTrigger);
+
 
 async function main() {
     await loadHeader();
     await loadFooter();
+
+    const langSwitch = document.querySelector("#language");
+    locale = getLocale(); // получаем локаль пользователя
+
+    langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
+        switchLang(langSwitch);
+        // console.log(langSwitch);
+    });
+
     await localize(locale);
 
     // Разделение h1 заголовков на главной странице и анимация их повяления
@@ -58,7 +74,7 @@ async function main() {
 
 
     // анимация появления и ухода меню на десктопе
-    if (window.innerWidth >= 992) {
+    if (window.innerWidth > mobileWidth) {
         const tl = gsap.timeline()
 
         tl.to(".menu_li", {
@@ -87,12 +103,28 @@ async function main() {
         opacity: 1,
         });
         
+        // Анимация при нажатии на кнопку меню
+        document.querySelector(".menu_btn").addEventListener('click', () => {
+            
+            gsap.to(".menu_btn", {
+                y: +30,
+                // display: 'block',
+                opacity: 0,
+                });
+
+            gsap.to(".menu_li", {
+                y: 0,
+                opacity: 1,
+                stagger: 0.1,
+                });
+        });
+        
     }
     // /анимация появления и ухода меню на десктопе
 
 
     // Мобильное меню
-    if (window.innerWidth <= 992) {
+    if (window.innerWidth <= mobileWidth) {
 
         const toggleMenu = document.querySelector('.menu_btn')
         let toggleMenuIsOpen = false
@@ -136,13 +168,14 @@ async function main() {
                 toggleMenuIsOpen = false
             }
         })
+
     }
 }
 
 main();
 
 if (document.title === 'About') {
-    init();
+    init(mobileWidth);
     tick();
 }
 

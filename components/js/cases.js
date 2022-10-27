@@ -1,3 +1,8 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export function loadCases() {
     // Появления бордеров у проектов по триггеру
     gsap.to(".border_width", {

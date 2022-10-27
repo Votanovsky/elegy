@@ -15,32 +15,36 @@ meshPosition,
 vertexNormals = false,
 mesh,
 scale,
+scaleMultiplier,
 noise = new createNoise3D(),
 velocities,
 clock,
 blobScale = {scale: 0.3};
 
-export function init() {
+export function init(mobileWidth) {
     scene = new THREE.Scene();
 
     sizes = {
         width: window.innerWidth,
         height: window.innerHeight,
     }
+    
+    scaleMultiplier = Math.min(1, sizes.width/mobileWidth*1.2);
 
     window.addEventListener('resize', () =>
     {
         // Update sizes
-        sizes.width = window.innerWidth
-        sizes.height = window.innerHeight
+        sizes.width = window.innerWidth;
+        sizes.height = window.innerHeight;
+        aspectRatio = sizes.width / sizes.height;
     
         // Update camera
-        camera.aspect = sizes.width / sizes.height
-        camera.updateProjectionMatrix()
-    
+        camera.aspect = aspectRatio;
+        camera.updateProjectionMatrix();
+        
         // Update renderer
-        renderer.setSize(sizes.width, sizes.height)
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        renderer.setSize(sizes.width, sizes.height);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     })
 
     renderer = new THREE.WebGLRenderer({
@@ -114,15 +118,17 @@ export function init() {
     mesh.position.set(meshPosition.x, meshPosition.y, meshPosition.z);
     scene.add(mesh);
 
-    mesh.scale.x = scale.x;
-    mesh.scale.y = scale.y;
-    mesh.scale.z = scale.z;
+    mesh.scale.x = scale.x * scaleMultiplier;
+    mesh.scale.y = scale.y * scaleMultiplier;
+    mesh.scale.z = scale.z * scaleMultiplier;
 
-    gsap.fromTo(mesh.scale, {x: scale.x, y: scale.y, z: scale.z}, {x: scale.x * 1.3, y: scale.y * 1, z: scale.z * 1.3, duration: 5, ease: 'expo.inOut'});
+    
+    gsap.fromTo(mesh.scale, {x: scale.x * scaleMultiplier, y: scale.y * scaleMultiplier, z: scale.z * scaleMultiplier}, 
+                            {x: scale.x * 1.3 * scaleMultiplier, y: scale.y * 1 * scaleMultiplier, z: scale.z * 1.3 * scaleMultiplier, duration: 5, ease: 'expo.inOut'});
     let tlScale = gsap.timeline({repeat: -1, repeatDelay: 0});
     tlScale.startTime(5);
-    tlScale.to(mesh.scale, {x: scale.x * 0.8, y: scale.y * 1.4, z: scale.z * 0.8, duration: 5, ease: 'expo.inOut'})
-    .to(mesh.scale, {x: scale.x * 1.3, y: scale.y * 1, z: scale.z * 1.3, duration: 5, ease: 'expo.inOut'});
+    tlScale.to(mesh.scale, {x: scale.x * 0.8 * scaleMultiplier, y: scale.y * 1.4 * scaleMultiplier, z: scale.z * 0.8 * scaleMultiplier, duration: 5, ease: 'expo.inOut'})
+    .to(mesh.scale, {x: scale.x * 1.3 * scaleMultiplier, y: scale.y * 1 * scaleMultiplier, z: scale.z * 1.3 * scaleMultiplier, duration: 5, ease: 'expo.inOut'});
     
 
     clock = new THREE.Clock();

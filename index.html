@@ -7,6 +7,8 @@
     <title>Elegy</title>
     <link rel="stylesheet" href="styles/style.min.css">
     <link rel="icon" href="media/icon/favicon.ico" type="image/x-icon">
+
+    <script defer src="./index.js"></script>
 </head>
 <body>
     <header class="hdr"></header>
@@ -198,86 +200,7 @@
 
         <footer class="footer"></footer>
         
-        <!-- <script src="./components/js/header.js"></script>
-        <script src="./components/js/footer.js"></script> -->
     </main>
-
-
-    <script src="https://unpkg.com/split-type"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CSSRulePlugin.min.js" integrity="sha512-2+BGFUqT8mzxE2ifxQK7kcEhOeHaO5EOrUgRIUJ9+HoIw8zQHI+HvnVrgGjwW0qL5dpGv8ao2oZlBS7IvvCuhA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-    <script src="./index.js"></script>
-
-    <!-- <script>
-
-        
-        // Мобильное меню
-
-
-        
-        // Menu Animation (now work)
-        // const hdr = document.querySelector('.hdr')
-        
-        // let ht = hdr.scrollTop
-        // let prevScrollpos = window.pageYOffset;
-
-        // window.onscroll = function() {
-        //     let currentScrollPos = window.pageYOffset;
-        //     console.log(currentScrollPos);
-
-        //     if (prevScrollpos !== currentScrollPos) {
-        //         console.log('ye');
-
-        //         tl.to ('.menu_li', {
-        //             y: -30,
-        //             opacity: 0,
-        //             stagger: 0.1,
-        //             duration: .2
-        //         })
-
-        //         tl.to ('.menu_btn', {
-        //             display: 'block',
-        //             y: 0,
-        //             opacity: 1,
-        //             duration: .3
-        //         })
-
-        //         tl.to ('.menu_li', {
-        //             display: 'none'
-        //         })
-        //     } else if (prevScrollpos == currentScrollPos) {
-
-        //         console.log('no');
-
-        //         gsap.to ('.menu_li', {
-        //             y: 0,
-        //             opacity: 1,
-        //             stagger: 0.1,
-        //             duration: .2,
-        //             display: 'block'
-        //         })
-
-        //         gsap.to ('.menu_btn', {
-        //             display: 'none',
-        //             y: 30,
-        //             opacity: 0,
-        //             duration: .3
-        //         })
-
-        //     }
-            
-        // }
-        
-        // document.querySelector('.menu_btn').addEventListener('click',(e)=> {
-        //     tl.reverse()
-        // })
-
-
-    </script> -->
 </body>
 </html>

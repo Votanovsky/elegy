@@ -5,6 +5,7 @@
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
     "simplex-noise": "^4.0.1",
+    "split-type": "^0.3.2",
     "three": "^0.145.0",
     "webpack": "^5.74.0"
   },
