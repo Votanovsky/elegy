@@ -16,6 +16,8 @@ vertexNormals = false,
 mesh,
 scale,
 scaleMultiplier,
+scaleTl,
+blobScaleTl,
 noise = new createNoise3D(),
 velocities,
 clock,
@@ -95,7 +97,7 @@ export function init(mobileWidth) {
         z: 1.4,
     }
 
-    let geometry2 = new THREE.SphereGeometry(radius, detalization, detalization); 
+    let geometry = new THREE.SphereGeometry(radius, detalization, detalization); 
 
     let material = new THREE.MeshPhysicalMaterial({
         color: defaultColor,
@@ -114,21 +116,28 @@ export function init(mobileWidth) {
         flatShading: 767
     });
     
-    mesh = new THREE.Mesh(geometry2, material);
+    mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(meshPosition.x, meshPosition.y, meshPosition.z);
     scene.add(mesh);
+
+    texture.dispose();
+    normal.dispose();
+    displacement.dispose();
+    ao.dispose();
+    specular.dispose();
 
     mesh.scale.x = scale.x * scaleMultiplier;
     mesh.scale.y = scale.y * scaleMultiplier;
     mesh.scale.z = scale.z * scaleMultiplier;
 
     
-    gsap.fromTo(mesh.scale, {x: scale.x * scaleMultiplier, y: scale.y * scaleMultiplier, z: scale.z * scaleMultiplier}, 
-                            {x: scale.x * 1.3 * scaleMultiplier, y: scale.y * 1 * scaleMultiplier, z: scale.z * 1.3 * scaleMultiplier, duration: 5, ease: 'expo.inOut'});
-    let tlScale = gsap.timeline({repeat: -1, repeatDelay: 0});
-    tlScale.startTime(5);
-    tlScale.to(mesh.scale, {x: scale.x * 0.8 * scaleMultiplier, y: scale.y * 1.4 * scaleMultiplier, z: scale.z * 0.8 * scaleMultiplier, duration: 5, ease: 'expo.inOut'})
-    .to(mesh.scale, {x: scale.x * 1.3 * scaleMultiplier, y: scale.y * 1 * scaleMultiplier, z: scale.z * 1.3 * scaleMultiplier, duration: 5, ease: 'expo.inOut'});
+    scaleTl = gsap.timeline({repeat: -1, repeatDelay: 0});
+    scaleTl.startTime(0);
+    scaleTl.fromTo(mesh.scale, {x: scale.x * scaleMultiplier, y: scale.y * scaleMultiplier, z: scale.z * scaleMultiplier}, 
+                            {x: scale.x * 1.3 * scaleMultiplier, y: scale.y * 1 * scaleMultiplier, z: scale.z * 1.3 * scaleMultiplier, duration: 5, ease: 'expo.inOut'})
+    .to(mesh.scale, {x: scale.x * 0.8 * scaleMultiplier, y: scale.y * 1.4 * scaleMultiplier, z: scale.z * 0.8 * scaleMultiplier, duration: 5, ease: 'expo.inOut'})
+    .to(mesh.scale, {x: scale.x * 1.3 * scaleMultiplier, y: scale.y * 1 * scaleMultiplier, z: scale.z * 1.3 * scaleMultiplier, duration: 5, ease: 'expo.inOut'})
+    .to(mesh.scale, {x: scale.x * scaleMultiplier, y: scale.y * scaleMultiplier, z: scale.z * scaleMultiplier, duration: 5, ease: 'expo.inOut'});
     
 
     clock = new THREE.Clock();
@@ -141,43 +150,65 @@ export function init(mobileWidth) {
 
     const duration = 3;
     const multiplier = 1.6;
-    let blobScaleTl = gsap.timeline({repeat: -1, repeatDelay: 0});
-    blobScaleTl.startTime(duration);
-    gsap.fromTo(blobScale, {scale: blobScale.scale}, {scale: blobScale.scale * multiplier, duration: duration, ease: 'sine.inOut'});
-    blobScaleTl.to(blobScale, {scale: blobScale.scale / multiplier**2, duration: duration, ease: 'sine.inOut'})
-    .to(blobScale, {scale: blobScale.scale * multiplier, duration: duration, ease: 'sine.inOut'});
+    blobScaleTl = gsap.timeline({repeat: -1, repeatDelay: 0});
+    blobScaleTl.startTime(0);
+    blobScaleTl.fromTo(blobScale, {scale: blobScale.scale}, {scale: blobScale.scale * multiplier, duration: duration, ease: 'sine.inOut'})
+    .to(blobScale, {scale: blobScale.scale / multiplier**2, duration: duration, ease: 'sine.inOut'})
+    .to(blobScale, {scale: blobScale.scale * multiplier, duration: duration, ease: 'sine.inOut'})
+    .to(blobScale, {scale: blobScale.scale, duration: duration, ease: 'sine.inOut'});
 
-    
     renderer.render(scene, camera);
     window.requestAnimationFrame(tick);
 }
 
 export function tick() {
-    const delta = clock.getDelta();
+    if (mesh) {
+        const delta = clock.getDelta();
 
-    mesh.rotation.x += delta * 0.3;
-    mesh.rotation.y += velocities.y[0] * delta;
+        mesh.rotation.x += delta * 0.3;
+        mesh.rotation.y += velocities.y[0] * delta;
 
-    const position = mesh.geometry.attributes.position;
-    const v = new THREE.Vector3();
-    for ( let k = 0; k < position.count; k++ ) {
-        v.fromBufferAttribute( position, k );
-        let time = Date.now();
-        v.normalize();
-        let distance = mesh.geometry.parameters.radius + noise(
-            v.x + time * 0.0005,
-            v.y + time * 0.0005,
-            v.z + time * 0.0005) * blobScale.scale;
-        v.multiplyScalar(distance);
-        position.setXYZ(k, v.x, v.y, v.z);
+        const position = mesh.geometry.attributes.position;
+        const v = new THREE.Vector3();
+        for ( let k = 0; k < position.count; k++ ) {
+            v.fromBufferAttribute( position, k );
+            let time = Date.now();
+            v.normalize();
+            let distance = mesh.geometry.parameters.radius + noise(
+                v.x + time * 0.0005,
+                v.y + time * 0.0005,
+                v.z + time * 0.0005) * blobScale.scale;
+            v.multiplyScalar(distance);
+            position.setXYZ(k, v.x, v.y, v.z);
+        }
+        
+        mesh.geometry.verticesNeedUpdate = true;
+        mesh.geometry.attributes.position.needsUpdate = true;
+        mesh.geometry.normalsNeedUpdate = true;
+        if (vertexNormals)
+            mesh.geometry.computeVertexNormals();
+            
+        // console.log(mesh);
+        renderer.render(scene, camera);
+        window.requestAnimationFrame(tick);
     }
-    
-    mesh.geometry.verticesNeedUpdate = true;
-    mesh.geometry.attributes.position.needsUpdate = true;
-    mesh.geometry.normalsNeedUpdate = true;
-    if (vertexNormals)
-        mesh.geometry.computeVertexNormals();
+}
 
-    renderer.render(scene, camera);
-    window.requestAnimationFrame(tick);
+export function stopTick() {
+    // console.log('stopping tick');
+    if (mesh) {
+        renderer.dispose();
+        scene.clear();
+        mesh.geometry.dispose();
+        mesh.material.dispose();
+        for (let tween of scaleTl.getChildren())
+            tween.kill();
+        for (let tween of blobScaleTl.getChildren())
+            tween.kill();
+        scaleTl.kill();
+        blobScaleTl.kill();
+        mesh = null;
+    }
+    // else
+    //     console.log('nothing to stop');
 }

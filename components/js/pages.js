@@ -49,6 +49,23 @@ export function pagesTransitionsEx(loadPage) {
         });
     }
     
+    function killAnimations() {
+        gsap.globalTimeline.getChildren().forEach(child => {
+            if (!child.targets) {
+                for (let tween of child.getChildren())
+                    tween.kill();
+                child.kill();
+            }
+            else {
+                for (let target of child.targets()) {
+                    if (!target.classList || target.classList && !target.classList.contains("loader-overlay")) {
+                        child.kill();
+                        break;
+                    }
+                }
+            }
+        });
+    }
     
     // BARBA SETUP
     barba.init({
@@ -58,12 +75,14 @@ export function pagesTransitionsEx(loadPage) {
             async leave () {
     
                 pageAnimation()
-                await delay(1500)
+                await delay(2000)
 
             },
             async enter() {
                 
                 const done = this.async();
+                // killAnimations();
+                // console.log(gsap.globalTimeline.getChildren());
                 loadPage()
                 done()
                 barba.destroy()

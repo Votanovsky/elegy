@@ -3,7 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import SplitType from 'split-type';
 
-import { init, tick } from './three.js';
+import { init, tick, stopTick } from './three.js';
 import {loadCases} from './cases.js';
 
 import {loadFooter} from './footer.js';
@@ -45,6 +45,7 @@ function getCookie(cname) {
 }
 
 async function loadPage() {
+    console.log(getCookie('locale'))
     await loadHeader();
     await loadFooter();
 
@@ -57,6 +58,7 @@ async function loadPage() {
     }
 
     langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
+        console.log(window.location.href = window.location.pathname);
         locale = switchLang(langSwitch);
         setCookie('locale', locale, 30);
     });
@@ -210,6 +212,8 @@ async function loadPage() {
         init(mobileWidth);
         tick();
     }
+    else
+        stopTick();
     
     if (document.title === 'Cases') {
         loadCases();
