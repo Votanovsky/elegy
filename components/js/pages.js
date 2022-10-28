@@ -3,7 +3,7 @@ import barba from '@barba/core';
 
 // PAGE TRANSITION ANIMATION
 
-export function pagesTransitionsEx() {
+export function pagesTransitionsEx(loadPage) {
     function pageAnimation(){
         gsap.to(".loader-overlay.one", {
             duration: 1,
@@ -56,13 +56,20 @@ export function pagesTransitionsEx() {
     
         transitions: [{
             async leave () {
-                const done = this.async();
     
                 pageAnimation()
                 await delay(1500)
+
+            },
+            async enter() {
+                
+                const done = this.async();
+                loadPage()
                 done()
+                barba.destroy()
+
             }
-        }]
+        }],
     });
 }
 

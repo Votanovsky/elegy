@@ -23,8 +23,8 @@ export function switchLang(language){
         0 : 
         (languages.indexOf(locale) + 1)]
     
-    console.log(locale);
     localize(locale);
+    return locale;
 }
 
 export async function localize(locale) {

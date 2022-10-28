@@ -9,55 +9,61 @@
 
     <script defer src="./index.js"></script>
 </head>
-<body>
+<body data-barba="wrapper">
 
-<header class="hdr"></header>
+<!-- PAGE TRANSITION ANIMATION -->
+<div class="loader-overlay one"></div>
+<div class="loader-overlay two"></div>
+
+<div id="all_root" data-barba="container" data-barba-namespace="about">
+
+    <header class="hdr"></header>
 
 
-<main id="root-index">
-    <section class="sec_work-1">
-        <div class="h1-a" id="work-title">
-            how we create and launch web projects
-        </div>
+    <main id="root-index">
+        <section class="sec_work-1">
+            <div class="h1-a" id="work-title">
+                how we create and launch web projects
+            </div>
 
-        <!-- <div class="divider"></div> -->
-    </section>
+            <!-- <div class="divider"></div> -->
+        </section>
 
-    <div class="sec_work-2">
+        <div class="sec_work-2">
 
-        <div class="work_it">
-            <div class="border_width"></div>
-            <div class="lf">
-                <div class="count">01</div>
-                <div class="name">
-                    research
+            <div class="work_it">
+                <div class="border_width"></div>
+                <div class="lf">
+                    <div class="count">01</div>
+                    <div class="name">
+                        research
+                    </div>
+                </div>
+        
+                <div class="rg">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et animi quod saepe beatae autem minima hic minus facilis, rerum ad iusto quidem nihil ducimus fugit nesciunt. Architecto ipsa quis veniam repudiandae corporis! Minima, voluptatem eveniet!
                 </div>
             </div>
-    
-            <div class="rg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et animi quod saepe beatae autem minima hic minus facilis, rerum ad iusto quidem nihil ducimus fugit nesciunt. Architecto ipsa quis veniam repudiandae corporis! Minima, voluptatem eveniet!
-            </div>
-        </div>
-        <div class="work_it">
-            <div class="border_width"></div>
-            <div class="lf">
-                <div class="count">02</div>
-                <div class="name">
-                    Design
+            <div class="work_it">
+                <div class="border_width"></div>
+                <div class="lf">
+                    <div class="count">02</div>
+                    <div class="name">
+                        Design
+                    </div>
+                </div>
+        
+                <div class="rg">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et animi quod saepe beatae autem minima hic minus facilis, rerum ad iusto quidem nihil ducimus fugit nesciunt. Architecto ipsa quis veniam repudiandae corporis! Minima, voluptatem eveniet!
                 </div>
             </div>
-    
-            <div class="rg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et animi quod saepe beatae autem minima hic minus facilis, rerum ad iusto quidem nihil ducimus fugit nesciunt. Architecto ipsa quis veniam repudiandae corporis! Minima, voluptatem eveniet!
-            </div>
+
+
         </div>
 
-
-    </div>
-
-    
-    <footer class="footer"></footer>
-</main>
-
+        
+        <footer class="footer"></footer>
+    </main>
+</div>
 </body>
 </html>

@@ -12,25 +12,53 @@ import {loadHeader} from './header.js';
 import {localize, switchLang, getLocale} from './localization.js';
 
 // import barba from '@barba/core';
-// import {pagesTransitionsEx} from './pages.js';
+import {pagesTransitionsEx} from './pages.js';
 
+// "use strict";
 
-let locale = 'en'; // локаль по умолчанию
+let locale;
 const mobileWidth = 992;
 
 gsap.registerPlugin(ScrollTrigger);
 
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
 
-async function main() {
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
+
+async function loadPage() {
     await loadHeader();
     await loadFooter();
 
     const langSwitch = document.querySelector("#language");
-    locale = getLocale(); // получаем локаль пользователя
+
+    locale = getCookie('locale'); // достаём локаль из куки
+    if (!locale) { // если куки нет
+        locale = getLocale(); // получаем локаль пользователя
+        setCookie('locale', locale, 30);
+    }
 
     langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
-        switchLang(langSwitch);
-        // console.log(langSwitch);
+        locale = switchLang(langSwitch);
+        setCookie('locale', locale, 30);
     });
 
     await localize(locale);
@@ -175,18 +203,20 @@ async function main() {
 
     }
 
-    pagesTransitionsEx()
+
+    if (document.title === 'About') {
+        // const canvas = document.querySelector('canvas');
+        // console.log(canvas);
+        init(mobileWidth);
+        tick();
+    }
+    
+    if (document.title === 'Cases') {
+        loadCases();
+    }
+
+    pagesTransitionsEx(loadPage);
 }
 
-main();
 
-if (document.title === 'About') {
-    init(mobileWidth);
-    tick();
-}
-
-if (document.title === 'Cases') {
-    loadCases();
-}
-
-
+loadPage();
