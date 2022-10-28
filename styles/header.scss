@@ -41,6 +41,15 @@
                     color: $gray-color;
                 }
             }
+            .lang {
+                cursor: pointer;
+                padding: 1px 8px 2px;
+                border-radius: 22px;
+                &:hover {
+                    background: $black-color;
+                    color: $gray-color;
+                }
+            }
             .menu_li {
                 display: block;
                 color: #282828;
@@ -141,4 +150,5 @@
             }
         }
     }
+
 }
