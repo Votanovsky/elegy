@@ -11,6 +11,10 @@ import {loadHeader} from './header.js';
 
 import {localize, switchLang, getLocale} from './localization.js';
 
+// import barba from '@barba/core';
+// import {pagesTransitionsEx} from './pages.js';
+
+
 let locale = 'en'; // локаль по умолчанию
 const mobileWidth = 992;
 
@@ -170,6 +174,8 @@ async function main() {
         })
 
     }
+
+    pagesTransitionsEx()
 }
 
 main();
@@ -182,3 +188,5 @@ if (document.title === 'About') {
 if (document.title === 'Cases') {
     loadCases();
 }
+
+

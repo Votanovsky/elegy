@@ -72,7 +72,7 @@ export function init(mobileWidth) {
     dLightTop.position.set(-10, 10, -5);
     scene.add(dLightTop);
 
-    const detalization = 180;
+    const detalization = 250;
 
     defaultColor = 0x404040;
 

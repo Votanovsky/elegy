@@ -9,11 +9,20 @@
 
     <script defer src="./index.js"></script>
 </head>
-<body>
+<body data-barba="wrapper">
+
+<!-- PAGE TRANSITION ANIMATION -->
+<div class="loader-overlay one"></div>
+<div class="loader-overlay two"></div>
+
+<div id="all_root" data-barba="container" data-barba-namespace="cases">
+    <!-- <div class="page_loader"> -->
+        <!-- <div class="page-transition"></div> -->
+    <!-- </div> -->
+
     <header class="hdr"></header>
 
-
-    <main id="root-index">
+    <main id="root-index" data-barba-namespace="cases">
         <section class="sec_cases-1">
             <div class="h1-a h1-t" id="our-cases">
                 <!-- Yep i'ts our <br> cases ! -->
@@ -35,42 +44,50 @@
                 <div class="pre_it bg_color-trigger">
 
                     <div class="border_width"></div>
-
-                    <div class="it">
-                        
-                        <div class="img_wrap">
-                            <div class="blur"></div>
-                            <img src="/media/img/qenly.png" alt="">
+                    
+                    <div class="for_mob-it">
+                        <div class="name_for-mobile">
+                            Qenly
                         </div>
-        
-                        <div class="info_wrap">
 
-                            <div class="border_height"></div>
+                        <div class="border_height"></div>
 
-                            <div class="info">
-                                <div class="name">
-                                    QENLY
-                                </div>
-
-                                <div class="descr" id="case-1-descr">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit maxime laboriosam, dolor temporibus enim error fuga odit veritatis tenetur aspernatur in id sequi, nemo soluta repellendus, inventore totam ratione! Cupiditate, rem iure distinctio perferendis consectetur molestias enim accusantium architecto veniam neque repellat ratione maiores cumque!
-                                </div>
-
-                                <div class="do">
-                                    <div class="category_wr">
-                                        <div class="category" id="research">
-                                            Research
-                                        </div>
-                                        <div class="category" id="development">
-                                            Development
-                                        </div>
-                                        <div class="category" id="seo">
-                                            SEO
-                                        </div>
-                                    </div>
+                        <div class="it">
+                        
+                            <div class="img_wrap">
+                                <div class="blur"></div>
+                                <img src="/media/img/qenly.png" alt="">
+                            </div>
             
-                                    <div class="date">
-                                        2021
+                            <div class="info_wrap">
+    
+                                <div class="border_height"></div>
+    
+                                <div class="info">
+                                    <div class="name">
+                                        QENLY
+                                    </div>
+    
+                                    <div class="descr" id="case-1-descr">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit maxime laboriosam, dolor temporibus enim error fuga odit veritatis tenetur aspernatur in id sequi, nemo soluta repellendus, inventore totam ratione! Cupiditate, rem iure distinctio perferendis consectetur molestias enim accusantium architecto veniam neque repellat ratione maiores cumque!
+                                    </div>
+    
+                                    <div class="do">
+                                        <div class="category_wr">
+                                            <div class="category" id="research">
+                                                Research
+                                            </div>
+                                            <div class="category" id="development">
+                                                Development
+                                            </div>
+                                            <div class="category" id="seo">
+                                                SEO
+                                            </div>
+                                        </div>
+                
+                                        <div class="date">
+                                            2021
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -78,45 +95,53 @@
                     </div>
                 </div>
 
-                <div class="pre_it">
+                <div class="pre_it bg_color-trigger">
 
                     <div class="border_width"></div>
-
-                    <div class="it">
-                        
-                        <div class="img_wrap">
-                            <div class="blur"></div>
-                            <img src="/media/img/smth.png" alt="">
+                    
+                    <div class="for_mob-it">
+                        <div class="name_for-mobile">
+                            Geisha <br> under
                         </div>
-        
-                        <div class="info_wrap">
 
-                            <div class="border_height"></div>
+                        <div class="border_height"></div>
 
-                            <div class="info">
-                                <div class="name">
-                                    smth.0111
-                                </div>
-
-                                <div class="descr" id="case-2-descr">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit maxime laboriosam, dolor temporibus enim error fuga odit veritatis tenetur aspernatur in id sequi, nemo soluta repellendus, inventore totam ratione! Cupiditate, rem iure distinctio perferendis consectetur molestias enim accusantium architecto veniam neque repellat ratione maiores cumque!
-                                </div>
-
-                                <div class="do">
-                                    <div class="category_wr">
-                                        <div class="category" id="research">
-                                            Research
-                                        </div>
-                                        <div class="category" id="development">
-                                            Development
-                                        </div>
-                                        <div class="category" id="seo">
-                                            SEO
-                                        </div>
-                                    </div>
+                        <div class="it">
+                        
+                            <div class="img_wrap">
+                                <div class="blur"></div>
+                                <img src="/media/img/smth.png" alt="">
+                            </div>
             
-                                    <div class="date">
-                                        2021
+                            <div class="info_wrap">
+    
+                                <div class="border_height"></div>
+    
+                                <div class="info">
+                                    <div class="name">
+                                        QENLY
+                                    </div>
+    
+                                    <div class="descr" id="case-1-descr">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit maxime laboriosam, dolor temporibus enim error fuga odit veritatis tenetur aspernatur in id sequi, nemo soluta repellendus, inventore totam ratione! Cupiditate, rem iure distinctio perferendis consectetur molestias enim accusantium architecto veniam neque repellat ratione maiores cumque!
+                                    </div>
+    
+                                    <div class="do">
+                                        <div class="category_wr">
+                                            <div class="category" id="research">
+                                                Research
+                                            </div>
+                                            <div class="category" id="development">
+                                                Development
+                                            </div>
+                                            <div class="category" id="seo">
+                                                SEO
+                                            </div>
+                                        </div>
+                
+                                        <div class="date">
+                                            2021
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -124,45 +149,53 @@
                     </div>
                 </div>
 
-                <div class="pre_it">
+                <div class="pre_it bg_color-trigger">
 
                     <div class="border_width"></div>
-
-                    <div class="it">
-                        
-                        <div class="img_wrap">
-                            <div class="blur"></div>
-                            <img src="/media/img/island.png" alt="">
+                    
+                    <div class="for_mob-it">
+                        <div class="name_for-mobile">
+                            Insland
                         </div>
-        
-                        <div class="info_wrap">
 
-                            <div class="border_height"></div>
+                        <div class="border_height"></div>
 
-                            <div class="info">
-                                <div class="name">
-                                    island dw
-                                </div>
-
-                                <div class="descr" id="case-3-descr">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit maxime laboriosam, dolor temporibus enim error fuga odit veritatis tenetur aspernatur in id sequi, nemo soluta repellendus, inventore totam ratione! Cupiditate, rem iure distinctio perferendis consectetur molestias enim accusantium architecto veniam neque repellat ratione maiores cumque!
-                                </div>
-
-                                <div class="do">
-                                    <div class="category_wr">
-                                        <div class="category" id="research">
-                                            Research
-                                        </div>
-                                        <div class="category" id="development">
-                                            Development
-                                        </div>
-                                        <div class="category" id="seo">
-                                            SEO
-                                        </div>
-                                    </div>
+                        <div class="it">
+                        
+                            <div class="img_wrap">
+                                <div class="blur"></div>
+                                <img src="/media/img/island.png" alt="">
+                            </div>
             
-                                    <div class="date">
-                                        2021
+                            <div class="info_wrap">
+    
+                                <div class="border_height"></div>
+    
+                                <div class="info">
+                                    <div class="name">
+                                        Insland
+                                    </div>
+    
+                                    <div class="descr" id="case-1-descr">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit maxime laboriosam, dolor temporibus enim error fuga odit veritatis tenetur aspernatur in id sequi, nemo soluta repellendus, inventore totam ratione! Cupiditate, rem iure distinctio perferendis consectetur molestias enim accusantium architecto veniam neque repellat ratione maiores cumque!
+                                    </div>
+    
+                                    <div class="do">
+                                        <div class="category_wr">
+                                            <div class="category" id="research">
+                                                Research
+                                            </div>
+                                            <div class="category" id="development">
+                                                Development
+                                            </div>
+                                            <div class="category" id="seo">
+                                                SEO
+                                            </div>
+                                        </div>
+                
+                                        <div class="date">
+                                            2021
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -174,6 +207,7 @@
 
         <footer class="footer"></footer>
     </main>
+</div>
 
 </body>
 </html>

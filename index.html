@@ -10,10 +10,23 @@
 
     <script defer src="./index.js"></script>
 </head>
-<body>
+<body data-barba="wrapper">
+
+<!-- PAGE TRANSITION ANIMATION -->
+<div class="loader-overlay one"></div>
+<div class="loader-overlay two"></div>
+
+<div id="all_root" data-barba="container" data-barba-namespace="home">
+
+        <!-- <div class="page_loader"> -->
+        <!-- <div class="page-transition"></div> -->
+        <!-- </div> -->
+
     <header class="hdr"></header>
 
     <main id="root-index">
+
+
         <section class="sec-1">
             <div class="h1-a h1-t" id="title-1">
                 a digital web studio <br> creating
@@ -140,7 +153,7 @@
                 <div class="h1-a" id="we-are-studio">
                     we are an international digital web studio that creates
                 </div>
-     
+        
                 <div class="desc-text showreel_trig" id="showreel-desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus, libero sed malesuada consequat, urna sem pulvinar tortor, eget tincidunt dui dui ut nunc. Morbi ultricies, diam id blandit cursus, urna ex mattis arcu, sagittis ultrices dolor mauris eu sapien. 
                 </div>
@@ -201,6 +214,8 @@
         <footer class="footer"></footer>
         
     </main>
-    
+</div>    
+
+
 </body>
 </html>

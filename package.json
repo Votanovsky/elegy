@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "gsap": "^3.11.3",
     "mathutils": "^0.0.1",
     "sass": "^1.55.0",

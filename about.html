@@ -9,7 +9,17 @@
 
     <script defer src="./index.js"></script>
 </head>
-<body>
+<body data-barba="wrapper">
+
+<!-- PAGE TRANSITION ANIMATION -->
+<div class="loader-overlay one"></div>
+<div class="loader-overlay two"></div>
+
+<div id="all_root" data-barba="container" data-barba-namespace="about">
+    <!-- <div class="page_loader"> -->
+        <!-- <div class="page-transition"></div> -->
+    <!-- </div> -->
+
     <header class="hdr"></header>
 
     <main id="root-index">
@@ -33,6 +43,9 @@
         <!-- <script src="/components/js/header.js"></script>
         <script src="/components/js/footer.js"></script> -->
     </main>
+</div>
+
+
     
 </body>
 </html>
