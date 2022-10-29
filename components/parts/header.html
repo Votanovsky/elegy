@@ -14,12 +14,6 @@
     <ul>
         <li class="menu_li">
             <div class="lang" id="language"></div>
-
-            <!-- <div class="lang_drop">
-                <div>ru</div>
-                <div>eng</div>
-                <div>fr</div>
-            </div> -->
         </li>
         
     </ul>
@@ -48,7 +42,7 @@
         <!-- <li class="menu_li_lay">
             <a href="#">eng</a>
         </li> -->
-        <button class="lang" id="language_mob">english</button>
+        <div class="menu_li_lay" id="language"></div>
         <li class="menu_li_lay menu_li_lay-active" id="page-main">
             <a href="index.html">index</a>
         </li>
@@ -58,12 +52,17 @@
         <li class="menu_li_lay" id="page-cases">
             <a href="cases.html">cases</a>
         </li>
-        <li class="menu_li_lay" id="page-work">
-            <a href="work.html">how we work</a>
+        <li class="menu_li_lay " id="page-work">
+            <a class="click" href="work.html">how we work</a>
         </li>
     </ul>
     
 </div>
 
+<script>
+    document.querySelector('.click').addEventListener('click',()=> {
+        console.log('ti pidor');
+    })
+</script>
 <!-- <div class="page-transition"></div> -->
 <!-- <div class="loader"></div> -->

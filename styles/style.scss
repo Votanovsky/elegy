@@ -195,12 +195,15 @@ canvas {
 @import 'footer.scss';
 @import 'index.scss';
 @import 'cases.scss';
+ 
 
+.bg-green {
+    background: $green-color;
+}
 #root-index{
     width: 100%;
     -webkit-font-smoothing: antialiased;
     // transition: .3s;
-    background: $gray-color;
     margin-bottom: 300px;
     z-index: 1;
     border-radius: 0 0 20px 20px;
@@ -217,7 +220,7 @@ canvas {
                 padding: 130px 20px 20px;
             }
             @media  (max-width: $breakpoint-sm-min) {
-                padding: 90px 20px 20px;
+                padding: 70px 20px 20px;
             }
             .divider {
                 width: 100%;
@@ -240,7 +243,8 @@ canvas {
                     letter-spacing: -0.2rem;
                 }
                 @media  (max-width: $breakpoint-sm-min) {
-                    font-size: 58px;
+                    font-size: 36px;
+                    letter-spacing: -1px;
                 }
             }
         }
@@ -258,31 +262,113 @@ canvas {
             .work_it {
                 display: flex;
                 align-items: flex-start;
+                flex-direction: column;
+                margin-bottom: 60px;
+                .ite {
+                    display: flex;
+                    align-items: flex-start;
+                    @media  (max-width: $breakpoint-md-min) {
+                        flex-direction: column;
+                    }
+                }
+                .border_width-work {
+                    width: 100%;
+                    height: 1.2px;
+                    background: $black-color;
+                }
                 .lf {
-                    // width: 20%;
+                    width: 32%;
                     font-family: 'NeueMetana-Regular';
                     text-transform: uppercase;
-                    padding: 0 2vw 0 0;
+                    padding: 1vw 1vw 0 0;
                     display: flex;
                     align-items: center;
-                    width: 23%;
-                    border-right: 1.2px solid $black-color;
+                    @media  (max-width: $breakpoint-lg-min) {
+                        width: 22%;
+                    }
+                    @media  (max-width: $breakpoint-md-min) {
+                        width: 100%;
+                    }
                     .name {
                         font-size: 46px;
                         letter-spacing: -0.1rem;
+                        @media  (max-width: $breakpoint-xl-min) {
+                            font-size: 26px;
+                            letter-spacing: -1px;
+                        }
+                        @media  (max-width: $breakpoint-lg-min) {
+                            font-size: 14px;
+                            letter-spacing: -.5px;
+                        }
+                        @media  (max-width: $breakpoint-md-min) {
+                            font-size: 26px;
+                            letter-spacing: -1px;
+                        }
                     }
                     .count {
                         font-size: 14px;
                         letter-spacing: -0.1rem;
                         margin-right: 7px;
+                        @media  (max-width: $breakpoint-xl-min) {
+                            font-size: 12px;
+                            letter-spacing: -1px;
+                        }
+                        @media  (max-width: $breakpoint-lg-min) {
+                            font-size: 8px;
+                            letter-spacing: -.5px;
+                        }
+                        @media  (max-width: $breakpoint-md-min) {
+                            font-size: 12px;
+                            letter-spacing: -1px;
+                        }
                     }
                 }
                 .rg {
-                    width: 77%;
-                    padding: 40px 0 0 2vw;
+                    width: 68%;
                     font-size: 28px;
-                    line-height: 97%;
+                    line-height: 94%;
                     letter-spacing: -0.8px;
+                    padding-bottom: 5vw;
+                    display: flex;
+                    @media  (max-width: $breakpoint-xl-min) {
+                        font-size: 18px;
+                    }
+                    @media  (max-width: $breakpoint-lg-min) {
+                        width: 78%;
+                        font-size: 14px;
+                    }
+                    @media  (max-width: $breakpoint-md-min) {
+                        width: 100%;
+                        font-size: 16px;
+                    }
+                    .border_height-work {
+                        height: 130px;
+                        background: $black-color;
+                        width: 1.2px;
+                    }
+                    .ite {
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 2vw;
+                        .name {
+                            font-size: 46px;
+                            padding: 2vw 0;
+                            text-transform: uppercase;
+                            font-family: 'NeueMetana-Regular';
+                            text-transform: uppercase;
+                            opacity: 0;
+                            @media  (max-width: $breakpoint-xl-min) {
+                                font-size: 26px;
+                                letter-spacing: -1px;
+                            }
+                            @media  (max-width: $breakpoint-lg-min) {
+                                font-size: 14px;
+                                letter-spacing: -.5px;
+                                padding: .5vw 0;
+                            }
+                        }
+                    }
+                    
                 }
             }
         }

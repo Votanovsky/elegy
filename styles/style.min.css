@@ -281,6 +281,7 @@ canvas {
   text-transform: uppercase;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 200;
 }
 .hdr .menu_layout ul .menu_li_lay-active a {
   color: #EDEDED;
@@ -311,7 +312,7 @@ canvas {
   text-transform: uppercase;
   font-size: 56px;
   letter-spacing: -0.2rem;
-  line-height: 87%;
+  line-height: 90%;
   margin-bottom: 50px;
   padding-top: 50px;
   cursor: pointer;
@@ -729,7 +730,7 @@ canvas {
   text-transform: uppercase;
   font-size: 56px;
   letter-spacing: -0.2rem;
-  line-height: 87%;
+  line-height: 90%;
   margin-bottom: 50px;
   text-align: right;
   width: 60%;
@@ -1131,10 +1132,13 @@ canvas {
   display: none;
 }
 
+.bg-green {
+  background: #556158;
+}
+
 #root-index {
   width: 100%;
   -webkit-font-smoothing: antialiased;
-  background: #EDEDED;
   margin-bottom: 300px;
   z-index: 1;
   border-radius: 0 0 20px 20px;
@@ -1155,7 +1159,7 @@ canvas {
 }
 @media (max-width: 576px) {
   #root-index .sec_work-1 {
-    padding: 90px 20px 20px;
+    padding: 70px 20px 20px;
   }
 }
 #root-index .sec_work-1 .divider {
@@ -1184,7 +1188,8 @@ canvas {
 }
 @media (max-width: 576px) {
   #root-index .sec_work-1 .h1-a {
-    font-size: 58px;
+    font-size: 36px;
+    letter-spacing: -1px;
   }
 }
 #root-index .sec_work-2 {
@@ -1203,29 +1208,139 @@ canvas {
 #root-index .sec_work-2 .work_it {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+#root-index .sec_work-2 .work_it .ite {
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 768px) {
+  #root-index .sec_work-2 .work_it .ite {
+    flex-direction: column;
+  }
+}
+#root-index .sec_work-2 .work_it .border_width-work {
+  width: 100%;
+  height: 1.2px;
+  background: #282828;
 }
 #root-index .sec_work-2 .work_it .lf {
+  width: 32%;
   font-family: "NeueMetana-Regular";
   text-transform: uppercase;
-  padding: 0 2vw 0 0;
+  padding: 1vw 1vw 0 0;
   display: flex;
   align-items: center;
-  width: 23%;
-  border-right: 1.2px solid #282828;
+}
+@media (max-width: 992px) {
+  #root-index .sec_work-2 .work_it .lf {
+    width: 22%;
+  }
+}
+@media (max-width: 768px) {
+  #root-index .sec_work-2 .work_it .lf {
+    width: 100%;
+  }
 }
 #root-index .sec_work-2 .work_it .lf .name {
   font-size: 46px;
   letter-spacing: -0.1rem;
+}
+@media (max-width: 1200px) {
+  #root-index .sec_work-2 .work_it .lf .name {
+    font-size: 26px;
+    letter-spacing: -1px;
+  }
+}
+@media (max-width: 992px) {
+  #root-index .sec_work-2 .work_it .lf .name {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+  }
+}
+@media (max-width: 768px) {
+  #root-index .sec_work-2 .work_it .lf .name {
+    font-size: 26px;
+    letter-spacing: -1px;
+  }
 }
 #root-index .sec_work-2 .work_it .lf .count {
   font-size: 14px;
   letter-spacing: -0.1rem;
   margin-right: 7px;
 }
+@media (max-width: 1200px) {
+  #root-index .sec_work-2 .work_it .lf .count {
+    font-size: 12px;
+    letter-spacing: -1px;
+  }
+}
+@media (max-width: 992px) {
+  #root-index .sec_work-2 .work_it .lf .count {
+    font-size: 8px;
+    letter-spacing: -0.5px;
+  }
+}
+@media (max-width: 768px) {
+  #root-index .sec_work-2 .work_it .lf .count {
+    font-size: 12px;
+    letter-spacing: -1px;
+  }
+}
 #root-index .sec_work-2 .work_it .rg {
-  width: 77%;
-  padding: 40px 0 0 2vw;
+  width: 68%;
   font-size: 28px;
-  line-height: 97%;
+  line-height: 94%;
   letter-spacing: -0.8px;
+  padding-bottom: 5vw;
+  display: flex;
+}
+@media (max-width: 1200px) {
+  #root-index .sec_work-2 .work_it .rg {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  #root-index .sec_work-2 .work_it .rg {
+    width: 78%;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  #root-index .sec_work-2 .work_it .rg {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+#root-index .sec_work-2 .work_it .rg .border_height-work {
+  height: 130px;
+  background: #282828;
+  width: 1.2px;
+}
+#root-index .sec_work-2 .work_it .rg .ite {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2vw;
+}
+#root-index .sec_work-2 .work_it .rg .ite .name {
+  font-size: 46px;
+  padding: 2vw 0;
+  text-transform: uppercase;
+  font-family: "NeueMetana-Regular";
+  text-transform: uppercase;
+  opacity: 0;
+}
+@media (max-width: 1200px) {
+  #root-index .sec_work-2 .work_it .rg .ite .name {
+    font-size: 26px;
+    letter-spacing: -1px;
+  }
+}
+@media (max-width: 992px) {
+  #root-index .sec_work-2 .work_it .rg .ite .name {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    padding: 0.5vw 0;
+  }
 }/*# sourceMappingURL=style.min.css.map */

@@ -16,6 +16,8 @@ import {pagesTransitionsEx} from './pages.js';
 
 // "use strict";
 
+
+
 let locale;
 const mobileWidth = 992;
 
@@ -71,19 +73,21 @@ async function loadPage() {
     textClipTl.to('.word', {
         // height: 'auto',
         y: 0,
-        stagger: .15,
+        stagger: .17,
         // delay: 0.8,
-        duration: 1.4,
+        duration: 1.7,
         ease: "power4.out",
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
         // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
     })
-    
+    document.getElementById('language').addEventListener('click', ()=> {
+        console.log('ksksksk');
+    })
     gsap.to('.load_anim', {
         // height: 'auto',
         y: 0,
-        delay: 1,
-        duration: 1.7,
+        delay: 1.2,
+        duration: 1.2,
         ease: "power4.inOut",
         clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
     })
