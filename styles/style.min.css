@@ -93,7 +93,7 @@ canvas {
 
 .char:hover {
   font-family: "Wagon";
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.5rem;
 }
 
 .word {
@@ -407,7 +407,7 @@ canvas {
   font-family: "NeueMetana-Regular";
   text-transform: uppercase;
   font-size: 102px;
-  letter-spacing: -0.4rem;
+  letter-spacing: -0.2rem;
   line-height: 90%;
 }
 @media (max-width: 992px) {
@@ -460,12 +460,20 @@ canvas {
 #root-index .sec-1--about {
   position: relative;
 }
+@media (max-width: 576px) {
+  #root-index .sec-1--about {
+    padding: 70px 20px 0;
+  }
+}
 #root-index .sec-1--about .h1-t {
   z-index: 10;
+  color: rgb(255, 255, 255);
+  mix-blend-mode: difference;
 }
 @media (max-width: 576px) {
   #root-index .sec-1--about .h1-t {
-    font-size: 46px;
+    font-size: 56px;
+    text-align: right;
   }
 }
 #root-index .sec-1--about .rect {
@@ -866,7 +874,7 @@ canvas {
   font-family: "NeueMetana-Regular";
   text-transform: uppercase;
   font-size: 102px;
-  letter-spacing: -0.4rem;
+  letter-spacing: -0.2rem;
   line-height: 90%;
 }
 @media (max-width: 992px) {

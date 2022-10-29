@@ -31,7 +31,7 @@ export function init(mobileWidth) {
         height: window.innerHeight,
     }
     
-    scaleMultiplier = Math.min(1, sizes.width/mobileWidth*1.2);
+    scaleMultiplier = Math.min(1, sizes.width/mobileWidth*1.7);
 
     window.addEventListener('resize', () =>
     {

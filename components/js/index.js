@@ -67,18 +67,18 @@ async function loadPage() {
 
     // Разделение h1 заголовков на главной странице и анимация их повяления
     const text = new SplitType('.h1-a')
-
-    gsap.to('.word', {
+    const textClipTl = gsap.timeline()
+    textClipTl.to('.word', {
         // height: 'auto',
         y: 0,
         stagger: .15,
         // delay: 0.8,
         duration: 1.4,
         ease: "power4.out",
-        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
         // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
     })
-
+    
     gsap.to('.load_anim', {
         // height: 'auto',
         y: 0,
@@ -106,55 +106,107 @@ async function loadPage() {
     });
     // /Анимация пояления/расширения шоурила на главном экране (пока там просто черный блок)
 
+    //Перебор букв со сменой шрифта 
+    // if (window.innerWidth < mobileWidth) {
+        // setInterval(()=> {
+        //     const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
+        //     Math.random() > .75
+        // ))
 
-    // анимация появления и ухода меню на десктопе
+        // const tl_fontFamily = gsap.timeline()
+
+        // tl_fontFamily.to(h1FontFamily, {
+        //     fontFamily: 'Wagon',
+        //     letterSpacing: '0.4rem'
+        // })
+        // .to(h1FontFamily, {
+        //     fontFamily: 'NeueMetana-regular',
+        //     letterSpacing: '0.1rem',
+        //     // delay: Math.random() * 10
+        // }) 
+        
+        // }, 700)
+    // }
+    // /Перебор букв со сменой шрифта 
+
+    // Анимация появления и ухода меню на десктопе
+        
     if (window.innerWidth > mobileWidth) {
-        const tl = gsap.timeline()
+        // tl_menu.to(".menu_li", {
+        //     scrollTrigger: {
+        //         trigger: ".h1-t",
+        //         start: "top 70",
+        //         end: "top bottom",
+        //         toggleActions: "play none reverse none",
+        //         // markers: true
+        //     },
+        //     y: -30,
+        //     opacity: 0,
+        //     stagger: 0.1,
+        //     });
 
-        tl.to(".menu_li", {
-        scrollTrigger: {
-            trigger: ".h1-t",
-            start: "top 70",
-            end: "top bottom",
-            toggleActions: "play none reverse none",
-            // markers: true
-        },
-        y: -30,
-        opacity: 0,
-        stagger: 0.1,
-        });
+        // tl_menu.to(".menu_btn", {
+        //     scrollTrigger: {
+        //         trigger: ".h1-t",
+        //         start: "top 70",
+        //         end: "top bottom",
+        //         toggleActions: "play none reverse none",
+        //         // markers: true,
+        //     },
+        //     y: 0,
+        //     // display: 'block',
+        //     opacity: 1,
+        // });  
+        let menuIsOpen = false
 
-        tl.to(".menu_btn", {
-        scrollTrigger: {
-            trigger: ".h1-t",
-            start: "top 70",
-            end: "top bottom",
-            toggleActions: "play none reverse none",
-            // markers: true,
-        },
-        y: 0,
-        // display: 'block',
-        opacity: 1,
+        const tl_menu = gsap.timeline({
+            onComplete: ()=> {
+                menuIsOpen = true
+            }
+        })
+
+        tl_menu.to(".menu_li", {
+            y: -30,
+            opacity: 0,
+            stagger: 0.1,
+            });
+
+        tl_menu.to(".menu_btn", {
+            y: 0,
+            // display: 'block',
+            opacity: 1,
         });
+        console.log(window.scrollY);
+        window.addEventListener('scroll', ()=> {
+            const h1Pos = document.querySelector('.h1-t').getBoundingClientRect().top
+
+            // if (menuIsOpen || window.scrollY < h1Pos) {
+            if (window.scrollY < h1Pos) {
+                tl_menu.reverse()
+
+                menuIsOpen = false
+            } else if(window.scrollY > h1Pos) { 
+            //     if (!menuIsOpen && tl_menu.time() == tl_menu.duration()) {
+            //         tl_menu.restart()
+            // } else {
+                tl_menu.play()
+            // }
+        }
+        })
+        tl_menu.pause()
+
+        // tl_menu.restart()
         
         // Анимация при нажатии на кнопку меню
         document.querySelector(".menu_btn").addEventListener('click', () => {
-            
-            gsap.to(".menu_btn", {
-                y: +30,
-                // display: 'block',
-                opacity: 0,
-                });
+            tl_menu.reverse()
 
-            gsap.to(".menu_li", {
-                y: 0,
-                opacity: 1,
-                stagger: 0.1,
-                });
+            menuIsOpen = false
         });
+
         
     }
-    // /анимация появления и ухода меню на десктопе
+    // /Анимация появления и ухода меню на десктопе
 
 
     // Мобильное меню
@@ -218,6 +270,7 @@ async function loadPage() {
     if (document.title === 'Cases') {
         loadCases();
     }
+
 
     pagesTransitionsEx(loadPage);
 }

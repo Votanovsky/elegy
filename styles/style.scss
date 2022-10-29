@@ -143,9 +143,11 @@ canvas {
     // transform: translateY(60px);
     // opacity: 0;
     // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+        // transition: .3s;
     &:hover {
         font-family: 'Wagon';
-        letter-spacing: 0.4rem;
+        letter-spacing: .5rem;
+        // transform: translateY(20px);
         // transition: .3s;
     }
 }

@@ -10,6 +10,8 @@
 
     <script src="./index.js"></script>
 </head>
+
+
 <body data-barba="wrapper">
 
 <!-- PAGE TRANSITION ANIMATION -->
@@ -23,7 +25,7 @@
 
     <header class="hdr"></header>
 
-    <main id="root-index">
+    <main id="root-index" style="overflow: hidden;">
         <div class="blob">
             <!-- <canvas class="canvas"></canvas> -->
         </div>
@@ -46,7 +48,14 @@
     </main>
 </div>
 
-
+<style>
+    canvas {
+        height: 100vh;
+    }
+    #root-index {
+        height: 110vh;
+    }
+</style>
     
 </body>
 </html>
