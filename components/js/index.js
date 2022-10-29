@@ -53,19 +53,20 @@ async function loadPage() {
     await loadHeader();
     await loadFooter();
 
-    const langSwitch = document.querySelector("#language");
+    const langSwitches = document.querySelectorAll("#language");
+
+    langSwitches.forEach(langSwitch => langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
+        window.location.href = window.location.pathname;
+        locale = switchLang(langSwitch);
+        setCookie('locale', locale, 30);
+    }));
 
     locale = getCookie('locale'); // достаём локаль из куки
     if (!locale) { // если куки нет
-        locale = getLocale(); // получаем локаль пользователя
+        // locale = getLocale(); // получаем локаль пользователя
+        locale = 'en';
         setCookie('locale', locale, 30);
     }
-
-    langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
-        console.log(window.location.href = window.location.pathname);
-        locale = switchLang(langSwitch);
-        setCookie('locale', locale, 30);
-    });
 
     await localize(locale);
 
@@ -82,9 +83,7 @@ async function loadPage() {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
         // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
     })
-    document.getElementById('language').addEventListener('click', ()=> {
-        console.log('ksksksk');
-    })
+    
     gsap.to('.load_anim', {
         // height: 'auto',
         y: 0,
@@ -167,13 +166,16 @@ async function loadPage() {
 
         const tl_menu = gsap.timeline({
             onComplete: ()=> {
-                menuIsOpen = true
+                menuIsOpen = true;
+            },
+            onReverseComplete: () => {
+                menuIsOpen = false;
             }
         })
 
-        tl_menu.to(".menu_li", {
+        tl_menu.to([".menu_li"], {
             y: -30,
-            opacity: 0,
+            // opacity: 0,
             stagger: 0.1,
             });
 
@@ -187,11 +189,11 @@ async function loadPage() {
             const h1Pos = document.querySelector('.h1-t').getBoundingClientRect().top
 
             // if (menuIsOpen || window.scrollY < h1Pos) {
-            if (window.scrollY < h1Pos) {
+            if (menuIsOpen && window.scrollY < h1Pos) {
                 tl_menu.reverse()
 
-                menuIsOpen = false
-            } else if(window.scrollY > h1Pos) { 
+                // menuIsOpen = false
+            } else if(!menuIsOpen && window.scrollY >= h1Pos) { 
             //     if (!menuIsOpen && tl_menu.time() == tl_menu.duration()) {
             //         tl_menu.restart()
             // } else {
