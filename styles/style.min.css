@@ -1132,10 +1132,6 @@ canvas {
   display: none;
 }
 
-.bg-green {
-  background: #556158;
-}
-
 #root-index {
   width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -1224,6 +1220,8 @@ canvas {
   width: 100%;
   height: 1.2px;
   background: #282828;
+  -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+          clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 #root-index .sec_work-2 .work_it .lf {
   width: 32%;
@@ -1316,7 +1314,9 @@ canvas {
 #root-index .sec_work-2 .work_it .rg .border_height-work {
   height: 130px;
   background: #282828;
-  width: 1.2px;
+  width: 2px;
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
 }
 #root-index .sec_work-2 .work_it .rg .ite {
   display: flex;
@@ -1343,4 +1343,8 @@ canvas {
     letter-spacing: -0.5px;
     padding: 0.5vw 0;
   }
+}
+
+.bg-green {
+  background: #556158;
 }/*# sourceMappingURL=style.min.css.map */

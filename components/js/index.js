@@ -6,6 +6,8 @@ import SplitType from 'split-type';
 import { init, tick, stopTick } from './three.js';
 import {loadCases} from './cases.js';
 
+import {loadWork} from './work.js';
+
 import {loadFooter} from './footer.js';
 import {loadHeader} from './header.js';
 
@@ -273,6 +275,10 @@ async function loadPage() {
     
     if (document.title === 'Cases') {
         loadCases();
+    }
+    
+    if (document.title === 'Work') {
+        loadWork();
     }
 
 

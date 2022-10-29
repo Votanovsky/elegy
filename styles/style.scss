@@ -197,9 +197,7 @@ canvas {
 @import 'cases.scss';
  
 
-.bg-green {
-    background: $green-color;
-}
+
 #root-index{
     width: 100%;
     -webkit-font-smoothing: antialiased;
@@ -275,6 +273,7 @@ canvas {
                     width: 100%;
                     height: 1.2px;
                     background: $black-color;
+                    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
                 }
                 .lf {
                     width: 32%;
@@ -344,7 +343,8 @@ canvas {
                     .border_height-work {
                         height: 130px;
                         background: $black-color;
-                        width: 1.2px;
+                        width: 2px;
+                        clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
                     }
                     .ite {
                         display: flex;
@@ -374,4 +374,6 @@ canvas {
         }
     }
 }
-
+.bg-green {
+    background: $green-color;
+}
