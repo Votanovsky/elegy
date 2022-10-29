@@ -20,8 +20,9 @@
             padding: 90px 20px 120px;
         }
         @media  (max-width: $breakpoint-sm-min) {
-            padding: 90px 20px 70px;
-            height: 87vh;
+            padding: 90px 20px 65px;
+            height: auto;
+            justify-content: flex-start;
         }
         
         .h1-a {
@@ -49,6 +50,9 @@
         .h1-b {
             // margin-top: auto;
             text-align: right;
+            @media  (max-width: $breakpoint-sm-min) {
+                // margin-top: 60px;
+            }
         }
         
         .h6-a {
@@ -67,9 +71,25 @@
             }
 
             @media  (max-width: $breakpoint-sm-min) {
-                margin-bottom: 137px;
-                font-size: 14px;
+                // margin-bottom: 137px;
+                // font-size: 14px;
+                display: none;
             }
+            
+        }
+        .h6-a_mob {
+            font-size: 14px;
+            width: 230px;
+            line-height: 95%;
+            letter-spacing: -0.5px;
+            display: none;
+            margin-top: 40px;
+            margin-bottom: 0;
+            @media  (max-width: $breakpoint-sm-min) {
+                display: block;
+                
+            }
+            
         }
 
         &--about {
@@ -148,6 +168,9 @@
         @media  (max-width: $breakpoint-md-min) {
             padding: 60px 20px 0;
         }
+        @media  (max-width: $breakpoint-sm-min) {
+            padding: 0 20px;
+        }
         .cases_wr {
             // padding-top: 60px;
             display: flex;
@@ -195,7 +218,7 @@
                         // transition: .34s cubic-bezier(.42, 0, .58, 1);
                         transition: border-radius .5s cubic-bezier(.165, .84, .44, 1),filter .5s cubic-bezier(.165, .84, .44, 1),-webkit-filter .5s cubic-bezier(.165, .84, .44, 1);
                         @media  (max-width: $breakpoint-md-min) {
-                            border-radius: 10px;
+                            // border-radius: 10px;
                         }
                     }
                     img {
@@ -206,7 +229,7 @@
                         // transition: .34s cubic-bezier(.42, 0, .58, 1);
                         transition: border-radius .5s cubic-bezier(.165, .84, .44, 1),filter .5s cubic-bezier(.165, .84, .44, 1),-webkit-filter .5s cubic-bezier(.165, .84, .44, 1);
                         @media  (max-width: $breakpoint-md-min) {
-                            border-radius: 10px;
+                            // border-radius: 10px;
                         }
                         
                     }

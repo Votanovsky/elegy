@@ -399,8 +399,9 @@ canvas {
 }
 @media (max-width: 576px) {
   #root-index .sec-1 {
-    padding: 90px 20px 70px;
-    height: 87vh;
+    padding: 90px 20px 65px;
+    height: auto;
+    justify-content: flex-start;
   }
 }
 #root-index .sec-1 .h1-a {
@@ -453,8 +454,21 @@ canvas {
 }
 @media (max-width: 576px) {
   #root-index .sec-1 .h6-a {
-    margin-bottom: 137px;
-    font-size: 14px;
+    display: none;
+  }
+}
+#root-index .sec-1 .h6-a_mob {
+  font-size: 14px;
+  width: 230px;
+  line-height: 95%;
+  letter-spacing: -0.5px;
+  display: none;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+@media (max-width: 576px) {
+  #root-index .sec-1 .h6-a_mob {
+    display: block;
   }
 }
 #root-index .sec-1--about {
@@ -548,6 +562,11 @@ canvas {
     padding: 60px 20px 0;
   }
 }
+@media (max-width: 576px) {
+  #root-index .sec-2 {
+    padding: 0 20px;
+  }
+}
 #root-index .sec-2 .cases_wr {
   display: flex;
   width: 100%;
@@ -608,22 +627,12 @@ canvas {
   border-radius: 200px;
   transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-@media (max-width: 768px) {
-  #root-index .sec-2 .cases_wr .it .img-wr:hover img {
-    border-radius: 10px;
-  }
-}
 #root-index .sec-2 .cases_wr .it .img-wr img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-@media (max-width: 768px) {
-  #root-index .sec-2 .cases_wr .it .img-wr img {
-    border-radius: 10px;
-  }
 }
 #root-index .sec-2 .cases_wr .it .name {
   text-transform: uppercase;
