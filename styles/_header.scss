@@ -85,6 +85,7 @@
                 opacity: 0;
                 transition: .2s;
                 transform: translateY(30px);
+                text-transform: uppercase;
                 // transition-delay: 0.45s;
                 z-index: 1000;
                 // display: none; transform: translateY(30px); opacity: 0;
@@ -133,6 +134,13 @@
             
             @media  (max-width: $breakpoint-sm-min) {
                 font-size: 46px;
+            }
+            .lang {
+                border-radius: 0px;
+                &:hover {
+                    background: $black-color;
+                    color: $gray-color;
+                }
             }
             .menu_li_lay {
                 line-height: 90%;

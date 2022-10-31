@@ -170,12 +170,14 @@ async function loadPage() {
             y: -30,
             opacity: 0,
             stagger: 0.1,
+            ease: "power4.in"
             });
 
         tl_menu.to(".menu_btn", {
             y: 0,
             // display: 'block',
             opacity: 1,
+            ease: "power4.out"
         });
 
         window.onscroll = function(event) {

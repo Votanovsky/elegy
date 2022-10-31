@@ -84,6 +84,7 @@ export function pagesTransitionsEx(loadPage) {
                 // killAnimations();
                 // console.log(gsap.globalTimeline.getChildren());
                 loadPage()
+                window.scroll(0, 0);
                 done()
                 barba.destroy()
 
