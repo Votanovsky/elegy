@@ -18,8 +18,6 @@ import {pagesTransitionsEx} from './pages.js';
 
 // "use strict";
 
-
-
 let locale;
 const mobileWidth = 992;
 
@@ -165,17 +163,12 @@ async function loadPage() {
         let menuIsOpen = false
 
         const tl_menu = gsap.timeline({
-            onComplete: ()=> {
-                menuIsOpen = true;
-            },
-            onReverseComplete: () => {
-                menuIsOpen = false;
-            }
+
         })
 
         tl_menu.to([".menu_li"], {
             y: -30,
-            // opacity: 0,
+            opacity: 0,
             stagger: 0.1,
             });
 
@@ -184,32 +177,36 @@ async function loadPage() {
             // display: 'block',
             opacity: 1,
         });
-        console.log(window.scrollY);
-        window.addEventListener('scroll', ()=> {
-            const h1Pos = document.querySelector('.h1-t').getBoundingClientRect().top
 
-            // if (menuIsOpen || window.scrollY < h1Pos) {
+        window.onscroll = function(event) {
+            const h1Pos = document.querySelector('.h1-t').getBoundingClientRect().top;
+
             if (menuIsOpen && window.scrollY < h1Pos) {
-                tl_menu.reverse()
-
-                // menuIsOpen = false
-            } else if(!menuIsOpen && window.scrollY >= h1Pos) { 
-            //     if (!menuIsOpen && tl_menu.time() == tl_menu.duration()) {
-            //         tl_menu.restart()
-            // } else {
-                tl_menu.play()
-            // }
+                // console.log("play reverse");
+                tl_menu.reverse();
+                menuIsOpen = !menuIsOpen;
+            } 
+            else if(!menuIsOpen && window.scrollY >= h1Pos && self.oldScroll < self.scrollY) {
+                // console.log("play forward");
+                tl_menu.play();
+                menuIsOpen = !menuIsOpen;
+            }
+            self.oldScroll = self.scrollY;
         }
-        })
+
+        window.addEventListener('scroll', () => {
+           onscroll(); 
+        });
+
         tl_menu.pause()
 
         // tl_menu.restart()
         
         // Анимация при нажатии на кнопку меню
         document.querySelector(".menu_btn").addEventListener('click', () => {
-            tl_menu.reverse()
+            tl_menu.reverse();
 
-            menuIsOpen = false
+            menuIsOpen = false;
         });
 
         

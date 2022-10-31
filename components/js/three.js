@@ -33,21 +33,21 @@ export function init(mobileWidth) {
     
     scaleMultiplier = Math.min(1, sizes.width/mobileWidth*1.7);
 
-    window.addEventListener('resize', () =>
-    {
-        // Update sizes
-        sizes.width = window.innerWidth;
-        sizes.height = window.innerHeight;
-        aspectRatio = sizes.width / sizes.height;
+    // window.addEventListener('resize', () =>
+    // {
+    //     // Update sizes
+    //     sizes.width = window.innerWidth;
+    //     sizes.height = window.innerHeight;
+    //     aspectRatio = sizes.width / sizes.height;
     
-        // Update camera
-        camera.aspect = aspectRatio;
-        camera.updateProjectionMatrix();
+    //     // Update camera
+    //     camera.aspect = aspectRatio;
+    //     camera.updateProjectionMatrix();
         
-        // Update renderer
-        renderer.setSize(sizes.width, sizes.height);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    })
+    //     // Update renderer
+    //     renderer.setSize(sizes.width, sizes.height);
+    //     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    // })
 
     renderer = new THREE.WebGLRenderer({
         antialias: true,
