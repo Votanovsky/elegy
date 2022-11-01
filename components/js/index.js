@@ -116,18 +116,19 @@ async function loadPage() {
     if (window.innerWidth < mobileWidth) {
         setInterval(()=> {
             const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
-            Math.random() > .95
+            Math.random() > .97
         ))
 
         const tl_fontFamily = gsap.timeline()
 
         tl_fontFamily.to(h1FontFamily, {
-            fontFamily: 'Wagon',
-            letterSpacing: '0.1rem',
-            zIndex: 100
+            // fontFamily: 'Wagon',
+            color: '#87817B',
+            // letterSpacing: '0.1rem',
         })
         .to(h1FontFamily, {
-            fontFamily: 'NeueMetana-regular',
+            // fontFamily: 'NeueMetana-regular',
+            color: '#282828',
             // letterSpacing: '0.1rem',
             // delay: Math.random() * 10
         }) 
