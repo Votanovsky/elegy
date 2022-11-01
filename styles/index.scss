@@ -94,36 +94,24 @@
 
         &--about {
             position: relative;
-            @media  (max-width: $breakpoint-sm-min) {
-                padding: 70px 20px 0;
+            @media  (max-width: $breakpoint-md-min) {
+                padding: 90px 20px 0;
+                height: 95vh;
             }
             .h1-t {
                 z-index: 10;
                 color: rgb(255, 255, 255);
                 mix-blend-mode: difference;
-                @media  (max-width: $breakpoint-sm-min) {
+                top: 120px;
+                left: 50px;
+                position: absolute;
+                @media  (max-width: $breakpoint-md-min) {
                     font-size: 56px;
                     text-align: right;
+                    right: 20px;
+                    top: 70px;
                 }
             }
-            .rect {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                height: 500px;
-                width: 500px;
-                background: #000;
-                animation: rotate 10s linear infinite;
-            }
-            @keyframes rotate {
-                0% {
-                  transform: translate(-50%, -50%) rotate(0deg)
-                }
-                100% {
-                    transform: translate(-50%, -50%) rotate(360deg)
-                }
-              }
             .about_text {
                 position: absolute;
                 right: 60px;
@@ -133,9 +121,6 @@
                 z-index: 10;
                 color: rgb(255, 255, 255);
                 mix-blend-mode: difference;
-                // background: -webkit-linear-gradient(319deg, rgba(203,203,203,1) 0%, rgba(101,101,101,1) 48%, rgba(40,40,40,1) 83%);
-                // -webkit-background-clip: text;
-                // -webkit-text-fill-color: transparent;
                 @media  (max-width: $breakpoint-lg-min) {
                     width: 50%;
                     bottom: 40px;
@@ -152,10 +137,7 @@
                 }
                 
             }
-            @media  (max-width: $breakpoint-sm-min) {
-                padding: 90px 20px 70px;
-                height: 95vh;
-            }
+            
         }
     }
 

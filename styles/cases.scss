@@ -37,7 +37,7 @@
                     letter-spacing: -0.2rem;
                 }
                 @media  (max-width: $breakpoint-sm-min) {
-                    font-size: 58px;
+                    font-size: 54px;
                 }
             }
     
@@ -54,6 +54,7 @@
                 @media  (max-width: $breakpoint-lg-min) {
                     width: 100%;
                     margin-top: 20px;
+                    font-size: 14px;
                 }
             }
     
