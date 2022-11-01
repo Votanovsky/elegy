@@ -163,6 +163,7 @@ canvas {
 }
 .hdr .menu {
   display: flex;
+  font-size: 16px;
 }
 .hdr .menu ul {
   margin-left: 100px;

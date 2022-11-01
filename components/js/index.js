@@ -114,24 +114,24 @@ async function loadPage() {
 
     //Перебор букв со сменой шрифта 
     // if (window.innerWidth < mobileWidth) {
-        // setInterval(()=> {
-        //     const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
-        //     Math.random() > .75
-        // ))
+    //     setInterval(()=> {
+    //         const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
+    //         Math.random() > .9
+    //     ))
 
-        // const tl_fontFamily = gsap.timeline()
+    //     const tl_fontFamily = gsap.timeline()
 
-        // tl_fontFamily.to(h1FontFamily, {
-        //     fontFamily: 'Wagon',
-        //     letterSpacing: '0.4rem'
-        // })
-        // .to(h1FontFamily, {
-        //     fontFamily: 'NeueMetana-regular',
-        //     letterSpacing: '0.1rem',
-        //     // delay: Math.random() * 10
-        // }) 
+    //     tl_fontFamily.to(h1FontFamily, {
+    //         fontFamily: 'Wagon',
+    //         letterSpacing: '0.2rem'
+    //     })
+    //     .to(h1FontFamily, {
+    //         fontFamily: 'NeueMetana-regular',
+    //         // letterSpacing: '0.1rem',
+    //         // delay: Math.random() * 10
+    //     }) 
         
-        // }, 700)
+    //     }, 500)
     // }
     // /Перебор букв со сменой шрифта 
 

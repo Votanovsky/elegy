@@ -52,10 +52,10 @@ export function init(mobileWidth) {
     renderer = new THREE.WebGLRenderer({
         antialias: true,
         alpha: true,
-        // domElement: document.querySelector('canvas')
+        domElement: document.querySelector('.canvas')
     });
     renderer.setSize(sizes.width, sizes.height);
-    renderer.setClearColor(0xEDEDED, 0.5);
+    // renderer.setClearColor(0xEDEDED, 0.5);
     document.querySelector('.blob').appendChild(renderer.domElement);
 
     aspectRatio = sizes.width / sizes.height;
