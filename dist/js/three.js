@@ -21,7 +21,7 @@ blobScaleTl,
 noise = new createNoise3D(),
 velocities,
 clock,
-blobScale = {scale: 0.3};
+blobScale = {scale: 0.1};
 
 export function init(mobileWidth) {
     scene = new THREE.Scene();
@@ -55,13 +55,13 @@ export function init(mobileWidth) {
         // domElement: document.querySelector('canvas')
     });
     renderer.setSize(sizes.width, sizes.height);
-    renderer.setClearColor(0xEDEDED, 0.5);
+    // renderer.setClearColor(0xEDEDED, 0.5);
     document.querySelector('.blob').appendChild(renderer.domElement);
 
     aspectRatio = sizes.width / sizes.height;
     camera = new THREE.PerspectiveCamera( 
         45, aspectRatio, 0.1, 1000 );
-    camera.position.set(15, 15, 15);
+    camera.position.set(6, 6, 6);
     scene.add(camera);
     
     const dLightR = new THREE.PointLight(0xffffff, 1);
@@ -74,11 +74,11 @@ export function init(mobileWidth) {
     dLightTop.position.set(-10, 10, -5);
     scene.add(dLightTop);
 
-    const detalization = 250;
+    const detalization = 160;
 
     defaultColor = 0x404040;
 
-    radius = 3;
+    radius = 1;
 
     meshPosition = new THREE.Vector3(5, 0, 5);
     camera.lookAt(meshPosition.x, meshPosition.y, meshPosition.z);
@@ -113,7 +113,7 @@ export function init(mobileWidth) {
         reflectivity: .79,
         clearcoat: 0.767,
         clearcoatRoughness: 0.431,
-        flatShading: 767
+        flatShading: 1
     });
     
     mesh = new THREE.Mesh(geometry, material);
