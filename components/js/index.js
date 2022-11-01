@@ -113,26 +113,27 @@ async function loadPage() {
     // /Анимация пояления/расширения шоурила на главном экране (пока там просто черный блок)
 
     //Перебор букв со сменой шрифта 
-    // if (window.innerWidth < mobileWidth) {
-    //     setInterval(()=> {
-    //         const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
-    //         Math.random() > .9
-    //     ))
+    if (window.innerWidth < mobileWidth) {
+        setInterval(()=> {
+            const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
+            Math.random() > .95
+        ))
 
-    //     const tl_fontFamily = gsap.timeline()
+        const tl_fontFamily = gsap.timeline()
 
-    //     tl_fontFamily.to(h1FontFamily, {
-    //         fontFamily: 'Wagon',
-    //         letterSpacing: '0.2rem'
-    //     })
-    //     .to(h1FontFamily, {
-    //         fontFamily: 'NeueMetana-regular',
-    //         // letterSpacing: '0.1rem',
-    //         // delay: Math.random() * 10
-    //     }) 
+        tl_fontFamily.to(h1FontFamily, {
+            fontFamily: 'Wagon',
+            letterSpacing: '0.1rem',
+            zIndex: 100
+        })
+        .to(h1FontFamily, {
+            fontFamily: 'NeueMetana-regular',
+            // letterSpacing: '0.1rem',
+            // delay: Math.random() * 10
+        }) 
         
-    //     }, 500)
-    // }
+        }, 500)
+    }
     // /Перебор букв со сменой шрифта 
 
     // Анимация появления и ухода меню на десктопе
