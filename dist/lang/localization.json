@@ -35,28 +35,8 @@
     },
 
     "we-create": {
-        "en": "We create modern web-products that we would like to use ourselves.",
+        "en": "We create modern web-products that we'd be glad to use ourselves.",
         "ru": "Мы создаем современные веб-решения, которыми хотели бы пользоваться сами."
-    },
-
-    "research": {
-        "en": "Research",
-        "ru": "Исследование"
-    },
-    
-    "design": {
-        "en": "Design",
-        "ru": "Дизайн"
-    },
-    
-    "development": {
-        "en": "Development",
-        "ru": "Разработка"
-    },
-    
-    "seo": {
-        "en": "SEO",
-        "ru": "SEO"
     },
     
     "about": {
@@ -79,16 +59,35 @@
         "ru": "наши технологии"
     },
     
+    "seo": {
+        "en": "SEO",
+        "ru": "SEO"
+    },
+    
+    "seo-text": {
+        "en": "By performing internal site optimization, we also take care of SEO, ensuring that the site's parameters meet all essential requirements so that search engines willingly index them",
+        "ru": ""
+    },
+    
 
     "ui-ux": {
         "en": "UI/UX",
         "ru": "UI/UX"
     },
     
+    "ui-ux-text": {
+        "en": "Using best practices to make user interfaces as pleasant and intuitive as possible, so that users won't be having a hard time while interacting with them. Thus, they won't be distracted from using the product to its full extent by unnecessary elements and actions",
+        "ru": ""
+    },
 
     "creative-coding": {
         "en": "CREATIVE CODING",
         "ru": "CREATIVE CODING"
+    },
+    
+    "creative-coding-text": {
+        "en": "We use special program libraries to create colorful, stunning, and at the same time lightweight visual effects. As a result, we get an impressive picture plus good performance",
+        "ru": ""
     },
     
 
@@ -97,10 +96,20 @@
         "ru": "ГЕНЕРАТИВНАЯ ГРАФИКА"
     },
     
+    "generative-graphics-text": {
+        "en": "Generative graphics is basiaclly art created automatically, e.g. using program code with randomized values. It adds originality to page content",
+        "ru": ""
+    },
+    
 
     "webgl": {
         "en": "WEBGL",
         "ru": "WEBGL"
+    },
+    
+    "webgl-text": {
+        "en": "WebGL is a graphics rendering API for browsers. We use it for implementing high-performance graphics effects and structures",
+        "ru": ""
     },
     
 
@@ -108,10 +117,20 @@
         "en": "FRONTEND",
         "ru": "ФРОНТЕНД"
     },
+    
+    "frontend-text": {
+        "en": "Frontend is a crucial component of user experience, so we ensure that all the content is displayed correctly. We also take care of the structure of web pages so there are no visual bugs and other issues",
+        "ru": ""
+    },
 
     "d-models": {
         "en": "3D MODELS",
         "ru": "3D МОДЕЛИ"
+    },
+    
+    "d-models-text": {
+        "en": "We can provide custom 3D models as a part of your websites and applications. As well as generative graphics, it's a great way to draw more attention to certain details and enhance overall attractiveness",
+        "ru": ""
     },
     
     "animations": {
@@ -119,14 +138,29 @@
         "ru": "АНИМАЦИИ"
     },
     
+    "animations-text": {
+        "en": "Nice animations are a must-have for an attractive website today. We like animations and know how to make them look really good, so a product made by us certainly won't lack them",
+        "ru": ""
+    },
+    
     "backend": {
         "en": "BACKEND",
         "ru": "БЭКЕНД"
     },
     
+    "backend-text": {
+        "en": "We implement site's main functions, provide integration with databases and third-party services, and make possible dynamic changes of site's content",
+        "ru": ""
+    },
+    
     "web-design": {
         "en": "WEB DESIGN", 
         "ru": "ВЕБ-ДИЗАЙН"
+    },
+    
+    "web-design-text": {
+        "en": "Web design includes overall style and look of a product; also, creation of custom content, such as models, icons, videos, is possible",
+        "ru": ""
     },
     
     "alchemy": {
@@ -167,6 +201,36 @@
     "work-title": {
         "en": "how we create and launch web projects",
         "ru": "как мы создаем и запускаем веб-проекты"
+    },
+    
+    "research": {
+        "en": "Research",
+        "ru": "Исследование"
+    },
+
+    "research-text": {
+        "en": "",
+        "ru": ""
+    },
+    
+    "design": {
+        "en": "Design",
+        "ru": "Дизайн"
+    },
+
+    "design-text": {
+        "en": "",
+        "ru": ""
+    },
+    
+    "development": {
+        "en": "Development",
+        "ru": "Разработка"
+    },
+
+    "development-text": {
+        "en": "",
+        "ru": ""
     },
 
     "learn-more": {
