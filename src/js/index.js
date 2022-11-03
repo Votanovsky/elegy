@@ -44,6 +44,19 @@ function getCookie(cname) {
     return "";
 }
 
+// async function loadBody(title) {
+//     let address =  title ===    "Home"  ? "index.html"
+//                 : (title ===    "About" ? "about.html"
+//                 : (title ===    "Cases" ? "cases.html"
+//                 : (title ===    "Work"  ? "work.html"
+//                 : "")));
+//     let parser = new DOMParser();
+//     await fetch(address)
+//     .then(response => response.text())
+//     .then(text => parser.parseFromString(text, "text/html"))
+//     .then(doc => document.body = doc.body);
+// }
+
 async function loadPage() {
     await loadHeader();
     await loadFooter();
