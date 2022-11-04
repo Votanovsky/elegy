@@ -79,8 +79,8 @@ async function loadPage() {
     await localize(locale);
 
     // Разделение h1 заголовков на главной странице и анимация их повяления
-    const text = new SplitType('.h1-a')
-    const textClipTl = gsap.timeline()
+    const text = new SplitType('.h1-a');
+    const textClipTl = gsap.timeline();
     textClipTl.to('.word', {
         // height: 'auto',
         y: 0,
@@ -118,6 +118,78 @@ async function loadPage() {
         }
     });
     // /Анимация пояления/расширения шоурила на главном экране (пока там просто черный блок)
+
+    // Анимация выпадающго текста описания технологий
+
+    // function toggleTechDescription(el) {
+    //     let style = el.style;
+    //     console.log(style);
+    //     if (el.className === 'tech-it') {
+    //         gsap.to(el, {className: 'tech-it-open'});
+    //         gsap.to(style, {borderRadius: style.borderRadius * 72 / window.getComputedStyle(el, null).getPropertyValue('height').slice(0,-2) + 'px'})
+    //         techTl.play();
+    //         // gsap.to(el.style, {borderColor: 'red'})
+    //         // console.log(el.style);
+    //     }
+    //     else
+    //         gsap.to(el, {className: 'tech-it'});
+    // }
+
+    let blackColor = '#282828';
+    let grayColor = '#EDEDED';
+    
+    let items = gsap.utils.toArray('.tech-it');
+    let toggles = items.map(createAnimation);
+
+    function createAnimation(it) {
+        let text = it.querySelector('.tech-it-text');
+        // console.log(window.getComputedStyle(it).getPropertyValue('width'));
+        gsap.set(it, {
+            background: blackColor,
+            color: grayColor,
+            borderRadius: '50px',
+            // width: '585px'
+        });
+        gsap.set(text, {
+            height: 'auto',
+            opacity: 1,
+            padding: '20px'
+        });
+        let itAnimation = gsap.from(it, {
+            background: grayColor,
+            color: blackColor,
+            // width: 'min-content',
+            // borderRadius: '84px',
+            duration: 0.5,
+            ease: 'sine.in'
+        }).reverse();
+        let textAnimation = gsap.from(text, {
+            height: 0,
+            opacity: 0,
+            padding: 0,
+            duration: 0.5,
+            ease: 'sine.in'
+        }).reverse();
+
+        return function(clickedIt) {
+            if (it === clickedIt) {
+                textAnimation.reversed(!textAnimation.reversed());
+                itAnimation.reversed(!itAnimation.reversed());
+            }
+            else {
+                itAnimation.reverse();        
+                textAnimation.reverse();        
+            }
+        }
+    }
+
+    function toggleTechDescription(clickedIt) {
+        toggles.forEach(toggle => toggle(clickedIt));
+    }
+
+    document.querySelectorAll('.tech-it').forEach(it => {
+        it.addEventListener('click', () => toggleTechDescription(it));
+    });
 
     //Перебор букв со сменой шрифта 
     if (window.innerWidth < mobileWidth) {

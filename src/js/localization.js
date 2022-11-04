@@ -34,8 +34,8 @@ export async function localize(locale) {
         
     for (let key in strings) {
         document.querySelectorAll('#'+key)
-        .forEach(el => {
-            el.innerHTML = strings[key][locale]
+        .forEach(el => { 
+            el.innerHTML = strings[key][locale] + el.innerHTML;
         });
     }
 }

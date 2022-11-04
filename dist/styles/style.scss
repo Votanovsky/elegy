@@ -169,6 +169,7 @@ canvas {
         border-radius: 22px;
         padding: 0 7px 1.5px;
         letter-spacing: -0.5px;
+        cursor: pointer;
         &:hover {
             background: $black-color;
             color: $gray-color;

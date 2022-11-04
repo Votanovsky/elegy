@@ -112,6 +112,7 @@ canvas {
   border-radius: 22px;
   padding: 0 7px 1.5px;
   letter-spacing: -0.5px;
+  cursor: pointer;
 }
 .btn-title .cont:hover {
   background: #282828;
@@ -1066,7 +1067,7 @@ canvas {
   flex-wrap: wrap;
   margin: 0 auto;
 }
-#root-index .sec-5 .tech-it {
+#root-index .sec-5 .tech-it, #root-index .sec-5 .tech-it-open {
   font-size: 56px;
   letter-spacing: -0.3rem;
   border: 2px solid #282828;
@@ -1075,19 +1076,36 @@ canvas {
   margin-right: 8px;
   margin-bottom: 8px;
   color: #282828;
-  transition: 0.15s;
+  transition: 0.5s;
+  width: min-content;
+  height: fit-content;
+  text-align: center;
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  #root-index .sec-5 .tech-it {
+  #root-index .sec-5 .tech-it, #root-index .sec-5 .tech-it-open {
     font-size: 26px;
     letter-spacing: -0.1rem;
   }
 }
-#root-index .sec-5 .tech-it:hover {
+#root-index .sec-5 .tech-it:hover, #root-index .sec-5 .tech-it-open:hover {
   background: #282828;
   color: #EDEDED;
   transition: 0.15s;
+}
+#root-index .sec-5 .tech-it-open {
+  background: #282828;
+  color: #EDEDED;
+  border-color: #EDEDED;
+  transition: 0.5s;
+}
+#root-index .sec-5 .tech-it-text {
+  font-size: 16px;
+  letter-spacing: 0rem;
+  background: transparent;
+  color: #EDEDED;
+  width: 100%;
+  overflow: hidden;
 }
 
 #root-index {

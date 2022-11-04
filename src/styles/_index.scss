@@ -408,7 +408,10 @@
                 margin-right: 8px;
                 margin-bottom: 8px;
                 color: $black-color;
-                transition:  .15s;
+                transition:  .5s;
+                width: min-content;
+                height: fit-content;
+                text-align: center;
                 @media  (max-width: $breakpoint-md-min) {
                     font-size: 26px;
                     letter-spacing: -0.1rem;
@@ -423,6 +426,17 @@
                     color: $gray-color;
                     transition:  .15s;
                     // padding: 0 60px;
+                }
+                &-text {
+                    // display: none;
+                    font-size: 16px;
+                    letter-spacing: 0rem;
+                    background: transparent;
+                    color: $gray-color;
+                    width: 100%;
+                    // padding: 0;
+                    // height: 0;
+                    overflow: hidden;
                 }
             }
         }

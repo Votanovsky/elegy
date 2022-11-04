@@ -76,13 +76,13 @@
     },
     
     "ui-ux-text": {
-        "en": "Using best practices to make user interfaces as pleasant and intuitive as possible, so that users won't be having a hard time while interacting with them. Thus, they won't be distracted from using the product to its full extent by unnecessary elements and actions",
+        "en": "Using best practices to make user interfaces as pleasant and intuitive as possible, so that users won't be having a hard time interacting with them. Thus, they won't be distracted from utilizing the product to its full extent by unnecessary elements and actions",
         "ru": ""
     },
 
     "creative-coding": {
-        "en": "CREATIVE CODING",
-        "ru": "CREATIVE CODING"
+        "en": "CREATIVE&nbsp;CODING",
+        "ru": "CREATIVE&nbsp;CODING"
     },
     
     "creative-coding-text": {
@@ -92,8 +92,8 @@
     
 
     "generative-graphics": {
-        "en": "GENERATIVE GRAPHICS",
-        "ru": "ГЕНЕРАТИВНАЯ ГРАФИКА"
+        "en": "GENERATIVE&nbsp;GRAPHICS",
+        "ru": "ГЕНЕРАТИВНАЯ&nbsp;ГРАФИКА"
     },
     
     "generative-graphics-text": {
@@ -124,8 +124,8 @@
     },
 
     "d-models": {
-        "en": "3D MODELS",
-        "ru": "3D МОДЕЛИ"
+        "en": "3D&nbsp;MODELS",
+        "ru": "3D&nbsp;МОДЕЛИ"
     },
     
     "d-models-text": {
@@ -154,7 +154,7 @@
     },
     
     "web-design": {
-        "en": "WEB DESIGN", 
+        "en": "WEB&nbsp;DESIGN", 
         "ru": "ВЕБ-ДИЗАЙН"
     },
     
