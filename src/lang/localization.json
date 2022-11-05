@@ -26,32 +26,31 @@
 
     "title-1": {
         "en": "a digital web studio <br> creating",
-        "ru": "веб-студия, которая <br> создает"
+        "ru": "a digital web studio <br> creating"
     },
 
     "title-2": {
-        "en": "sites that <br> cause emotion",
-        "ru": "сайты, вызывающие <br> эмоции"
-    },
-
-    "we-create": {
-        "en": "We create modern web-products that we'd be glad to use ourselves.",
-        "ru": "Мы создаем современные веб-решения, которыми хотели бы пользоваться сами."
+        "en": "advanced <br> sites & web - apps",
+        "ru": "advanced <br> sites & web - apps"
     },
     
+    "we-create": {
+        "en": "We create modern web-products that cause emotions!",
+        "ru": "Мы создаем современные веб-решения, которые вызвают эмоции!"
+    },
     "about": {
         "en": "about",
         "ru": "о нас"
     },
     
     "we-are-studio": {
-        "en": "We are a studio that creates",
-        "ru": "Мы - студия, которая творит"
+        "en": "Creating modern web-products <br> that we'd be glad to use ourselves.",
+        "ru": "Creating modern web-products <br> that we'd be glad to use ourselves."
     },
     
     "showreel-desc": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+        "en": "We help our customers provide their users with unique user experience. We believe that the key to launching a successful product is close cooperation. That’s why we build a special approach to each customer, which allows us to uncover each other in business, creativity and development.",
+        "ru": "Помогаем нашим клиентам предоставлять своим пользователям уникальный пользовательский опыт. Мы считаем, что залог запуска успешного продукта - это тесное сотрудничество. поэтому к каждому заказчику мы выстраиваем особый подход, который позволяет нам расскрывать друг друга в бизнесе, творчестве и разработке."
     },
 
     "our-tech": {
@@ -62,6 +61,11 @@
     "seo": {
         "en": "SEO",
         "ru": "SEO"
+    },
+
+    "maintenance": {
+        "en": "maintenance",
+        "ru": "maintenance"
     },
     
     "seo-text": {
@@ -83,6 +87,10 @@
     "creative-coding": {
         "en": "CREATIVE&nbsp;CODING",
         "ru": "CREATIVE&nbsp;CODING"
+    },
+    "creativity": {
+        "en": "Creativity",
+        "ru": "Creativity"
     },
     
     "creative-coding-text": {
@@ -179,28 +187,63 @@
     },
 
     "sec-cases-1-text": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+        "en": "Here we want to tell you and show you all that we can!",
+        "ru": "Тут мы хотим вам рассказать и показать всё, что мы умеем!"
     },
 
     "case-1-descr": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+        "en": "We design & developed a shop for the techwear brand by visualizing the processability of clothing through particle systems that placed on the main pages of the site. In this project we combined the coarseness of simplicity with the elegance of modern technology.",
+        "ru": "Мы задизайнили разработали магазин для techwear бренда, визуализировав технологичность одежды через системы частиц, которые поместили на главные страницы сайте. В этом проекте мы совместили грубость простоты с изящностью современных технологий."
     },
 
     "case-2-descr": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+        "en": "Lots and lots of animations and computer graphics. This is how we can characterize what we have developed for design - the SMTH 0111 project which has brought together artists around the world.",
+        "ru": "Много-много анимаций и компьютерной графики. Именно так можно охарактеризовать то, что мы разработали для дизайн - проекта SMTH 0111, который объединил художников по всему миру."
     },
 
     "case-3-descr": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+        "en": "Comprehensive development of the website of the store of women’s underwear affordable luxe segment. Design, development, graphics, as well as technical support. We have created a website management system that integrates popular CRM to track business, delivery and payment operations.",
+        "ru": "Комплексная разработка сайта магазина женского нижнего белья affordable luxe сегмента. Дизайн, разработка, графика, а так же техническое сопровождение. Мы создали систему управления сайтом, интегрировав в него популярные CRM для отслеживания работы бизнеса, службы доставок и систему оплаты."
+    },
+
+    "case-4-descr": {
+        "en": "Helped to develop a series of promotional games for the creative studio, which specializes in presentations - Bonnie & Slide. In every game, users could earn points and get great bonuses from the studio!",
+        "ru": "Помогли разработать серию промо игр для креативной студии, которая специализируется на презентациях - Bonnie & Slide. В каждой игре пользователи могли набирать очки и получать за это отличные бонусы от студии!"
     },
 
     "work-title": {
         "en": "how we create and launch web projects",
         "ru": "как мы создаем и запускаем веб-проекты"
+    },
+
+    "work-descr-1": {
+        "en": "While creating unique experience for brands and organizations, we thoroughly investigate competitors and the market, research user experience and analyze current trends. The best analysis allows us to create the most effective and competitive products.",
+        "ru": "При создания уникального опыта для брендов и организаций, мы детально исследуем конкурентов и рынок, исследуем пользовательский опыт и анализируем современные тенденции. Лучший анализ позволяет нам создавать наиболее эффективные и конкурентноспособные продукты."
+    },
+
+    "work-descr-2": {
+        "en": "Using the best practice to create interesting and clear design for the user, make it not only effective, but also spectacular. We complement our sites with animations and interactive 3D, they will not be boring!",
+        "ru": "Используем лучшие методы, чтобы создать для пользователя интересный и понятный дизайн, делаем его не только эффективным, но и эффектным. Дополняем наши сайты анимациями и интерактивным 3D, на них никто не сможет заскучать!"
+    },
+
+    "work-descr-3": {
+        "en": "We build, make frontend and backend development, creating siteы and complex web-applications, simple web-games. We implement site’s main functions, provide integration with databases, crm-systems and third-party services, and enable users to interact with site’s content",
+        "ru": "Мы верстаем, делаем фронтенд и бэкенд разработку, создаваем сайты и сложные веб-приложения, простые веб-игры. Мы реализуем основные функции сайта, обеспечиваем интеграцию с базами данных, crm-системами и сторонними сервисами, и позволяем пользователям взаимодействовать с содержанием сайта"
+    },
+
+    "work-descr-4": {
+        "en": "We use progressive program libraries to create colorful, stunning, and at the same time lightweight visual effects. As a result, we get an impressive picture plus good performance",
+        "ru": "Мы используем продвинутые программные библиотеки для создания красочных, потрясающих и в то же время легковесных визуальных эффектов. В результате мы получаем впечатляющую картину плюс хорошую производительность"
+    },
+
+    "work-descr-5": {
+        "en": "By performing internal site optimization, we also take care of SEO, ensuring that the site’s parameters meet all essential requirements so that search engines willingly index them",
+        "ru": "Осуществляя внутреннюю оптимизацию сайта, мы также заботимся о SEO, чтобы параметры сайта соответствовали всем основным требованиям для улучшения индексации в поисковых системах."
+    },
+
+    "work-descr-6": {
+        "en": "Support and maintenance are provided to all our products. After deploying a website, we’re also glad to take orders for further changes to make it even better.",
+        "ru": "Поддержка и обслуживание предоставляются всем нашим продуктам. После запуска веб-сайта, мы также будем рады помогать вам в его дальнейших изменениях, чтобы сделать ваш продукт еще лучше."
     },
     
     "research": {
@@ -216,6 +259,11 @@
     "design": {
         "en": "Design",
         "ru": "Дизайн"
+    },
+
+    "crm": {
+        "en": "CRM",
+        "ru": "CRM"
     },
 
     "design-text": {

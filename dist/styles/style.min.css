@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::-moz-selection {
+  background-color: rgba(40, 40, 40, 0.3882352941);
+}
 *::selection {
   background-color: rgba(40, 40, 40, 0.3882352941);
 }
@@ -95,12 +98,14 @@ canvas {
 
 .word {
   transform: translateY(40px);
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .load_anim {
   transform: translateY(20px);
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
 .btn-title {
@@ -268,7 +273,8 @@ canvas {
   line-height: 90%;
   margin-bottom: 20px;
   text-transform: uppercase;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   z-index: 200;
 }
 .hdr .menu_layout ul .menu_li_lay-active a {
@@ -444,6 +450,12 @@ canvas {
   flex-direction: column;
   margin-bottom: 90px;
 }
+@media (min-width: 992px) {
+  .sec_cases-2 .cs_cont {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+}
 @media (max-width: 768px) {
   .sec_cases-2 .cs_cont {
     margin-bottom: 40px;
@@ -492,7 +504,8 @@ canvas {
   }
 }
 .sec_cases-2 .cs_wrap .pre_it .for_mob-it .border_height {
-  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
   height: auto;
   bottom: 0;
   background: #282828;
@@ -508,7 +521,8 @@ canvas {
   width: 100%;
   height: 1.2px;
   background-color: #282828;
-  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+          clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 .sec_cases-2 .cs_wrap .pre_it .it {
   width: 100%;
@@ -529,7 +543,6 @@ canvas {
   .sec_cases-2 .cs_wrap .pre_it .it .img_wrap {
     width: 100%;
     padding: 2vw 0;
-    padding-left: 2vw;
   }
 }
 .sec_cases-2 .cs_wrap .pre_it .it .img_wrap img {
@@ -546,7 +559,8 @@ canvas {
   }
 }
 .sec_cases-2 .cs_wrap .pre_it .it .info_wrap .border_height {
-  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
   height: 100%;
   background: #282828;
   width: 1.2px;
@@ -568,7 +582,7 @@ canvas {
 }
 @media (max-width: 992px) {
   .sec_cases-2 .cs_wrap .pre_it .it .info_wrap .info {
-    padding: 1vw 0vw 2vw 2vw;
+    padding: 1vw 1vw 2vw 0;
   }
 }
 .sec_cases-2 .cs_wrap .pre_it .it .info_wrap .info .name {
@@ -581,7 +595,8 @@ canvas {
 }
 @media (max-width: 992px) {
   .sec_cases-2 .cs_wrap .pre_it .it .info_wrap .info .name {
-    display: none;
+    font-size: 18px;
+    margin-bottom: 12px;
   }
 }
 .sec_cases-2 .cs_wrap .pre_it .it .info_wrap .info .descr {
@@ -862,13 +877,14 @@ canvas {
 }
 #root-index .sec-2 .cases_wr .it .img-wr:hover img {
   border-radius: 200px;
-  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #root-index .sec-2 .cases_wr .it .img-wr img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #root-index .sec-2 .cases_wr .it .name {
   text-transform: uppercase;
@@ -1067,7 +1083,7 @@ canvas {
   flex-wrap: wrap;
   margin: 0 auto;
 }
-#root-index .sec-5 .tech-it, #root-index .sec-5 .tech-it-open {
+#root-index .sec-5 .tech-it {
   font-size: 56px;
   letter-spacing: -0.3rem;
   border: 2px solid #282828;
@@ -1077,27 +1093,25 @@ canvas {
   margin-bottom: 8px;
   color: #282828;
   transition: 0.5s;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   text-align: center;
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  #root-index .sec-5 .tech-it, #root-index .sec-5 .tech-it-open {
+  #root-index .sec-5 .tech-it {
     font-size: 26px;
     letter-spacing: -0.1rem;
   }
 }
-#root-index .sec-5 .tech-it:hover, #root-index .sec-5 .tech-it-open:hover {
+#root-index .sec-5 .tech-it:hover {
   background: #282828;
   color: #EDEDED;
   transition: 0.15s;
-}
-#root-index .sec-5 .tech-it-open {
-  background: #282828;
-  color: #EDEDED;
-  border-color: #EDEDED;
-  transition: 0.5s;
 }
 #root-index .sec-5 .tech-it-text {
   font-size: 16px;
@@ -1196,7 +1210,8 @@ canvas {
   width: 100%;
   height: 1.2px;
   background: #282828;
-  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+          clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 #root-index .sec_work-2 .work_it .lf {
   width: 32%;
@@ -1219,6 +1234,9 @@ canvas {
 #root-index .sec_work-2 .work_it .lf .name {
   font-size: 46px;
   letter-spacing: -0.1rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transform: translateY(20px);
 }
 @media (max-width: 1200px) {
   #root-index .sec_work-2 .work_it .lf .name {
@@ -1290,7 +1308,8 @@ canvas {
   height: 130px;
   background: #282828;
   width: 2px;
-  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
 }
 #root-index .sec_work-2 .work_it .rg .ite {
   display: flex;

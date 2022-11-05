@@ -38,6 +38,17 @@ export function loadCases() {
     });
     // /Появления бордеров у проектов по триггеру
 
+    // Появление видео 
+    if (window.innerWidth > 992) {
+        gsap.to(".cs_cont ", {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            ease: "power4.inOut",
+            duration: 2,
+        });
+    }
+    // /Появление видео 
+
+
     // Смена цвета страницы и цвета хедера
     gsap.to("#root-index", {
         background: 'rgb(135,129,123)',

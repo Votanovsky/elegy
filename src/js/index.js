@@ -366,6 +366,29 @@ async function loadPage() {
         loadWork();
     }
 
+    // Создаем дату для футтера 
+   
+
+    
+    function createZeroFirst(value)
+    {
+        if (value < 10)
+        {
+            value='0'+value;
+        }
+        return value;
+    }
+
+    function addDateNow() {
+        const now = new Date();
+
+        let year_js = createZeroFirst( now.getFullYear() )
+        let month_js = createZeroFirst( now.getMonth() )
+        let day_js = createZeroFirst( now.getDate() )
+
+        return year_js+"."+month_js+"."+day_js
+    }
+    document.getElementById('date_now').innerHTML = addDateNow();
 
     pagesTransitionsEx(loadPage);
 }
