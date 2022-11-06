@@ -16,11 +16,6 @@ export function switchLang(language){
     let locale;
     for (let key in strings["language"]){
         locale = (language.innerHTML === strings["language"][key]) ? key : locale;
-        console.log(language.innerHTML === strings["language"][key]);
-        console.log(language);
-        console.log(strings["language"][key]);
-        console.log(key);
-        console.log(locale);
     }
 
     locale = languages[
@@ -28,8 +23,7 @@ export function switchLang(language){
         0 : 
         (languages.indexOf(locale) + 1)]
     
-    localize(locale);
-    // console.log(locale);
+    // localize(locale);
     return locale;
 }
 
