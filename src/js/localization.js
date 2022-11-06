@@ -16,6 +16,11 @@ export function switchLang(language){
     let locale;
     for (let key in strings["language"]){
         locale = (language.innerHTML === strings["language"][key]) ? key : locale;
+        console.log(language.innerHTML === strings["language"][key]);
+        console.log(language);
+        console.log(strings["language"][key]);
+        console.log(key);
+        console.log(locale);
     }
 
     locale = languages[
@@ -24,6 +29,7 @@ export function switchLang(language){
         (languages.indexOf(locale) + 1)]
     
     localize(locale);
+    // console.log(locale);
     return locale;
 }
 
@@ -35,7 +41,8 @@ export async function localize(locale) {
     for (let key in strings) {
         document.querySelectorAll('#'+key)
         .forEach(el => { 
-            el.innerHTML = strings[key][locale] + el.innerHTML;
+            // el.innerHTML = el.innerHTML === ' ' || el.innerHTML === '' ? strings[key][locale] : strings[key][locale] + el.innerHTML;
+            el.innerHTML = strings[key][locale];
         });
     }
 }
