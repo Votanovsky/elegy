@@ -92,104 +92,65 @@ async function loadPage() {
         // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
     })
     
-    gsap.to('.load_anim', {
-        // height: 'auto',
-        y: 0,
-        delay: 1.2,
-        duration: 1.2,
-        ease: "power4.inOut",
-        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
-    })
     // /Разделение h1 заголовков на главной странице и анимация их повяления
-
-
-
-    // Анимация пояления/расширения шоурила на главном экране (пока там просто черный блок)
-    gsap.to(".showreel_wr", {
-        width: '100%',
-        ease: "power4.inOut",
-        scrollTrigger: {
-            trigger: ".showreel_trig",
-            start: "top center",
-            end: "top top",
-            scrub: 4,
-            // markers: true,
-            // id: "scrub"
-        }
-    });
-    // /Анимация пояления/расширения шоурила на главном экране (пока там просто черный блок)
 
     // Анимация выпадающго текста описания технологий
 
-    // function toggleTechDescription(el) {
-    //     let style = el.style;
-    //     console.log(style);
-    //     if (el.className === 'tech-it') {
-    //         gsap.to(el, {className: 'tech-it-open'});
-    //         gsap.to(style, {borderRadius: style.borderRadius * 72 / window.getComputedStyle(el, null).getPropertyValue('height').slice(0,-2) + 'px'})
-    //         techTl.play();
-    //         // gsap.to(el.style, {borderColor: 'red'})
-    //         // console.log(el.style);
+    // let blackColor = '#282828';
+    // let grayColor = '#EDEDED';
+    
+    // let items = gsap.utils.toArray('.tech-it');
+    // let toggles = items.map(createAnimation);
+
+    // function createAnimation(it) {
+    //     let text = it.querySelector('.tech-it-text');
+    //     // console.log(window.getComputedStyle(it).getPropertyValue('width'));
+    //     gsap.set(it, {
+    //         background: blackColor,
+    //         color: grayColor,
+    //         borderRadius: '50px',
+    //         // width: '585px'
+    //     });
+    //     gsap.set(text, {
+    //         height: 'auto',
+    //         opacity: 1,
+    //         padding: '20px'
+    //     });
+    //     let itAnimation = gsap.from(it, {
+    //         background: grayColor,
+    //         color: blackColor,
+    //         // width: 'min-content',
+    //         // borderRadius: '84px',
+    //         duration: 0.5,
+    //         ease: 'sine.in'
+    //     }).reverse();
+    //     let textAnimation = gsap.from(text, {
+    //         height: 0,
+    //         opacity: 0,
+    //         padding: 0,
+    //         duration: 0.5,
+    //         ease: 'sine.in'
+    //     }).reverse();
+
+    //     return function(clickedIt) {
+    //         if (it === clickedIt) {
+    //             textAnimation.reversed(!textAnimation.reversed());
+    //             itAnimation.reversed(!itAnimation.reversed());
+    //         }
+    //         else {
+    //             itAnimation.reverse();        
+    //             textAnimation.reverse();        
+    //         }
     //     }
-    //     else
-    //         gsap.to(el, {className: 'tech-it'});
     // }
 
-    let blackColor = '#282828';
-    let grayColor = '#EDEDED';
-    
-    let items = gsap.utils.toArray('.tech-it');
-    let toggles = items.map(createAnimation);
+    // function toggleTechDescription(clickedIt) {
+    //     toggles.forEach(toggle => toggle(clickedIt));
+    // }
 
-    function createAnimation(it) {
-        let text = it.querySelector('.tech-it-text');
-        // console.log(window.getComputedStyle(it).getPropertyValue('width'));
-        gsap.set(it, {
-            background: blackColor,
-            color: grayColor,
-            borderRadius: '50px',
-            // width: '585px'
-        });
-        gsap.set(text, {
-            height: 'auto',
-            opacity: 1,
-            padding: '20px'
-        });
-        let itAnimation = gsap.from(it, {
-            background: grayColor,
-            color: blackColor,
-            // width: 'min-content',
-            // borderRadius: '84px',
-            duration: 0.5,
-            ease: 'sine.in'
-        }).reverse();
-        let textAnimation = gsap.from(text, {
-            height: 0,
-            opacity: 0,
-            padding: 0,
-            duration: 0.5,
-            ease: 'sine.in'
-        }).reverse();
-
-        return function(clickedIt) {
-            if (it === clickedIt) {
-                textAnimation.reversed(!textAnimation.reversed());
-                itAnimation.reversed(!itAnimation.reversed());
-            }
-            else {
-                itAnimation.reverse();        
-                textAnimation.reverse();        
-            }
-        }
-    }
-
-    function toggleTechDescription(clickedIt) {
-        toggles.forEach(toggle => toggle(clickedIt));
-    }
-
-    document.querySelectorAll('.tech-it').forEach(it => {
-        it.addEventListener('click', () => toggleTechDescription(it));
-    });
+    // document.querySelectorAll('.tech-it').forEach(it => {
+    //     it.addEventListener('click', () => toggleTechDescription(it));
+    // });
 
     //Перебор букв со сменой шрифта 
     if (window.innerWidth < mobileWidth) {
@@ -348,28 +309,48 @@ async function loadPage() {
 
     }
 
-
     if (document.title === 'About') {
-        // const canvas = document.querySelector('canvas');
-        // console.log(canvas);
         init(mobileWidth);
         tick();
     }
-    else
-        stopTick();
-    
-    if (document.title === 'Cases') {
-        loadCases();
-    }
-    
-    if (document.title === 'Work') {
-        loadWork();
-    }
+    else {
+        stopTick(); // Остановка блоба на остальных страницах
 
+        if (document.title === 'Home') {
+            // Анимация пояления/расширения шоурила на главном экране
+            gsap.to(".showreel_wr", {
+                width: '100%',
+                ease: "power4.inOut",
+                scrollTrigger: {
+                    trigger: ".showreel_trig",
+                    start: "top center",
+                    end: "top top",
+                    scrub: 4,
+                    // markers: true,
+                    // id: "scrub"
+                }
+            });
+            // /Анимация пояления/расширения шоурила на главном экране
+    
+            gsap.to('.load_anim', {
+                // height: 'auto',
+                y: 0,
+                delay: 1.2,
+                duration: 1.2,
+                ease: "power4.inOut",
+                clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
+            })
+        }
+        else if (document.title === 'Cases') {
+            loadCases();
+        }
+        else if (document.title === 'Work') {
+            loadWork();
+        }
+    }
+    
     // Создаем дату для футтера 
-   
-
-    
+      
     function createZeroFirst(value)
     {
         if (value < 10)
@@ -383,7 +364,7 @@ async function loadPage() {
         const now = new Date();
 
         let year_js = createZeroFirst( now.getFullYear() )
-        let month_js = createZeroFirst( now.getMonth() )
+        let month_js = createZeroFirst( now.getMonth() + 1 )
         let day_js = createZeroFirst( now.getDate() )
 
         return year_js+"."+month_js+"."+day_js

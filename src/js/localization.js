@@ -23,7 +23,7 @@ export function switchLang(language){
         0 : 
         (languages.indexOf(locale) + 1)]
     
-    localize(locale);
+    // localize(locale);
     return locale;
 }
 
@@ -35,7 +35,8 @@ export async function localize(locale) {
     for (let key in strings) {
         document.querySelectorAll('#'+key)
         .forEach(el => { 
-            el.innerHTML = strings[key][locale] + el.innerHTML;
+            // el.innerHTML = el.innerHTML === ' ' || el.innerHTML === '' ? strings[key][locale] : strings[key][locale] + el.innerHTML;
+            el.innerHTML = strings[key][locale];
         });
     }
 }
