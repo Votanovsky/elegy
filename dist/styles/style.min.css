@@ -4,9 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-*::-moz-selection {
-  background-color: rgba(40, 40, 40, 0.3882352941);
-}
 *::selection {
   background-color: rgba(40, 40, 40, 0.3882352941);
 }
@@ -98,14 +95,12 @@ canvas {
 
 .word {
   transform: translateY(40px);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .load_anim {
   transform: translateY(20px);
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
 .btn-title {
@@ -273,8 +268,7 @@ canvas {
   line-height: 90%;
   margin-bottom: 20px;
   text-transform: uppercase;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   z-index: 200;
 }
 .hdr .menu_layout ul .menu_li_lay-active a {
@@ -452,8 +446,7 @@ canvas {
 }
 @media (min-width: 992px) {
   .sec_cases-2 .cs_cont {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 }
 @media (max-width: 768px) {
@@ -504,8 +497,7 @@ canvas {
   }
 }
 .sec_cases-2 .cs_wrap .pre_it .for_mob-it .border_height {
-  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
-          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
   height: auto;
   bottom: 0;
   background: #282828;
@@ -521,8 +513,7 @@ canvas {
   width: 100%;
   height: 1.2px;
   background-color: #282828;
-  -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
-          clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 .sec_cases-2 .cs_wrap .pre_it .it {
   width: 100%;
@@ -559,8 +550,7 @@ canvas {
   }
 }
 .sec_cases-2 .cs_wrap .pre_it .it .info_wrap .border_height {
-  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
-          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
   height: 100%;
   background: #282828;
   width: 1.2px;
@@ -877,14 +867,13 @@ canvas {
 }
 #root-index .sec-2 .cases_wr .it .img-wr:hover img {
   border-radius: 200px;
-  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #root-index .sec-2 .cases_wr .it .img-wr img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  object-fit: cover;
+  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #root-index .sec-2 .cases_wr .it .name {
   text-transform: uppercase;
@@ -1093,11 +1082,6 @@ canvas {
   margin-bottom: 8px;
   color: #282828;
   transition: 0.5s;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   text-align: center;
   cursor: pointer;
@@ -1210,8 +1194,7 @@ canvas {
   width: 100%;
   height: 1.2px;
   background: #282828;
-  -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
-          clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 #root-index .sec_work-2 .work_it .lf {
   width: 32%;
@@ -1234,8 +1217,7 @@ canvas {
 #root-index .sec_work-2 .work_it .lf .name {
   font-size: 46px;
   letter-spacing: -0.1rem;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transform: translateY(20px);
 }
 @media (max-width: 1200px) {
@@ -1308,8 +1290,7 @@ canvas {
   height: 130px;
   background: #282828;
   width: 2px;
-  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
-          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
 }
 #root-index .sec_work-2 .work_it .rg .ite {
   display: flex;

@@ -309,14 +309,14 @@ async function loadPage() {
 
     }
 
-    if (document.title === 'About') {
+    if (document.title === 'About Elegy') {
         init(mobileWidth);
         tick();
     }
     else {
         stopTick(); // Остановка блоба на остальных страницах
 
-        if (document.title === 'Home') {
+        if (document.title === 'Elegy Studio') {
             // Анимация пояления/расширения шоурила на главном экране
             gsap.to(".showreel_wr", {
                 width: '100%',
@@ -341,10 +341,10 @@ async function loadPage() {
                 clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
             })
         }
-        else if (document.title === 'Cases') {
+        else if (document.title === 'Our cases') {
             loadCases();
         }
-        else if (document.title === 'Work') {
+        else if (document.title === 'How we work') {
             loadWork();
         }
     }
