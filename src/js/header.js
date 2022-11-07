@@ -5,25 +5,25 @@ export async function loadHeader() {
 
     const mobileMenu  = document.querySelectorAll('li.menu_li_lay');
     switch(document.title) {
-        case "Home":
+        case "Elegy Studio":
             for (let li of mobileMenu) {
                 if (li.children[0].id === 'page-home')
                     li.classList.add('menu_li_lay-active');
             }
             break;
-        case "About":
+        case "About Elegy":
             for (let li of mobileMenu) {
                 if (li.children[0].id === 'page-about')
                     li.classList.add('menu_li_lay-active');
             }
             break;
-        case "Cases":
+        case "Our cases":
             for (let li of mobileMenu) {
                 if (li.children[0].id === 'page-cases')
                     li.classList.add('menu_li_lay-active');
             }
             break;
-        case "Work":
+        case "How we work":
             for (let li of mobileMenu) {
                 if (li.children[0].id === 'page-work')
                     li.classList.add('menu_li_lay-active');

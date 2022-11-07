@@ -153,7 +153,7 @@ async function loadPage() {
     // });
 
     //Перебор букв со сменой шрифта 
-    if (window.innerWidth < mobileWidth && document.title !== 'About') {
+    if (window.innerWidth < mobileWidth && document.title !== 'About Elegy') {
         setInterval(()=> {
             const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
             Math.random() > .90
@@ -367,7 +367,7 @@ async function loadPage() {
     });
     // Ховер стерлочек для кейсов на главной странице 
 
-    if (document.title === 'About') {
+    if (document.title === 'About Elegy') {
         init(mobileWidth);
         tick();
     }
