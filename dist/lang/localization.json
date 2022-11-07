@@ -16,7 +16,12 @@
 
     "page-cases": {
         "en": "cases", 
-        "ru": "примеры"
+        "ru": "кейсы"
+    },
+
+    "contacts": {
+        "en": "contacts", 
+        "ru": "контакты"
     },
 
     "page-work": {
@@ -35,8 +40,8 @@
     },
     
     "we-create": {
-        "en": "We create modern web-products that cause emotions!",
-        "ru": "Мы создаем современные веб-решения, которые вызвают эмоции!"
+        "en": "We create modern web-products that cause new emotions!",
+        "ru": "Мы разрабатываем современные веб-решения, которые создают новые эмоции!"
     },
     "about": {
         "en": "about",
@@ -44,13 +49,13 @@
     },
     
     "we-are-studio": {
-        "en": "Creating modern web-products <br> that we'd be glad to use ourselves.",
-        "ru": "Creating modern web-products <br> that we'd be glad to use ourselves."
+        "en": "Creating modern web-products <br> that we'd be glad to use ourselves",
+        "ru": "Creating modern web-products <br> that we'd be glad to use ourselves"
     },
     
     "showreel-desc": {
-        "en": "We help our customers provide their users with unique user experience. We believe that the key to launching a successful product is close cooperation. That’s why we build a special approach to each customer, which allows us to uncover each other in business, creativity and development.",
-        "ru": "Помогаем нашим клиентам предоставлять своим пользователям уникальный пользовательский опыт. Мы считаем, что залог запуска успешного продукта - это тесное сотрудничество. поэтому к каждому заказчику мы выстраиваем особый подход, который позволяет нам расскрывать друг друга в бизнесе, творчестве и разработке."
+        "en": "We help our customers provide their users with unique user experience. We believe that the key to launching a successful product is close cooperation. That’s why we build a special approach to each customer, which allows us to uncover each other in business, creativity and development",
+        "ru": "Помогаем нашим клиентам предоставлять своим пользователям уникальный пользовательский опыт. Мы считаем, что залог запуска успешного продукта - это тесное сотрудничество. поэтому к каждому заказчику мы выстраиваем особый подход, который позволяет нам расскрывать друг друга в бизнесе, творчестве и разработке"
     },
 
     "our-tech": {
@@ -101,7 +106,12 @@
 
     "generative-graphics": {
         "en": "GENERATIVE&nbsp;GRAPHICS",
-        "ru": "ГЕНЕРАТИВНАЯ&nbsp;ГРАФИКА"
+        "ru": "GENERATIVE&nbsp;GRAPHICS"
+    },
+    
+    "web-games": {
+        "en": "WEB&nbsp;GAMES",
+        "ru": "WEB&nbsp;GAMES"
     },
     
     "generative-graphics-text": {
@@ -123,7 +133,7 @@
 
     "frontend": {
         "en": "FRONTEND",
-        "ru": "ФРОНТЕНД"
+        "ru": "FRONTEND"
     },
     
     "frontend-text": {
@@ -133,7 +143,7 @@
 
     "d-models": {
         "en": "3D&nbsp;MODELS",
-        "ru": "3D&nbsp;МОДЕЛИ"
+        "ru": "3D&nbsp;MODELS"
     },
     
     "d-models-text": {
@@ -143,7 +153,7 @@
     
     "animations": {
         "en": "ANIMATIONS",
-        "ru": "АНИМАЦИИ"
+        "ru": "ANIMATIONS"
     },
     
     "animations-text": {
@@ -153,7 +163,7 @@
     
     "backend": {
         "en": "BACKEND",
-        "ru": "БЭКЕНД"
+        "ru": "BACKEND"
     },
     
     "backend-text": {
@@ -163,7 +173,7 @@
     
     "web-design": {
         "en": "WEB&nbsp;DESIGN", 
-        "ru": "ВЕБ-ДИЗАЙН"
+        "ru": "WEB&nbsp;DESIGN"
     },
     
     "web-design-text": {
@@ -172,8 +182,8 @@
     },
     
     "alchemy": {
-        "en": "creating web <br> alchemy",
-        "ru": "творим веб-магию"
+        "en": "creating web -<br> alchemy",
+        "ru": "Создаем веб -<br> алхимию"
     },
 
     "about-text": {
@@ -183,7 +193,7 @@
 
     "our-cases": {
         "en": "Our cases",
-        "ru": "Наши работы"
+        "ru": "Наши кейсы"
     },
 
     "sec-cases-1-text": {
@@ -283,6 +293,6 @@
 
     "learn-more": {
         "en": "learn more about how <br> we work",
-        "ru": "узнайте больше о том, <br> как мы работаем"
+        "ru": "learn more about how <br> we work"
     }
 }

@@ -237,12 +237,14 @@
                                     }
                                     .category_wr {
                                         display: flex;
+                                        flex-wrap: wrap;
                                         margin-bottom: 10px;
                                         
                                         .category {
                                             display: flex;
                                             align-items: center;
                                             margin-right: 7px;
+                                            margin-bottom: 2px;
                                             &::after {
                                                 content: '';
                                                 width: 5px;

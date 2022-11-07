@@ -15,7 +15,7 @@
     a {
         color: $gray-color;
     }
-    .h1-a {
+    .h1-more {
         position: relative;
         font-family: 'NeueMetana-Regular';
         text-transform: uppercase;
@@ -24,7 +24,7 @@
         line-height: 90%;
         margin-bottom: 50px;
         padding-top: 50px;
-        cursor: pointer;
+        cursor: none;
         @media  (max-width: $breakpoint-md-min) {
             font-size: 46px;
         }
@@ -33,14 +33,23 @@
             letter-spacing: -0.1rem;
             line-height: 90%;
         }
-        .more {
+        .more_btn {
+            
             position: absolute;
-            right: 0;
-            top: 0;
-            padding: 0 15px;
-            font-size: 18px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) scale(.5);
+            opacity: 0;
+            text-transform: lowercase;
+            letter-spacing: -0.1rem;
+            line-height: 100%;
+            padding: 4px 10px 0;
+            font-size: 32px;
+            border-radius: 20px;
+            z-index: 120;
             color: $black-color;
             background: $gray-color;
+            border: 2px solid $black-color;
         }
     }
     .inf {

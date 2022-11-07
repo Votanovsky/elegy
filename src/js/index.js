@@ -153,17 +153,17 @@ async function loadPage() {
     // });
 
     //Перебор букв со сменой шрифта 
-    if (window.innerWidth < mobileWidth) {
+    if (window.innerWidth < mobileWidth && document.title !== 'About') {
         setInterval(()=> {
             const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
-            Math.random() > .97
+            Math.random() > .90
         ))
 
         const tl_fontFamily = gsap.timeline()
 
         tl_fontFamily.to(h1FontFamily, {
             // fontFamily: 'Wagon',
-            color: '#87817B',
+            color: '#c0b4a7',
             // letterSpacing: '0.1rem',
         })
         .to(h1FontFamily, {
@@ -178,51 +178,27 @@ async function loadPage() {
     // /Перебор букв со сменой шрифта 
 
     // Анимация появления и ухода меню на десктопе
-        
     if (window.innerWidth > mobileWidth) {
-        // tl_menu.to(".menu_li", {
-        //     scrollTrigger: {
-        //         trigger: ".h1-t",
-        //         start: "top 70",
-        //         end: "top bottom",
-        //         toggleActions: "play none reverse none",
-        //         // markers: true
-        //     },
-        //     y: -30,
-        //     opacity: 0,
-        //     stagger: 0.1,
-        //     });
-
-        // tl_menu.to(".menu_btn", {
-        //     scrollTrigger: {
-        //         trigger: ".h1-t",
-        //         start: "top 70",
-        //         end: "top bottom",
-        //         toggleActions: "play none reverse none",
-        //         // markers: true,
-        //     },
-        //     y: 0,
-        //     // display: 'block',
-        //     opacity: 1,
-        // });  
         let menuIsOpen = false
 
         const tl_menu = gsap.timeline({
 
         })
 
-        tl_menu.to([".menu_li"], {
+        tl_menu.to([".menu_li-st"], {
             y: -30,
             opacity: 0,
-            stagger: 0.1,
-            ease: "power4.in"
+            stagger: 0.05,
+            duration: .5,
+            ease: "power4.inOut"
             });
 
         tl_menu.to(".menu_btn", {
             y: 0,
             // display: 'block',
             opacity: 1,
-            ease: "power4.out"
+            duration: .5,
+            ease: "power4.inOut"
         });
 
         window.onscroll = function(event) {
@@ -255,8 +231,6 @@ async function loadPage() {
 
             menuIsOpen = false;
         });
-
-        
     }
     // /Анимация появления и ухода меню на десктопе
 
@@ -282,7 +256,7 @@ async function loadPage() {
                     duration: .7
                 })
 
-                menu_tl.from('.menu_li_lay', {
+                menu_tl.from('.menu_li_lay-st', {
                     y: 30,
                     opacity: 0,
                     stagger: .1,
@@ -308,6 +282,90 @@ async function loadPage() {
         })
 
     }
+
+    // Контакты
+    document.querySelector('.div_cont').addEventListener('click',()=> {
+        gsap.to('.contacts_layout', {
+            // display: 'block',
+            y: 0,
+            ease: "expo.InOut",
+            duration: .7
+        })
+        
+    })
+    document.querySelector('.close_contacts').addEventListener('click',()=> {
+        gsap.to('.contacts_layout', {
+            y: '-100%',
+            // display: 'none',
+            ease: "expo.InOut",
+            duration: .7
+        })
+    })
+    // /Контакты
+
+    // Ховер для футтера (потому что блять могу)
+    const cursor_place = document.querySelector(".more-hover");
+    const footer_cursor = document.querySelector(".more_btn");
+
+    gsap.set(footer_cursor, {
+        xPercent: -50,
+        yPercent: -50
+    });
+
+    cursor_place.addEventListener("mousemove", onMove);
+    cursor_place.addEventListener("mouseleave", onLeave);
+
+    function onMove(e) {
+    
+    const { left, top, width, height } = cursor_place.getBoundingClientRect();
+    
+    const halfW = width / 2;
+    const halfH = height / 2;  
+    const mouseX = e.x - left;
+    const mouseY = e.y - top;
+    
+    const x = gsap.utils.interpolate(-halfW, halfW, mouseX / width);
+    const y = gsap.utils.interpolate(-halfH, halfH, mouseY / height);
+  
+    gsap.to(footer_cursor, {
+        x: x,
+        y: y,
+        duration: 0.6,
+        opacity: 1,
+        scale: 1,
+        ease: "power1",
+    });  
+    }
+
+    function onLeave(e) {
+        gsap.to(footer_cursor, {
+            x: 0,
+            y: 0,
+            opacity: 0,
+            scale: .5,
+            ease: "power1",
+            duration: 0.6,
+        });
+    }
+    // /Ховер для футтера
+
+    // Ховер стерлочек для кейсов на главной странице (ховер работает только на ласт элемент я хз почему так)
+    gsap.utils.toArray(".it-hover").forEach(it => {
+        let hover = ''
+        gsap.utils.toArray(".cases-svg").forEach(svg => {
+                hover = gsap.to(svg, {
+                duration: .2,
+                opacity: 1,
+                y: 0,
+                x: 0,
+                paused: true,
+                ease: "power1.inOut",
+            });
+        })
+        it.addEventListener("mouseenter", () => hover.play());
+        it.addEventListener("mouseleave", () => hover.reverse());
+    });
+    // Ховер стерлочек для кейсов на главной странице 
 
     if (document.title === 'About') {
         init(mobileWidth);

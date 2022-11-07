@@ -234,13 +234,13 @@
                         transition: .2s;
                         transform: translate(-4px, -4px);
                     }
-                    &:hover {
-                        svg {
-                            transform: translate(0, 0);
-                            opacity: 1;
-                            transition: .2s;
-                        }
-                    }
+                    // &:hover {
+                    //     svg {
+                    //         transform: translate(0, 0);
+                    //         opacity: 1;
+                    //         transition: .2s;
+                    //     }
+                    // }
                 }
 
                 .info {
@@ -249,16 +249,19 @@
                     font-size: 14px;
                     padding-top: 7px;
                     display: flex;
+                    
                     justify-content: space-between;
                     @media  (max-width: $breakpoint-sm-min) {
                         margin: 4px 0;
                     }
                     .category_wr {
                         display: flex;
+                        flex-wrap: wrap;
                         .category {
                             display: flex;
                             align-items: center;
                             margin-right: 7px;
+                            margin-bottom: 7px;
                             &::after {
                                 content: '';
                                 width: 5px;
@@ -275,6 +278,9 @@
                                 }
                             }
                         }
+                    }
+                    .date {
+                        margin-left: 10px;
                     }
                     
                 }
@@ -408,7 +414,7 @@
                 margin-right: 8px;
                 margin-bottom: 8px;
                 color: $black-color;
-                transition:  .5s;
+                // transition:  .5s;
                 width: min-content;
                 height: fit-content;
                 text-align: center;

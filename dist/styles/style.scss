@@ -144,12 +144,15 @@ canvas {
     // opacity: 0;
     // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
         // transition: .3s;
-    &:hover {
-        font-family: 'Wagon';
-        letter-spacing: .5rem;
-        // transform: translateY(20px);
-        // transition: .3s;
+    @media  (min-width: $breakpoint-lg-min) {
+        &:hover {
+            font-family: 'Wagon';
+            letter-spacing: .5rem;
+            // transform: translateY(20px);
+            // transition: .3s;
+        }
     }
+    
 }
 .word {
     transform: translateY(40px);
@@ -196,6 +199,7 @@ canvas {
 @import 'footer.scss';
 @import 'cases.scss';
 @import 'index.scss';
+@import 'work.scss';
  
 
 
@@ -208,173 +212,6 @@ canvas {
     border-radius: 0 0 20px 20px;
     @media  (max-width: $breakpoint-xs-min) {
         margin-bottom: 265px;
-    }
-    .sec_work {
-        &-1 {
-            padding-bottom: 20px;
-            // border-bottom: 1px solid $black-color;
-            padding: 130px 50px 20px;
-            
-            @media  (max-width: $breakpoint-md-min) {
-                padding: 130px 20px 20px;
-            }
-            @media  (max-width: $breakpoint-sm-min) {
-                padding: 70px 20px 20px;
-            }
-            .divider {
-                width: 100%;
-                height: 1.2px;
-                background: $black-color;
-            }
-            .h1-a {
-                font-family: 'NeueMetana-Regular';
-                text-transform: uppercase;
-                font-size: 102px;
-                letter-spacing: -0.2rem;
-                line-height: 90%;
-    
-                @media  (max-width: $breakpoint-lg-min) {
-                    font-size: 84px;
-                    letter-spacing: -0.3rem;
-                }
-                @media  (max-width: $breakpoint-md-min) {
-                    font-size: 64px;
-                    letter-spacing: -0.2rem;
-                }
-                @media  (max-width: $breakpoint-sm-min) {
-                    font-size: 36px;
-                    letter-spacing: -1px;
-                }
-            }
-        }
-
-        &-2 {
-            padding: 90px 50px 20px;
-            
-            @media  (max-width: $breakpoint-md-min) {
-                padding: 40px 20px 20px;
-            }
-            @media  (max-width: $breakpoint-sm-min) {
-                padding: 40px 20px 20px;
-            }
-
-            .work_it {
-                display: flex;
-                align-items: flex-start;
-                flex-direction: column;
-                margin-bottom: 60px;
-                .ite {
-                    display: flex;
-                    align-items: flex-start;
-                    @media  (max-width: $breakpoint-md-min) {
-                        flex-direction: column;
-                    }
-                }
-                .border_width-work {
-                    width: 100%;
-                    height: 1.2px;
-                    background: $black-color;
-                    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
-                }
-                .lf {
-                    width: 32%;
-                    font-family: 'NeueMetana-Regular';
-                    text-transform: uppercase;
-                    padding: 1vw 1vw 0 0;
-                    display: flex;
-                    align-items: center;
-                    @media  (max-width: $breakpoint-lg-min) {
-                        width: 22%;
-                    }
-                    @media  (max-width: $breakpoint-md-min) {
-                        width: 100%;
-                    }
-                    .name {
-                        font-size: 46px;
-                        letter-spacing: -0.1rem;
-                        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-                        transform: translateY(20px);
-                        @media  (max-width: $breakpoint-xl-min) {
-                            font-size: 26px;
-                            letter-spacing: -1px;
-                        }
-                        @media  (max-width: $breakpoint-lg-min) {
-                            font-size: 14px;
-                            letter-spacing: -.5px;
-                        }
-                        @media  (max-width: $breakpoint-md-min) {
-                            font-size: 26px;
-                            letter-spacing: -1px;
-                        }
-                    }
-                    .count {
-                        font-size: 14px;
-                        letter-spacing: -0.1rem;
-                        margin-right: 7px;
-                        @media  (max-width: $breakpoint-xl-min) {
-                            font-size: 12px;
-                            letter-spacing: -1px;
-                        }
-                        @media  (max-width: $breakpoint-lg-min) {
-                            font-size: 8px;
-                            letter-spacing: -.5px;
-                        }
-                        @media  (max-width: $breakpoint-md-min) {
-                            font-size: 12px;
-                            letter-spacing: -1px;
-                        }
-                    }
-                }
-                .rg {
-                    width: 68%;
-                    font-size: 28px;
-                    line-height: 94%;
-                    letter-spacing: -0.8px;
-                    padding-bottom: 5vw;
-                    display: flex;
-                    @media  (max-width: $breakpoint-xl-min) {
-                        font-size: 18px;
-                    }
-                    @media  (max-width: $breakpoint-lg-min) {
-                        width: 78%;
-                        font-size: 14px;
-                    }
-                    @media  (max-width: $breakpoint-md-min) {
-                        width: 100%;
-                        font-size: 16px;
-                    }
-                    .border_height-work {
-                        height: 130px;
-                        background: $black-color;
-                        width: 2px;
-                        clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
-                    }
-                    .ite {
-                        display: flex;
-                        flex-direction: column;
-                        padding-left: 2vw;
-                        .name {
-                            font-size: 46px;
-                            padding: 2vw 0;
-                            text-transform: uppercase;
-                            font-family: 'NeueMetana-Regular';
-                            text-transform: uppercase;
-                            opacity: 0;
-                            @media  (max-width: $breakpoint-xl-min) {
-                                font-size: 26px;
-                                letter-spacing: -1px;
-                            }
-                            @media  (max-width: $breakpoint-lg-min) {
-                                font-size: 14px;
-                                letter-spacing: -.5px;
-                                padding: .5vw 0;
-                            }
-                        }
-                    }
-                    
-                }
-            }
-        }
     }
 }
 .bg-green {
