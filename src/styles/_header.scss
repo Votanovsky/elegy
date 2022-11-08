@@ -43,7 +43,7 @@
                 }
             }
             .lang {
-                cursor: pointer;
+                // cursor: pointer;
                 padding: 1px 8px 2px;
                 border-radius: 22px;
                 &:hover {
@@ -52,7 +52,7 @@
                 }
             }
             .div_cont {
-                cursor: pointer;
+                // cursor: pointer;
                 padding: 1px 8px 2px;
                 border-radius: 22px;
                 &:hover {
@@ -61,6 +61,7 @@
                 }
             }
             .menu_li-st {
+                cursor: pointer;
                 display: block;
                 color: #282828;
                 letter-spacing: -0.5px;
@@ -156,6 +157,7 @@
                 }
             }
             .menu_li_lay-st {
+                cursor: pointer;
                 line-height: 90%;
                 margin-bottom: 20px;
                 text-transform: uppercase;

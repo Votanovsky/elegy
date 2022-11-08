@@ -295,22 +295,29 @@ async function loadPage() {
     }
 
     // Контакты
-    document.querySelector('.div_cont').addEventListener('click',()=> {
-        gsap.to('.contacts_layout', {
-            // display: 'block',
-            y: 0,
-            ease: "expo.InOut",
-            duration: .7
-        })
-        
-    })
+    document.querySelectorAll('.div_cont').forEach(div => {
+        div.addEventListener('click',()=> {
+            gsap.to('.contacts_layout', {
+                // display: 'block',
+                y: 0,
+                ease: "expo.InOut",
+                duration: .7
+            });
+            gsap.set('#contacts', {
+                className: '.close_contacts'
+            });
+        });
+    });
     document.querySelector('.close_contacts').addEventListener('click',()=> {
         gsap.to('.contacts_layout', {
             y: '-100%',
             // display: 'none',
             ease: "expo.InOut",
             duration: .7
-        })
+        });
+        gsap.set('#contacts', {
+            className: '.div_cont'
+        });
     })
     // /Контакты
 
