@@ -304,7 +304,7 @@ async function loadPage() {
                 duration: .7
             });
             gsap.set('#contacts', {
-                className: '.close_contacts'
+                className: 'close_contacts'
             });
         });
     });
@@ -316,7 +316,7 @@ async function loadPage() {
             duration: .7
         });
         gsap.set('#contacts', {
-            className: '.div_cont'
+            className: 'div_cont'
         });
     })
     // /Контакты
