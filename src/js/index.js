@@ -152,28 +152,39 @@ async function loadPage() {
     //     it.addEventListener('click', () => toggleTechDescription(it));
     // });
 
-    //Перебор букв со сменой шрифта 
+    //Перебор букв со сменой шрифта
+    if (window.textInterval) {
+        clearInterval(window.textInterval);
+    }
     if (window.innerWidth < mobileWidth && document.title !== 'About Elegy') {
-        setInterval(()=> {
+
+        function animateFontColor () {
             const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
             Math.random() > .90
-        ))
-
-        const tl_fontFamily = gsap.timeline()
-
-        tl_fontFamily.to(h1FontFamily, {
-            // fontFamily: 'Wagon',
-            color: '#c0b4a7',
-            // letterSpacing: '0.1rem',
-        })
-        .to(h1FontFamily, {
-            // fontFamily: 'NeueMetana-regular',
-            color: '#282828',
-            // letterSpacing: '0.1rem',
-            // delay: Math.random() * 10
-        }) 
+            ));
+            // console.log(h1FontFamily);
+            if (h1FontFamily.length > 0) {
+                const tl_fontFamily = gsap.timeline();
+                // console.log(tl_fontFamily);
+                tl_fontFamily.to(h1FontFamily, {
+                    // fontFamily: 'Wagon',
+                    color: '#c0b4a7',
+                    // letterSpacing: '0.1rem',
+                })
+                .to(h1FontFamily, {
+                    // fontFamily: 'NeueMetana-regular',
+                    color: '#282828',
+                    // letterSpacing: '0.1rem',
+                    // delay: Math.random() * 10
+                });
+            }
+        }
         
-        }, 500)
+        window.textInterval = setInterval(()=> {
+                animateFontColor();
+                // console.log(gsap.globalTimeline.getTweensOf('.char'));
+                // console.log()
+        }, 500);
     }
     // /Перебор букв со сменой шрифта 
 

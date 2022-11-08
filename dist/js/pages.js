@@ -50,21 +50,28 @@ export function pagesTransitionsEx(loadPage) {
     }
     
     function killAnimations() {
+        console.log("running animations:")
+        console.log(gsap.globalTimeline.getChildren());
         gsap.globalTimeline.getChildren().forEach(child => {
             if (!child.targets) {
-                for (let tween of child.getChildren())
-                    tween.kill();
+                console.log("killing:");
+                console.log(child);
+                console.log(child.getChildren());
                 child.kill();
             }
             else {
                 for (let target of child.targets()) {
                     if (!target.classList || target.classList && !target.classList.contains("loader-overlay")) {
+                        console.log("killing:");
+                        console.log(child);
                         child.kill();
                         break;
                     }
                 }
             }
         });
+        console.log("REMAINING animations:")
+        console.log(gsap.globalTimeline.getChildren());
     }
     
     // BARBA SETUP
@@ -74,14 +81,16 @@ export function pagesTransitionsEx(loadPage) {
         transitions: [{
             async leave () {
     
-                pageAnimation()
-                await delay(2000)
+                pageAnimation();
+                await delay(2000);
+                // killAnimations();
+                // await delay(1000);
 
             },
             async enter() {
                 
                 const done = this.async();
-                // killAnimations();
+
                 // console.log(gsap.globalTimeline.getChildren());
                 loadPage()
                 window.scroll(0, 0);
