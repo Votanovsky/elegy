@@ -43,19 +43,20 @@
         "en": "We create modern web-products that cause new emotions!",
         "ru": "Мы разрабатываем современные веб-решения, которые создают новые эмоции!"
     },
+
     "about": {
         "en": "about",
         "ru": "о нас"
     },
     
     "we-are-studio": {
-        "en": "Creating modern web-products <br> that we'd be glad to use ourselves",
-        "ru": "Creating modern web-products <br> that we'd be glad to use ourselves"
+        "en": "Creating modern web-products <br> we'd be glad to use ourselves",
+        "ru": "Creating modern web-products <br> we'd be glad to use ourselves"
     },
     
     "showreel-desc": {
-        "en": "We help our customers provide their users with unique user experience. We believe that the key to launching a successful product is close cooperation. That’s why we build a special approach to each customer, which allows us to uncover each other in business, creativity and development",
-        "ru": "Помогаем нашим клиентам предоставлять своим пользователям уникальный пользовательский опыт. Мы считаем, что залог запуска успешного продукта - это тесное сотрудничество. поэтому к каждому заказчику мы выстраиваем особый подход, который позволяет нам расскрывать друг друга в бизнесе, творчестве и разработке"
+        "en": "We help our customers provide their users with unique user experience. We believe that the key to launching a successful product is close cooperation. That's why we build a special approach to each customer, which allows us to unlock each other's potential in business, creativity, and development",
+        "ru": "Мы помогаем клиентам предоставлять своим пользователям уникальный опыт. Мы считаем, что залог создания успешного продукта - это тесное сотрудничество. Поэтому к каждому заказчику мы выстраиваем особый подход, который позволяет нам расскрывать возможности друг друга в бизнесе, творчестве и разработке"
     },
 
     "our-tech": {
@@ -75,7 +76,7 @@
     
     "seo-text": {
         "en": "By performing internal site optimization, we also take care of SEO, ensuring that the site's parameters meet all essential requirements so that search engines willingly index them",
-        "ru": ""
+        "ru": "Благодаря внутренней оптимизации ресурсов, мы также достигаем улучшения показателей SEO. Мы заботимся о том, чтобы наши сайты соответствовали всем необходимым требованиям для того, чтобы поисковики охотнее индексировали их"
     },
     
 
@@ -85,8 +86,8 @@
     },
     
     "ui-ux-text": {
-        "en": "Using best practices to make user interfaces as pleasant and intuitive as possible, so that users won't be having a hard time interacting with them. Thus, they won't be distracted from utilizing the product to its full extent by unnecessary elements and actions",
-        "ru": ""
+        "en": "We're using best practices to make user interfaces as pleasant and intuitive as possible, so that users won't be having a hard time interacting with them. Thus, they won't be distracted from utilizing the product to its full extent by unnecessary elements and actions",
+        "ru": "Мы стремимся применять лучшие практики при разработке интерфейсов, чтобы сделать их приятными и интуитивными, а пользователи не испытывали трудностей при взаимодействии с ними. Люди смогут сосредоточиться на использовании продукта вместо того, чтобы отвлекаться на ненужные элементы и действия"
     },
 
     "creative-coding": {
@@ -100,7 +101,7 @@
     
     "creative-coding-text": {
         "en": "We use special program libraries to create colorful, stunning, and at the same time lightweight visual effects. As a result, we get an impressive picture plus good performance",
-        "ru": ""
+        "ru": "С помощью специальных программных библиотек мы создаем красочные, потрясающие, и в то же время легковесные визуальные эффекты. В итоге получается впечатляющий дизайн + производительность"
     },
     
 
@@ -116,7 +117,7 @@
     
     "generative-graphics-text": {
         "en": "Generative graphics is basiaclly art created automatically, e.g. using program code with randomized values. It adds originality to page content",
-        "ru": ""
+        "ru": "Генеративная графика - это, по сути, автоматизированное творчество, т. е. генерация в некоторой степени \"случайных\" графических элементов с помощью программ. С их помощью можно добавить страницам оригинальности"
     },
     
 
@@ -127,7 +128,7 @@
     
     "webgl-text": {
         "en": "WebGL is a graphics rendering API for browsers. We use it for implementing high-performance graphics effects and structures",
-        "ru": ""
+        "ru": "WebGL - это мощный браузерный API графического рендеринга. Мы используем его для создания графических элементов и эффектов с сохранением высокой производительности"
     },
     
 
@@ -138,7 +139,7 @@
     
     "frontend-text": {
         "en": "Frontend is a crucial component of user experience, so we ensure that all the content is displayed correctly. We also take care of the structure of web pages so there are no visual bugs and other issues",
-        "ru": ""
+        "ru": "Фронтенд - критичски важная составляющая удачного пользовательского опыта, поэтому мы тщательно проверяем, чтобы все содержимое страниц отображалось правильным образом, а также не было визуальных багов и прочих проблем с контентом"
     },
 
     "d-models": {
@@ -148,7 +149,7 @@
     
     "d-models-text": {
         "en": "We can provide custom 3D models as a part of your websites and applications. As well as generative graphics, it's a great way to draw more attention to certain details and enhance overall attractiveness",
-        "ru": ""
+        "ru": "При необходимости мы можем предоставлять собственные 3D-модели в качестве содержимого ваших сайтов и веб-приложений. Как и генеративная графика, такие модели отлично подходят для привлечения внимания пользователей и повышения привлекательности ресурса"
     },
     
     "animations": {
@@ -158,7 +159,7 @@
     
     "animations-text": {
         "en": "Nice animations are a must-have for an attractive website today. We like animations and know how to make them look really good, so a product made by us certainly won't lack them",
-        "ru": ""
+        "ru": "Сегодня красивые и качественные анимации просто необходимы, чтобы сделать сайт привлекательным. Мы любим анимации и хорошо умеем их делать, так что у вас в них точно не будет недостатка"
     },
     
     "backend": {
@@ -168,7 +169,7 @@
     
     "backend-text": {
         "en": "We implement site's main functions, provide integration with databases and third-party services, and make possible dynamic changes of site's content",
-        "ru": ""
+        "ru": "Само собой, мы реализуем основной функционал сайта, а также проводим интеграцию с базами данных и сторонними сервисами, так что на вашем сайте не будет проблем с динамическим содержимым"
     },
     
     "web-design": {
@@ -178,7 +179,7 @@
     
     "web-design-text": {
         "en": "Web design includes overall style and look of a product; also, creation of custom content, such as models, icons, videos, is possible",
-        "ru": ""
+        "ru": "Веб-дизайн включает в себя общую стилистику продукта, а также создание дополнительного, оригинального контента, такого как модели, иконки, изображения и видео"
     },
     
     "alchemy": {
@@ -197,28 +198,28 @@
     },
 
     "sec-cases-1-text": {
-        "en": "Here we want to tell you and show you all that we can!",
-        "ru": "Тут мы хотим вам рассказать и показать всё, что мы умеем!"
+        "en": "Here we want to show you all that we can do!",
+        "ru": "Тут мы хотим вам рассказать и показать все, что мы умеем!"
     },
 
     "case-1-descr": {
-        "en": "We design & developed a shop for the techwear brand by visualizing the processability of clothing through particle systems that placed on the main pages of the site. In this project we combined the coarseness of simplicity with the elegance of modern technology.",
-        "ru": "Мы задизайнили разработали магазин для techwear бренда, визуализировав технологичность одежды через системы частиц, которые поместили на главные страницы сайте. В этом проекте мы совместили грубость простоты с изящностью современных технологий."
+        "en": "We designed and developed a shop for the techwear brand. By visualizing clothing in particles on the site's main page, we reflected its utility and modernity. The coarseness of simplicity was combined with the elegance of modern technology in this project in order to highlight originality of the brand.",
+        "ru": "Мы задизайнили и разработали магазин для techwear бренда. Визуализировав одежду через систему частиц на главной странице магазина, мы отразили ее технологичность и современность. В этом проекте мы совместили грубость простоты с изящностью современных технологий, чтобы подчеркнуть оригинальность бренда."
     },
 
     "case-2-descr": {
-        "en": "Lots and lots of animations and computer graphics. This is how we can characterize what we have developed for design - the SMTH 0111 project which has brought together artists around the world.",
+        "en": "Lots and lots of animations and computer graphics - this is how we can describe what we have developed for SMTH 0111 - a designing project which has brought together artists around the world.",
         "ru": "Много-много анимаций и компьютерной графики. Именно так можно охарактеризовать то, что мы разработали для дизайн - проекта SMTH 0111, который объединил художников по всему миру."
     },
 
     "case-3-descr": {
-        "en": "Comprehensive development of the website of the store of women’s underwear affordable luxe segment. Design, development, graphics, as well as technical support. We have created a website management system that integrates popular CRM to track business, delivery and payment operations.",
-        "ru": "Комплексная разработка сайта магазина женского нижнего белья affordable luxe сегмента. Дизайн, разработка, графика, а так же техническое сопровождение. Мы создали систему управления сайтом, интегрировав в него популярные CRM для отслеживания работы бизнеса, службы доставок и систему оплаты."
+        "en": "Here's a complex process of creating a website for a women's underwear affordable luxe segment shop. Design, development, graphics, technical support - the entire product's lifecycle. We've also created a website management system with a popular CRM integration that enables to track business processes, delivery and payment operations.",
+        "ru": "Комплексная разработка сайта магазина женского нижнего белья affordable luxe сегмента. Дизайн, разработка, графика, а также техническое сопровождение - все это составило полный жизненный цикл продукта. Еще мы создали систему управления сайтом, интегрировав в него популярные CRM для отслеживания работы бизнеса, службы доставок и систему оплаты."
     },
 
     "case-4-descr": {
-        "en": "Helped to develop a series of promotional games for the creative studio, which specializes in presentations - Bonnie & Slide. In every game, users could earn points and get great bonuses from the studio!",
-        "ru": "Помогли разработать серию промо игр для креативной студии, которая специализируется на презентациях - Bonnie & Slide. В каждой игре пользователи могли набирать очки и получать за это отличные бонусы от студии!"
+        "en": "We helped to develop a series of promo games for a creative studio specializing in presentations - Bonnie & Slide. In every game, users could earn points and get great bonuses from the studio! The campaign was a real success, resulting in very high conversion rate for the studio",
+        "ru": "Помогли разработать серию промо игр для креативной студии, которая специализируется на презентациях - Bonnie & Slide. В каждой игре пользователи могли набирать очки и получать за это отличные бонусы от студии! Промо-кампания прошла успешно, принеся студии очень большую конверсию"
     },
 
     "work-title": {
@@ -227,33 +228,33 @@
     },
 
     "work-descr-1": {
-        "en": "While creating unique experience for brands and organizations, we thoroughly investigate competitors and the market, research user experience and analyze current trends. The best analysis allows us to create the most effective and competitive products.",
-        "ru": "При создания уникального опыта для брендов и организаций, мы детально исследуем конкурентов и рынок, исследуем пользовательский опыт и анализируем современные тенденции. Лучший анализ позволяет нам создавать наиболее эффективные и конкурентноспособные продукты."
+        "en": "While creating unique experience for brands and organizations, we thoroughly investigate competitors and the market, research various user experience and analyze current trends. Quality analysis allows us to create the most effective and competitive products.",
+        "ru": "При создания уникального опыта для брендов и организаций, мы тщательно исследуем конкурентов и рынок, изучаем пользовательский опыт и анализируем современные тенденции. Качественный анализ позволяет нам создавать наиболее эффективные и конкурентноспособные продукты."
     },
 
     "work-descr-2": {
-        "en": "Using the best practice to create interesting and clear design for the user, make it not only effective, but also spectacular. We complement our sites with animations and interactive 3D, they will not be boring!",
-        "ru": "Используем лучшие методы, чтобы создать для пользователя интересный и понятный дизайн, делаем его не только эффективным, но и эффектным. Дополняем наши сайты анимациями и интерактивным 3D, на них никто не сможет заскучать!"
+        "en": "Using best practices to create attractive and intuitive design for users, we make it not only effective, but also spectacular. We complement our sites with animations and interactive 3D, so nobody will get bored with them!",
+        "ru": "Используем лучшие методы, чтобы создать для пользователя красивый и понятный дизайн, делая его не только эффективным, но и эффектным. Дополняем наши сайты анимациями и интерактивным 3D, так что на них никто не сможет заскучать!"
     },
 
     "work-descr-3": {
-        "en": "We build, make frontend and backend development, creating siteы and complex web-applications, simple web-games. We implement site’s main functions, provide integration with databases, crm-systems and third-party services, and enable users to interact with site’s content",
-        "ru": "Мы верстаем, делаем фронтенд и бэкенд разработку, создаваем сайты и сложные веб-приложения, простые веб-игры. Мы реализуем основные функции сайта, обеспечиваем интеграцию с базами данных, crm-системами и сторонними сервисами, и позволяем пользователям взаимодействовать с содержанием сайта"
+        "en": "We construct pages, perform frontend and backend development, create sites and complex web-applications, as well as simple web-games. This involves implementing site's main functions, providing integration with databases, CRM-systems and third-party services, and enabling users to interact with the site's content",
+        "ru": "Мы верстаем, делаем фронтенд и бэкенд разработку, создаваем сайты и сложные веб-приложения, простые веб-игры. В это входит реализацтя основных функций сайта, обеспечение интеграции с базами данных, CRM-системами и сторонними сервисами, и предоставление пользователям возможности взаимодействовать с содержимым сайта"
     },
 
     "work-descr-4": {
-        "en": "We use progressive program libraries to create colorful, stunning, and at the same time lightweight visual effects. As a result, we get an impressive picture plus good performance",
-        "ru": "Мы используем продвинутые программные библиотеки для создания красочных, потрясающих и в то же время легковесных визуальных эффектов. В результате мы получаем впечатляющую картину плюс хорошую производительность"
+        "en": "We use advanced program libraries to create colorful, stunning, and at the same time lightweight visual effects. As a result, we get an impressive picture plus good performance",
+        "ru": "С помощью продвинутых программных библиотек мы создаем красочные, потрясающие, и в то же время легковесные визуальные эффекты. В итоге получается впечатляющий дизайн + производительность"
     },
 
     "work-descr-5": {
-        "en": "By performing internal site optimization, we also take care of SEO, ensuring that the site’s parameters meet all essential requirements so that search engines willingly index them",
-        "ru": "Осуществляя внутреннюю оптимизацию сайта, мы также заботимся о SEO, чтобы параметры сайта соответствовали всем основным требованиям для улучшения индексации в поисковых системах."
+        "en": "By performing internal site optimization, we also take care of SEO, ensuring that the site's parameters meet all essential requirements so that search engines willingly index them",
+        "ru": "Благодаря внутренней оптимизации ресурсов, мы также достигаем улучшения показателей SEO. Мы заботимся о том, чтобы наши сайты соответствовали всем необходимым требованиям для того, чтобы поисковики охотнее индексировали их"
     },
 
     "work-descr-6": {
-        "en": "Support and maintenance are provided to all our products. After deploying a website, we’re also glad to take orders for further changes to make it even better.",
-        "ru": "Поддержка и обслуживание предоставляются всем нашим продуктам. После запуска веб-сайта, мы также будем рады помогать вам в его дальнейших изменениях, чтобы сделать ваш продукт еще лучше."
+        "en": "Support and maintenance are provided to all our products. After deploying a website, we're also glad to take orders for further changes to make it even better",
+        "ru": "Всем нашим продуктам предоставляются поддержка и сопровождение. После запуска веб-сайта мы также будем рады производить дальнейшие изменения, чтобы сделать ваш продукт еще лучше"
     },
     
     "research": {
