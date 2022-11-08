@@ -20,7 +20,7 @@
     },
 
     "contacts": {
-        "en": "contacts", 
+        "en": "contact us", 
         "ru": "контакты"
     },
 
@@ -50,13 +50,13 @@
     },
     
     "we-are-studio": {
-        "en": "Creating modern web products <br> we'd be glad to use ourselves",
-        "ru": "Creating modern web products <br> we'd be glad to use ourselves"
+        "en": "Creating modern web products <br> that we'd be glad to use ourselves",
+        "ru": "Creating modern web products <br> that we'd be glad to use ourselves"
     },
     
     "showreel-desc": {
-        "en": "We help our customers provide their users with unique user experience. We believe that the key to launching a successful product is close cooperation. That's why we build a special approach to each customer, which allows us to unlock each other's potential in business, creativity, and development",
-        "ru": "Мы помогаем клиентам предоставлять своим пользователям уникальный опыт. Мы считаем, что залог создания успешного продукта - это тесное сотрудничество. Поэтому к каждому заказчику мы выстраиваем особый подход, который позволяет нам расскрывать возможности друг друга в бизнесе, творчестве и разработке"
+        "en": "We help our customers provide their users with unique experience. We believe that the key to launching a successful product is close cooperation. That's why we build a special approach to each customer, which allows us to unlock each other's potential in business, creativity, and development",
+        "ru": "Мы помогаем клиентам дарить своим пользователям уникальный опыт. Мы считаем, что залог создания успешного продукта - это тесное сотрудничество. Поэтому к каждому заказчику мы выстраиваем особый подход, который позволяет нам расскрывать возможности друг друга в бизнесе, творчестве и разработке"
     },
 
     "our-tech": {
@@ -184,7 +184,7 @@
     
     "alchemy": {
         "en": "creating web <br> alchemy",
-        "ru": "Создаем веб -<br> алхимию"
+        "ru": "Создаем веб <br> алхимию"
     },
 
     "about-text": {
@@ -199,7 +199,7 @@
 
     "sec-cases-1-text": {
         "en": "Here we want to show you all that we can do!",
-        "ru": "Тут мы хотим вам рассказать и показать все, что мы умеем!"
+        "ru": "Тут мы хотим рассказать и показать вам все, что мы умеем!"
     },
 
     "case-1-descr": {
@@ -209,7 +209,7 @@
 
     "case-2-descr": {
         "en": "Lots and lots of animations and computer graphics - this is how we can describe what we have developed for SMTH 0111 - a designing project which has brought together artists around the world.",
-        "ru": "Много-много анимаций и компьютерной графики. Именно так можно охарактеризовать то, что мы разработали для дизайн - проекта SMTH 0111, который объединил художников по всему миру."
+        "ru": "Много-много анимаций и компьютерной графики: именно так можно охарактеризовать то, что мы разработали для дизайн-проекта SMTH 0111, который объединил художников по всему миру."
     },
 
     "case-3-descr": {
@@ -218,7 +218,7 @@
     },
 
     "case-4-descr": {
-        "en": "We helped to develop a series of promo games for a creative studio specializing in presentations - Bonnie & Slide. In every game, users could earn points and get great bonuses from the studio! The campaign was a real success, resulting in very high conversion rate for the studio",
+        "en": "We helped to develop a series of promo games for a creative studio specializing in presentations - Bonnie & Slide. In every game, users could earn points and get great bonuses from the studio! The campaign was a real success, resulting in a very high conversion rate for the studio",
         "ru": "Помогли разработать серию промо игр для креативной студии, которая специализируется на презентациях - Bonnie & Slide. В каждой игре пользователи могли набирать очки и получать за это отличные бонусы от студии! Промо-кампания прошла успешно, принеся студии очень большую конверсию"
     },
 
@@ -229,7 +229,7 @@
 
     "work-descr-1": {
         "en": "While creating unique experience for brands and organizations, we thoroughly investigate competitors and the market, research various user experience and analyze current trends. Quality analysis allows us to create the most effective and competitive products.",
-        "ru": "При создания уникального опыта для брендов и организаций, мы тщательно исследуем конкурентов и рынок, изучаем пользовательский опыт и анализируем современные тенденции. Качественный анализ позволяет нам создавать наиболее эффективные и конкурентноспособные продукты."
+        "ru": "При создании уникального опыта для брендов и организаций, мы тщательно исследуем конкурентов и рынок, изучаем пользовательский опыт и анализируем современные тенденции. Качественный анализ позволяет нам создавать наиболее эффективные и конкурентноспособные продукты."
     },
 
     "work-descr-2": {
@@ -239,7 +239,7 @@
 
     "work-descr-3": {
         "en": "We construct pages, perform frontend and backend development, create sites and complex web applications, as well as simple web games. This involves implementing site's main functions, providing integration with databases, CRM-systems and third-party services, and enabling users to interact with the site's content",
-        "ru": "Мы верстаем, делаем фронтенд и бэкенд разработку, создаваем сайты и сложные веб-приложения, простые веб-игры. В это входит реализацтя основных функций сайта, обеспечение интеграции с базами данных, CRM-системами и сторонними сервисами, и предоставление пользователям возможности взаимодействовать с содержимым сайта"
+        "ru": "Мы верстаем, делаем фронтенд и бэкенд разработку, создаем сайты, веб-приложения и простые веб-игры. В это входит реализация основных функций сайта, обеспечение интеграции с базами данных, CRM-системами и сторонними сервисами, и предоставление пользователям возможности взаимодействовать с содержимым сайта"
     },
 
     "work-descr-4": {
@@ -253,8 +253,8 @@
     },
 
     "work-descr-6": {
-        "en": "Support and maintenance are provided to all our products. After deploying a website, we're also glad to take orders for further changes to make it even better",
-        "ru": "Всем нашим продуктам предоставляются поддержка и сопровождение. После запуска веб-сайта мы также будем рады производить дальнейшие изменения, чтобы сделать ваш продукт еще лучше"
+        "en": "Support and maintenance are provided for all our products. After deploying a website, we're also glad to take orders for further changes to make it even better",
+        "ru": "Всем нашим продуктам предоставляются поддержка и сопровождение. После запуска веб-сайта мы также будем рады вносить дальнейшие изменения, чтобы сделать ваш продукт еще лучше"
     },
     
     "research": {
