@@ -35,12 +35,12 @@
     },
 
     "title-2": {
-        "en": "advanced <br> sites & web - apps",
-        "ru": "advanced <br> sites & web - apps"
+        "en": "advanced <br> sites & web apps",
+        "ru": "advanced <br> sites & web apps"
     },
     
     "we-create": {
-        "en": "We create modern web-products that cause new emotions!",
+        "en": "We create modern web products that cause new emotions!",
         "ru": "Мы разрабатываем современные веб-решения, которые создают новые эмоции!"
     },
 
@@ -50,8 +50,8 @@
     },
     
     "we-are-studio": {
-        "en": "Creating modern web-products <br> we'd be glad to use ourselves",
-        "ru": "Creating modern web-products <br> we'd be glad to use ourselves"
+        "en": "Creating modern web products <br> we'd be glad to use ourselves",
+        "ru": "Creating modern web products <br> we'd be glad to use ourselves"
     },
     
     "showreel-desc": {
@@ -183,7 +183,7 @@
     },
     
     "alchemy": {
-        "en": "creating web -<br> alchemy",
+        "en": "creating web <br> alchemy",
         "ru": "Создаем веб -<br> алхимию"
     },
 
@@ -238,7 +238,7 @@
     },
 
     "work-descr-3": {
-        "en": "We construct pages, perform frontend and backend development, create sites and complex web-applications, as well as simple web-games. This involves implementing site's main functions, providing integration with databases, CRM-systems and third-party services, and enabling users to interact with the site's content",
+        "en": "We construct pages, perform frontend and backend development, create sites and complex web applications, as well as simple web games. This involves implementing site's main functions, providing integration with databases, CRM-systems and third-party services, and enabling users to interact with the site's content",
         "ru": "Мы верстаем, делаем фронтенд и бэкенд разработку, создаваем сайты и сложные веб-приложения, простые веб-игры. В это входит реализацтя основных функций сайта, обеспечение интеграции с базами данных, CRM-системами и сторонними сервисами, и предоставление пользователям возможности взаимодействовать с содержимым сайта"
     },
 
