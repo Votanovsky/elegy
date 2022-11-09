@@ -129,20 +129,20 @@
             height: 100%;
         }
     }
-    .media_logo {
-        z-index: 1000;
-        width: auto;
-        height: auto;
-        display: block;
-        a {
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            img {
-                padding: 8px;
-            }
-        }
-    }
+    // .media_logo {
+    //     z-index: 1000;
+    //     width: auto;
+    //     height: auto;
+    //     display: block;
+    //     a {
+    //         display: flex;
+    //         justify-content: end;
+    //         align-items: center;
+    //         img {
+    //             padding: 8px;
+    //         }
+    //     }
+    // }
 
     .menu_layout {
         position: fixed;
