@@ -37,6 +37,8 @@ export async function localize(locale) {
         .forEach(el => { 
             // el.innerHTML = el.innerHTML === ' ' || el.innerHTML === '' ? strings[key][locale] : strings[key][locale] + el.innerHTML;
             el.innerHTML = strings[key][locale];
+            if (el.placeholder)
+                el.placeholder = strings[key][locale];
         });
     }
 }

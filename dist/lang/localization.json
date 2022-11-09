@@ -24,6 +24,46 @@
         "ru": "контакты"
     },
 
+    "choose-contact": {
+        "en": "Choose any contact option convenient for you: email, phone or messenger",
+        "ru": "Выберите любой удобный для вас способ связи: email, телефон или мессенджер"
+    },
+
+    "messenger": {
+        "en": "CHOOSE PREFERRED MESSENGER",
+        "ru": "КАКОЙ МЕССЕНДЖЕР ПРЕДПОЧИТАЕТЕ"
+    },
+
+    "nickname": {
+        "en": "YOUR MESSENGER USERNAME",
+        "ru": "ИМЯ ПОЛЬЗОВАТЕЛЯ В МЕССЕНДЖЕРЕ"
+    },
+
+    "email": {
+        "en": "YOUR EMAIL",
+        "ru": "ВАШ EMAIL"
+    },
+
+    "phone": {
+        "en": "PHONE NUMBER",
+        "ru": "НОМЕР ТЕЛЕФОНА"
+    },
+
+    "message": {
+        "en": "MESSAGE",
+        "ru": "СООБЩЕНИЕ"
+    },
+
+    "submit": {
+        "en": "SUBMIT",
+        "ru": "ОТПРАВИТЬ"
+    },
+
+    "contact-descr": {
+        "en": "Please, fill out this short form, and we'll contact you",
+        "ru": "Заполните короткую форму, и мы свяжемся с вами"
+    },
+
     "page-work": {
         "en": "how we work", 
         "ru": "как мы работаем"
