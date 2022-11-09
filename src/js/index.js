@@ -78,6 +78,27 @@ async function loadPage() {
 
     await localize(locale);
 
+
+    // Анимация фавиконки 
+    let count = 1
+    let favicons = document.querySelectorAll('link')
+
+    function animateFavicons() {
+        favicons.forEach(link => {
+            if (link.getAttribute('rel').indexOf('icon') >= 0) {
+                link.setAttribute('href', 'media/icon/favicons/' + count + '.png')
+            }
+        })
+        count ++
+
+        if(count == 11) {
+            count = 1
+        }
+    }
+    setInterval(animateFavicons, 700);
+    // /Анимация фавиконки 
+
+
     // Разделение h1 заголовков на главной странице и анимация их повяления
     const text = new SplitType('.h1-a');
     const textClipTl = gsap.timeline();
