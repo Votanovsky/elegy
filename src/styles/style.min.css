@@ -79,6 +79,13 @@ a {
 }
 
 canvas {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
   height: 100vh;
 }
 
@@ -497,7 +504,7 @@ canvas {
     height: 15px;
   }
 }
-.contacts_wrapper .cont_fl .cont_left .form .inp_wr label .invisible {
+.contacts_wrapper .cont_fl .cont_left .form .inp_wr .invisible {
   opacity: 0;
 }
 .contacts_wrapper .cont_fl .cont_left .form .inp_wr input {
@@ -1614,17 +1621,19 @@ canvas {
     margin-bottom: 265px;
   }
 }
-#root-index .root-about {
+
+.root-about {
   height: 110vh;
   overflow: hidden;
 }
 @media (max-width: 556px) {
-  #root-index .root-about {
+  .root-about {
     height: 95vh;
     overflow: hidden;
   }
 }
-#root-index .root-work {
+
+.root-work {
   background: #556158;
 }
 

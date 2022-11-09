@@ -1,4 +1,6 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== "production";
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const fs = require('fs');
@@ -36,9 +38,12 @@ module.exports = {
           { from: "src/js", to: "js" },
           { from: "src/lang", to: "lang" },
           { from: "src/media", to: "media" },
-          { from: "src/styles", to: "styles" },
+          { from: "*.css(.*)?", 
+            context: path.resolve(__dirname, "src", "styles"),
+            to: "styles" },
+            // {from: "src/styles", to: "styles"}
         ],
-      }),].concat(htmlPlugins),
+      }),].concat(htmlPlugins).concat(devMode ? [] : [new MiniCssExtractPlugin()]),
 
     module: {
         rules: [
@@ -56,12 +61,12 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 include: path.resolve(__dirname, 'src/styles'),
                 use: [
-                  // Creates `style` nodes from JS strings
-                  "style-loader",
-                  // Translates CSS into CommonJS
-                  "css-loader",
-                  // Compiles Sass to CSS
-                  "sass-loader",
+                    // Creates `style` nodes from JS strings
+                    devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
                 ],
             },
         ]

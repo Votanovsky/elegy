@@ -386,9 +386,9 @@
                                 width: 15px;
                                 height: 15px;
                             }
-                            .invisible {
-                                opacity: 0; 
-                            }
+                        }
+                        .invisible {
+                            opacity: 0; 
                         }
                         input {
                             padding-bottom: 5px;
@@ -412,7 +412,7 @@
                                 opacity: 1;
                             }
                         }
-                        #massage {
+                        #message {
                             // width: 100%;
                         }
                     }
