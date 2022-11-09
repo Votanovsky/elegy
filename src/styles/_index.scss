@@ -196,23 +196,19 @@
                 }
                 .img-wr {
                     width: 100%;
-                    &:hover img{
-                        border-radius: 200px;
-                        // transition: .34s cubic-bezier(.42, 0, .58, 1);
-                        transition: border-radius .5s cubic-bezier(.165, .84, .44, 1),filter .5s cubic-bezier(.165, .84, .44, 1),-webkit-filter .5s cubic-bezier(.165, .84, .44, 1);
-                        @media  (max-width: $breakpoint-md-min) {
-                            // border-radius: 10px;
-                        }
-                    }
+                    // &:hover img{
+                    //     border-radius: 200px;
+                    //     transition: border-radius .5s cubic-bezier(.165, .84, .44, 1),filter .5s cubic-bezier(.165, .84, .44, 1),-webkit-filter .5s cubic-bezier(.165, .84, .44, 1);
+                    //     @media  (max-width: $breakpoint-md-min) {
+                    //     }
+                    // }
                     img {
                         
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
-                        // transition: .34s cubic-bezier(.42, 0, .58, 1);
                         transition: border-radius .5s cubic-bezier(.165, .84, .44, 1),filter .5s cubic-bezier(.165, .84, .44, 1),-webkit-filter .5s cubic-bezier(.165, .84, .44, 1);
                         @media  (max-width: $breakpoint-md-min) {
-                            // border-radius: 10px;
                         }
                         
                     }
@@ -234,13 +230,13 @@
                         transition: .2s;
                         transform: translate(-4px, -4px);
                     }
-                    // &:hover {
-                    //     svg {
-                    //         transform: translate(0, 0);
-                    //         opacity: 1;
-                    //         transition: .2s;
-                    //     }
-                    // }
+                    &:hover {
+                        svg {
+                            transform: translate(0, 0);
+                            opacity: 1;
+                            transition: .2s;
+                        }
+                    }
                 }
 
                 .info {

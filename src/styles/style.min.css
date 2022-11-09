@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::-moz-selection {
+  background-color: rgba(40, 40, 40, 0.3882352941);
+}
 *::selection {
   background-color: rgba(40, 40, 40, 0.3882352941);
 }
@@ -98,12 +101,14 @@ canvas {
 
 .word {
   transform: translateY(40px);
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .load_anim {
   transform: translateY(20px);
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
 .btn-title {
@@ -234,20 +239,6 @@ canvas {
   width: 100%;
   height: 100%;
 }
-.hdr .media_logo {
-  z-index: 1000;
-  width: auto;
-  height: auto;
-  display: block;
-}
-.hdr .media_logo a {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-.hdr .media_logo a img {
-  padding: 8px;
-}
 .hdr .menu_layout {
   position: fixed;
   top: 0;
@@ -284,10 +275,9 @@ canvas {
 }
 .hdr .menu_layout ul .menu_li_lay-st {
   cursor: pointer;
-  line-height: 90%;
-  margin-bottom: 20px;
   text-transform: uppercase;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   z-index: 200;
 }
 
@@ -522,6 +512,16 @@ canvas {
     font-size: 12px;
   }
 }
+.contacts_wrapper .cont_fl .cont_left .form .inp_wr input::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #EDEDED;
+  opacity: 1; /* Firefox */
+  font-size: 12px;
+}
+.contacts_wrapper .cont_fl .cont_left .form .inp_wr input:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #EDEDED;
+  opacity: 1; /* Firefox */
+  font-size: 12px;
+}
 .contacts_wrapper .cont_fl .cont_left .form .inp_wr input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #EDEDED;
   opacity: 1; /* Firefox */
@@ -746,7 +746,8 @@ canvas {
 }
 @media (min-width: 992px) {
   .sec_cases-2 .cs_cont {
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 }
 @media (max-width: 768px) {
@@ -797,7 +798,8 @@ canvas {
   }
 }
 .sec_cases-2 .cs_wrap .pre_it .for_mob-it .border_height {
-  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
   height: auto;
   bottom: 0;
   background: #282828;
@@ -813,7 +815,8 @@ canvas {
   width: 100%;
   height: 1.2px;
   background-color: #282828;
-  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+          clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 .sec_cases-2 .cs_wrap .pre_it .it {
   width: 100%;
@@ -850,7 +853,8 @@ canvas {
   }
 }
 .sec_cases-2 .cs_wrap .pre_it .it .info_wrap .border_height {
-  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
   height: 100%;
   background: #282828;
   width: 1.2px;
@@ -1167,15 +1171,12 @@ canvas {
 #root-index .sec-2 .cases_wr .it .img-wr {
   width: 100%;
 }
-#root-index .sec-2 .cases_wr .it .img-wr:hover img {
-  border-radius: 200px;
-  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
 #root-index .sec-2 .cases_wr .it .img-wr img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: border-radius 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #root-index .sec-2 .cases_wr .it .name {
   text-transform: uppercase;
@@ -1194,6 +1195,11 @@ canvas {
   margin-left: 7px;
   transition: 0.2s;
   transform: translate(-4px, -4px);
+}
+#root-index .sec-2 .cases_wr .it .name:hover svg {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.2s;
 }
 #root-index .sec-2 .cases_wr .it .info {
   margin: 7px 0;
@@ -1383,7 +1389,11 @@ canvas {
   margin-right: 8px;
   margin-bottom: 8px;
   color: #282828;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   text-align: center;
   cursor: pointer;
@@ -1484,11 +1494,13 @@ canvas {
   width: 100%;
   height: 1.2px;
   background: #282828;
-  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+          clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 .sec_work-2 .work_it .lf {
   width: 32%;
-  font-family: "NeueMetana-Regular";
+  font-family: "Inter-regular", "sans-serif";
+  font-weight: 400;
   text-transform: uppercase;
   padding: 1vw 1vw 0 0;
   display: flex;
@@ -1506,8 +1518,9 @@ canvas {
 }
 .sec_work-2 .work_it .lf .name {
   font-size: 46px;
-  letter-spacing: -0.1rem;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  letter-spacing: -0.15rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transform: translateY(20px);
 }
 @media (max-width: 1200px) {
@@ -1580,7 +1593,8 @@ canvas {
   height: 130px;
   background: #282828;
   width: 2px;
-  clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
+          clip-path: polygon(50% 0, 50% 0, 50% 0, 50% 0);
 }
 .sec_work-2 .work_it .rg .ite {
   display: flex;
@@ -1638,5 +1652,5 @@ canvas {
 }
 
 .bg-green {
-  background: #556158;
+  background: #556158 !important;
 }/*# sourceMappingURL=style.min.css.map */

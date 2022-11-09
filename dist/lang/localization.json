@@ -50,8 +50,8 @@
     },
 
     "message": {
-        "en": "MESSAGE",
-        "ru": "СООБЩЕНИЕ"
+        "en": "MESSAGE FOR US",
+        "ru": "СООБЩЕНИЕ ДЛЯ НАС"
     },
 
     "submit": {
@@ -111,7 +111,7 @@
 
     "maintenance": {
         "en": "maintenance",
-        "ru": "maintenance"
+        "ru": "поддержка"
     },
     
     "seo-text": {
@@ -136,12 +136,12 @@
     },
     "creativity": {
         "en": "Creativity",
-        "ru": "Creativity"
+        "ru": "Креативность"
     },
     
     "creative-coding-text": {
-        "en": "We use special program libraries to create colorful, stunning, and at the same time lightweight visual effects. As a result, we get an impressive picture plus good performance",
-        "ru": "С помощью специальных программных библиотек мы создаем красочные, потрясающие, и в то же время легковесные визуальные эффекты. В итоге получается впечатляющий дизайн + производительность"
+        "en": "We use progressive digital technology to create colorful, stunning, and at the same time lightweight visual effects. As a result, we get an impressive picture plus good performance",
+        "ru": "С помощью современных цифровых технологий,  мы создаем красочные и эффектные анимации и визуальные эффекты. В итоге получается впечатляющий дизайн и производительность"
     },
     
 
@@ -224,17 +224,17 @@
     
     "alchemy": {
         "en": "creating web <br> alchemy",
-        "ru": "Создаем веб <br> алхимию"
+        "ru": "creating web <br> alchemy"
     },
 
     "about-text": {
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "ru": "Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит. Лорем ипсум долор сит амет, консектетур адиписцинг элит."
+        "en": "We are a little team of people who love what they do and believe in the product they are engaged in, rethinking the idea of web development. Our mission is to create state-of-the-art web solutions: websites, apps, web games and digital installations that give people the opportunity to get new user experiences. In our work we strive to achieve maximum customer contact from brief to launch, in order to achieve together a unique result that we can be proud of together.",
+        "ru": "Мы - небольшой коллектив людей, которые любят то, что они делают и верят в тот продукт, которым занимаются, переосмысляя представление о web - разработке. Наша задача - создание современных веб решений: сайтов, приложений, веб - игр и цифровых инсталяций, которые дают людям возможность получить новый пользовательский опыт. В нашей работе мы стремимся к достижению максимального контакта с клиентом от брифа и до запуска, чтобы вместе достичь уникального результата, которым мы вместе сможем гордиться."
     },
 
     "our-cases": {
         "en": "Our cases",
-        "ru": "Наши кейсы"
+        "ru": "Our cases"
     },
 
     "sec-cases-1-text": {
@@ -264,7 +264,7 @@
 
     "work-title": {
         "en": "how we create and launch web projects",
-        "ru": "как мы создаем и запускаем веб-проекты"
+        "ru": "how we create and launch web projects"
     },
 
     "work-descr-1": {
@@ -273,13 +273,13 @@
     },
 
     "work-descr-2": {
-        "en": "Using best practices to create attractive and intuitive design for users, we make it not only effective, but also spectacular. We complement our sites with animations and interactive 3D, so nobody will get bored with them!",
-        "ru": "Используем лучшие методы, чтобы создать для пользователя красивый и понятный дизайн, делая его не только эффективным, но и эффектным. Дополняем наши сайты анимациями и интерактивным 3D, так что на них никто не сможет заскучать!"
+        "en": "Using best practices to create attractive and intuitive design for users, we make it not only effective, but also spectacular. We complement our sites with animations and interactive 3D, so nobody will get bored with them! We are also ready to make development for your design and are open to such offers.",
+        "ru": "Используем лучшие методы, чтобы создать для пользователя красивый и понятный дизайн, делая его не только эффективным, но и эффектным. Дополняем наши сайты анимациями и интерактивным 3D, поэтому на них никто не заскучает! Так же мы готовы делать разработку под ваш дизайн и открыты к таким предложениями."
     },
 
     "work-descr-3": {
         "en": "We construct pages, perform frontend and backend development, create sites and complex web applications, as well as simple web games. This involves implementing site's main functions, providing integration with databases, CRM-systems and third-party services, and enabling users to interact with the site's content",
-        "ru": "Мы верстаем, делаем фронтенд и бэкенд разработку, создаем сайты, веб-приложения и простые веб-игры. В это входит реализация основных функций сайта, обеспечение интеграции с базами данных, CRM-системами и сторонними сервисами, и предоставление пользователям возможности взаимодействовать с содержимым сайта"
+        "ru": "Мы верстаем, делаем фронтенд и бэкенд разработку, создаем сайты, веб-приложения и веб-игры. В это входит реализация основных функций сайта, обеспечение интеграции с базами данных, CRM-системами и сторонними сервисами, и предоставление пользователям возможности взаимодействовать с содержимым сайта"
     },
 
     "work-descr-4": {

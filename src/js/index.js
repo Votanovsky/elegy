@@ -368,21 +368,21 @@ async function loadPage() {
     // /Ховер для футтера
 
     // Ховер стерлочек для кейсов на главной странице (ховер работает только на ласт элемент я хз почему так)
-    gsap.utils.toArray(".it-hover").forEach(it => {
-        let hover = ''
-        gsap.utils.toArray(".cases-svg").forEach(svg => {
-                hover = gsap.to(svg, {
-                duration: .2,
-                opacity: 1,
-                y: 0,
-                x: 0,
-                paused: true,
-                ease: "power1.inOut",
-            });
-        })
-        it.addEventListener("mouseenter", () => hover.play());
-        it.addEventListener("mouseleave", () => hover.reverse());
-    });
+    // gsap.utils.toArray(".it-hover").forEach(it => {
+    //     let hover = ''
+    //     gsap.utils.toArray(".cases-svg").forEach(svg => {
+    //             hover = gsap.to(svg, {
+    //             duration: .2,
+    //             opacity: 1,
+    //             y: 0,
+    //             x: 0,
+    //             paused: true,
+    //             ease: "power1.inOut",
+    //         });
+    //     })
+    //     it.addEventListener("mouseenter", () => hover.play());
+    //     it.addEventListener("mouseleave", () => hover.reverse());
+    // });
     // Ховер стерлочек для кейсов на главной странице 
 
     if (document.title === 'About Elegy') {

@@ -67,7 +67,8 @@
             }
             .lf {
                 width: 32%;
-                font-family: 'NeueMetana-Regular';
+                font-family: 'Inter-regular', 'sans-serif';
+                font-weight: 400;
                 text-transform: uppercase;
                 padding: 1vw 1vw 0 0;
                 display: flex;
@@ -79,8 +80,9 @@
                     width: 100%;
                 }
                 .name {
+
                     font-size: 46px;
-                    letter-spacing: -0.1rem;
+                    letter-spacing: -0.15rem;
                     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
                     transform: translateY(20px);
                     @media  (max-width: $breakpoint-xl-min) {

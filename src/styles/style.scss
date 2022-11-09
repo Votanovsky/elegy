@@ -209,9 +209,10 @@ canvas {
         overflow: hidden;
     }
 }
+
 .root-work {
-    background: #556158;
+    background: #556158 ;
 }
 .bg-green {
-    background: $green-color;
+    background: $green-color !important;;
 }
