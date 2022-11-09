@@ -18,6 +18,9 @@
     @media  (max-width: $breakpoint-sm-min) {
         height: 60px;
     }
+    .hdr-work {
+        background: #556158;
+    }
     .menu {
         display: flex;
         font-size: 16px;
@@ -382,6 +385,9 @@
                                 font-size: 8px;
                                 width: 15px;
                                 height: 15px;
+                            }
+                            .invisible {
+                                opacity: 0; 
                             }
                         }
                         input {
