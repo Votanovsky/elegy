@@ -190,7 +190,7 @@ canvas {
  
 
 
-#root-index{
+.root-index{
     width: 100%;
     -webkit-font-smoothing: antialiased;
     // transition: .3s;
@@ -209,10 +209,9 @@ canvas {
         overflow: hidden;
     }
 }
-
-.root-work {
-    background: #556158 ;
-}
+// .root-work {
+    
+// }
 .bg-green {
-    background: $green-color !important;;
+    background: $green-color;
 }

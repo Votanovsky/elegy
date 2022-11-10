@@ -32,7 +32,7 @@ export function loadWork() {
     // /Появления бордеров у текста по триггеру
 
     // Смена цвета страницы и цвета хедера
-    gsap.to("#root-index", {
+    gsap.to(".root-index", {
         background: 'rgb(135,129,123)',
 
         scrollTrigger: {

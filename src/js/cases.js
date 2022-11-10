@@ -50,7 +50,7 @@ export function loadCases() {
 
 
     // Смена цвета страницы и цвета хедера
-    gsap.to("#root-index", {
+    gsap.to(".root-index", {
         background: 'rgb(135,129,123)',
         // ease: "expo.inOut",
         // duration: 1.5,
