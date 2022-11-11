@@ -54,7 +54,18 @@
         "ru": "СООБЩЕНИЕ ДЛЯ НАС"
     },
 
-    "submit": {
+    "contact_error": {
+        "en": "Please, fill in at least one of the following fields: messenger + nickname, email or phone",
+        "ru": "Пожалуйста, заполните хотя бы одно из полей: мессенджер + имя пользователя, email или телефон"
+    },
+
+    "message_error": {
+        "en": "Please, leave us some additional information in the message field (who you are, and what you're insterested in)",
+        "ru": "Сообщите нам какую-нибудь информацию о себе в поле \"сообщение\" (кто вы и что вас заинтересовало)"
+    },
+
+
+    "button_submit": {
         "en": "SUBMIT",
         "ru": "ОТПРАВИТЬ"
     },
@@ -95,8 +106,8 @@
     },
     
     "showreel-desc": {
-        "en": "We help our customers provide their users with unique experience. We believe that the key to launching a successful product is close cooperation. That's why we build a special approach to each customer, which allows us to unlock each other's potential in business, creativity, and development",
-        "ru": "Мы помогаем клиентам дарить своим пользователям уникальный опыт. Мы считаем, что залог создания успешного продукта - это тесное сотрудничество. Поэтому к каждому заказчику мы выстраиваем особый подход, который позволяет нам расскрывать возможности друг друга в бизнесе, творчестве и разработке"
+        "en": "We help our customers provide their users with unique experience. We believe that the key to launching a successful product is close cooperation. That's why we build a special approach to every customer, which allows us to unlock each other's potential in business, creativity, and development",
+        "ru": "Мы помогаем клиентам дарить своим пользователям уникальный опыт. Мы считаем, что залог создания успешного продукта - это тесное сотрудничество. Поэтому к каждому заказчику мы выстраиваем особый подход, который позволяет нам раскрывать возможности друг друга в бизнесе, творчестве и разработке"
     },
 
     "our-tech": {
@@ -273,8 +284,8 @@
     },
 
     "work-descr-2": {
-        "en": "Using best practices to create attractive and intuitive design for users, we make it not only effective, but also spectacular. We complement our sites with animations and interactive 3D, so nobody will get bored with them! We are also ready to make development for your design and are open to such offers.",
-        "ru": "Используем лучшие методы, чтобы создать для пользователя красивый и понятный дизайн, делая его не только эффективным, но и эффектным. Дополняем наши сайты анимациями и интерактивным 3D, поэтому на них никто не заскучает! Так же мы готовы делать разработку под ваш дизайн и открыты к таким предложениями."
+        "en": "Using best practices to create attractive and intuitive design for users, we make it not only effective, but also spectacular. We complement our sites with animations and interactive 3D, so nobody will get bored with them! We're also ready to make development specifically for your own design and are open to such offers.",
+        "ru": "Используем лучшие методы, чтобы создать для пользователя красивый и понятный дизайн, делая его не только эффективным, но и эффектным. Дополняем наши сайты анимациями и интерактивным 3D, поэтому на них никто не заскучает! Также мы готовы делать разработку под ваш собственный дизайн и открыты к таким предложениями."
     },
 
     "work-descr-3": {
@@ -288,7 +299,7 @@
     },
 
     "work-descr-5": {
-        "en": "By performing internal site optimization, we also take care of SEO, ensuring that the site's parameters meet all essential requirements so that search engines willingly index them",
+        "en": "By performing internal site optimization, we also take care of SEO, ensuring that the site's parameters meet all essential requirements so that search engines index them more willingly",
         "ru": "Благодаря внутренней оптимизации ресурсов, мы также достигаем улучшения показателей SEO. Мы заботимся о том, чтобы наши сайты соответствовали всем необходимым требованиям для того, чтобы поисковики охотнее индексировали их"
     },
 

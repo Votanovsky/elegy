@@ -450,6 +450,12 @@ canvas {
     display: none;
   }
 }
+.contacts_wrapper .cont_fl .cont_left .form .form_wr #contact_error {
+  display: none;
+}
+.contacts_wrapper .cont_fl .cont_left .form .form_wr #message_error {
+  display: none;
+}
 .contacts_wrapper .cont_fl .cont_left .form .inp_wr {
   font-size: 16px;
   letter-spacing: -0.5px;

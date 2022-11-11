@@ -36,6 +36,7 @@ module.exports = {
           { from: "src/fonts", to: "fonts" },
           { from: "src/html/includes", to: "html/includes" },
           { from: "src/js", to: "js" },
+          { from: "src/php", to: "php" },
           { from: "src/lang", to: "lang" },
           { from: "**/.DS_Store", 
             context: path.resolve(__dirname, "src"),

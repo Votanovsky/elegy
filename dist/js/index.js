@@ -8,8 +8,8 @@ import {loadCases} from './cases.js';
 
 import {loadWork} from './work.js';
 
+import {loadHeader, validateForm} from './header.js';
 import {loadFooter} from './footer.js';
-import {loadHeader} from './header.js';
 
 import {localize, switchLang, getLocale} from './localization.js';
 
@@ -61,13 +61,16 @@ async function loadPage() {
     await loadHeader();
     await loadFooter();
 
+    
     const langSwitches = document.querySelectorAll("#language");
-
+    
     langSwitches.forEach(langSwitch => langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
         window.location.href = window.location.pathname;
         locale = switchLang(langSwitch);
         setCookie('locale', locale, 30);
     }));
+    
+    validateForm();
 
     locale = getCookie('locale'); // достаём локаль из куки
     if (!locale) { // если куки нет

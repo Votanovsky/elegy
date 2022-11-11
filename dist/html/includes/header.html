@@ -89,43 +89,47 @@
                     <div id="choose-contact"> </div>
                 </div>
             
-                <form action="" class="form">
+                <form method="post" action="/php/mail_form.php" class="form">
                     <div class="form_wr">
                         <div class="left">
                             <div class="inp_wr">
                                 <label for="messenger">1</label>
-                                <input id="messenger" type="text" placeholder="TAG MESSENGER">
+                                <input id="messenger" name="messenger" type="text" placeholder="TAG MESSENGER">
                             </div>
-                            <div class="inp_wr nickname_mobile">
+                            <!-- <div class="inp_wr nickname_mobile">
                                 <label class="invisible" for="nickname"></label>
-                                <input id="nickname" type="text" placeholder="YOUR NICKNAME">
-                            </div>
+                                <input id="nickname" name="nickname" type="text" placeholder="YOUR NICKNAME">
+                            </div> -->
                             <div class="inp_wr">
                                 <label for="email">2</label>
-                                <input id="email" type="text" placeholder="YOUR EMAIL">
+                                <input id="email"name="email" type="email" placeholder="YOUR EMAIL">
                             </div>
                         </div>
                 
                         <div class="right">
                             <div class="inp_wr nickname_desctop">
                                 <label class="invisible" for="nickname"></label>
-                                <input id="nickname" type="text" placeholder="YOUR NICKNAME">
+                                <input id="nickname" name="nickname" type="text" placeholder="YOUR NICKNAME">
                             </div>
                     
                             <div class="inp_wr">
                                 <label for="phone">3</label>
-                                <input id="phone" type="text" placeholder="PHONE NUMBER">
+                                <input id="phone" name="phone" type="tel" placeholder="PHONE NUMBER">
                             </div>
                         </div>
+
+                        <!-- localized error messages -->
+                        <div id="contact_error"> </div>
+                        <div id="message_error"> </div>
                     </div>
             
                     <div class="inp_wr inp_wr--full">
                         <label class="invisible" for="message"></label>
-                        <input id="message" type="text" placeholder="MESSAGE FOR US">
+                        <input id="message" name="message" type="text" placeholder="MESSAGE FOR US">
                     </div>
 
                     <div class="button_submit">
-                        <button id="submit"> </button>
+                        <button type="submit" id="button_submit"> </button>
                     </div>
                 </form>
             </div> 
