@@ -412,8 +412,10 @@ async function loadPage() {
     // Ховер стерлочек для кейсов на главной странице 
 
     if (document.title === 'About Elegy') {
-        init(mobileWidth);
-        tick();
+        if (!document.querySelector('canvas')) {
+            init(mobileWidth);
+            tick();
+        }
     }
     else {
         stopTick(); // Остановка блоба на остальных страницах
