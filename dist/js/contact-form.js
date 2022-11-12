@@ -34,7 +34,7 @@ export function validateForm(loadPage) {                        // валида�
         else {                                  // если все нужные поля заполнены, убираем предупреждения, отправляем форму и показываем сообщение об отправке
             messenger.setCustomValidity("");
             message.setCustomValidity("");
-            let body = JSON.stringify({ "messenger": messenger.value, "nicknme": nickname.value, "email": email.value, "phone": phone.value, "message": message.value })
+            let body = JSON.stringify({ "messenger": messenger.value, "nickname": nickname.value, "email": email.value, "phone": phone.value, "message": message.value })
             await delay(500);                   // маленькая задержка перед отправкой (опционально)
             // form.submit();
             fetch('/php/mail_form.php', {
@@ -45,8 +45,8 @@ export function validateForm(loadPage) {                        // валида�
                 },
                 body: body
             })
-            .then(response => response.text());
-            // .then(response => console.log(response));
+            .then(response => response.text())
+            .then(response => console.log(response));
             loadPage();
             showNotification();
             // console.log(JSON.stringify({ "messenger": messenger.value, "nicknme": nickname.value, "email": email.value, "phone": phone.value, "message": message.value }));

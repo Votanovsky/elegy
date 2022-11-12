@@ -17,6 +17,9 @@ $dotenv->load();
 // Processing form input and constructing message body
 $requestBody = file_get_contents('php://input');
 $requestBody = json_decode($requestBody, true);
+// foreach ($requestBody as $key => $value) {
+//     echo $key.": ".$value." ";
+// }
 if ($requestBody["messenger"] && $requestBody["nickname"]) {
     $messengerNickname = [
         "messenger" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["messenger"]),
