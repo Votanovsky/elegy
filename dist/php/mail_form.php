@@ -4,6 +4,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\OAuth;
+//Alias the League Google OAuth2 provider class
+use League\OAuth2\Client\Provider\Google;
 
 //Load Composer's autoloader
 require '../../vendor/autoload.php';
@@ -11,9 +14,7 @@ require '../../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
 $dotenv->load();
 
-$GOOGLE_SMTP_USERNAME = $_ENV['GOOGLE_SMTP_USERNAME'];
-$GOOGLE_SMTP_PASS = $_ENV['GOOGLE_SMTP_PASS'];
-
+// Processing form input and constructing message body
 if ($_POST["messenger"] && $_POST["nickname"]) {
     $messengerNickname = [
         "messenger" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["messenger"]),
@@ -50,7 +51,7 @@ $messageBody = "<html>
                     <h2>Сообщение: </h2>
                     <p>{$message}</p>
                 </body></html>";
-echo $messageBody;
+// echo $messageBody;
 // echo $messengerNickname["messenger"]."<br>".$messengerNickname["nickname"]."<br>";
 // echo $email."<br>";
 // echo $phone."<br>";
@@ -59,8 +60,17 @@ echo $messageBody;
 //Create an instance; passing `true` enables exceptions
 
 class Mailer extends PHPMailer { 
-    public static function sendMail($email, $messengerNickname, $phone, $message) {
-        $mail = new PHPMailer(true);   
+    public static function sendMail($email, $messageBody) {
+        $mail = new PHPMailer(true); 
+        $OAUTH_USER_EMAIL    = $_ENV['OAUTH_USER_EMAIL'];
+        $OAUTH_CLIENT_ID     = $_ENV['OAUTH_CLIENT_ID'];
+        $OAUTH_CLIENT_SECRET = $_ENV['OAUTH_CLIENT_SECRET'];
+        $OAUTH_REFRESH_TOKEN = $_ENV['OAUTH_REFRESH_TOKEN'];
+        // echo $OAUTH_USER_EMAIL    ."<br>";
+        // echo $OAUTH_CLIENT_ID     ."<br>";
+        // echo $OAUTH_CLIENT_SECRET ."<br>";
+        // echo $OAUTH_REFRESH_TOKEN ."<br>";
+
         try {
             //Server settings
             $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
@@ -68,12 +78,33 @@ class Mailer extends PHPMailer {
             $mail->CharSet = "UTF-8";
             $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = $GOOGLE_SMTP_USERNAME;                     //SMTP username
-            $mail->Password   = $GOOGLE_SMTP_PASS;                               //SMTP password
+            $mail->AuthType = 'XOAUTH2';
+            // $mail->Username   = $GOOGLE_SMTP_USERNAME;                     //SMTP username
+            // $mail->Password   = $GOOGLE_SMTP_PASS;                               //SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
+            // Setting OAuth authentication
+            $provider = new Google(
+                [
+                    'clientId' => $OAUTH_CLIENT_ID,
+                    'clientSecret' => $OAUTH_CLIENT_SECRET
+                ]
+            );
+            $mail->setOAuth(
+                new OAuth(
+                    [
+                        'provider' => $provider,
+                        'clientId' => $OAUTH_CLIENT_ID,
+                        'clientSecret' => $OAUTH_CLIENT_SECRET,
+                        'refreshToken' => $OAUTH_REFRESH_TOKEN,
+                        'userName' => $OAUTH_USER_EMAIL,
+                    ]
+                    )
+                );
+
             //Recipients
+            $mail->Subject = "Новое сообщение из формы";
             $mail->setFrom('mailbot@elegy.studio');
             $mail->addAddress('ourmail@elegy.studio');     //Add a recipient
             if ($email) {
@@ -83,8 +114,8 @@ class Mailer extends PHPMailer {
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             // $mail->Subject = 'Here is the subject';
-            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->Body    = $messageBody;
+            $mail->AltBody = $messageBody;
 
             $mail->send();
             echo 'Message has been sent';
@@ -94,7 +125,7 @@ class Mailer extends PHPMailer {
     }
 }
 
-// Mailer::sendMail();
+Mailer::sendMail($email, $messageBody);
     // echo $_POST["messenger"]."<br>";
     // echo $_POST["nickname"]."<br>";
     // echo $_POST["email"]."<br>";
