@@ -15,16 +15,18 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
 $dotenv->load();
 
 // Processing form input and constructing message body
-if ($_POST["messenger"] && $_POST["nickname"]) {
+$requestBody = file_get_contents('php://input');
+$requestBody = json_decode($requestBody, true);
+if ($requestBody["messenger"] && $requestBody["nickname"]) {
     $messengerNickname = [
-        "messenger" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["messenger"]),
-        "nickname" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["nickname"])
+        "messenger" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["messenger"]),
+        "nickname" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["nickname"])
     ];
 }
 
-$email = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["email"]);
-$phone = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["phone"]);
-$message = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["message"]);
+$email = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["email"]);
+$phone = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["phone"]);
+$message = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["message"]);
 
 $messageBody = "<html>
                 <head>
@@ -70,7 +72,6 @@ class Mailer extends PHPMailer {
         // echo $OAUTH_CLIENT_ID     ."<br>";
         // echo $OAUTH_CLIENT_SECRET ."<br>";
         // echo $OAUTH_REFRESH_TOKEN ."<br>";
-
         try {
             //Server settings
             $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
