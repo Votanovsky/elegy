@@ -33,6 +33,7 @@ module.exports = {
     plugins: [
         new CopyPlugin({
         patterns: [
+          { from: ".env", to: ""},
           { from: "src/fonts", to: "fonts" },
           { from: "src/html/includes", to: "html/includes" },
           { from: "src/js", to: "js" },

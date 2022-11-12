@@ -8,8 +8,9 @@ import {loadCases} from './cases.js';
 
 import {loadWork} from './work.js';
 
-import {loadHeader, validateForm} from './header.js';
+import {loadHeader} from './header.js';
 import {loadFooter} from './footer.js';
+import {validateForm} from './contact-form.js';
 
 import {localize, switchLang, getLocale} from './localization.js';
 
@@ -26,7 +27,7 @@ function setCookie(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  }
+}
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -43,6 +44,7 @@ function getCookie(cname) {
     }
     return "";
 }
+
 
 // async function loadBody(title) {
 //     let address =  title ===    "Home"  ? "index.html"
@@ -70,7 +72,7 @@ async function loadPage() {
         setCookie('locale', locale, 30);
     }));
     
-    validateForm();
+    validateForm(loadPage);
 
     locale = getCookie('locale'); // достаём локаль из куки
     if (!locale) { // если куки нет

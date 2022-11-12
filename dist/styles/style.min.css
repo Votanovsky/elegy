@@ -557,6 +557,10 @@ canvas {
   }
 }
 
+#dummyframe {
+  display: none;
+}
+
 .footer {
   width: 100%;
   background: #282828;
@@ -1627,4 +1631,21 @@ canvas {
 
 .bg-green {
   background: #556158;
+}
+
+.message-sent-notification {
+  padding: 20px;
+  display: none;
+  position: fixed;
+  top: 14rem;
+  left: 42%;
+  width: fit-content;
+  height: 5rem;
+  background: #282828;
+  font-family: "Inter-regular";
+  src: url(../fonts/Inter-Regular.otf);
+  font-size: 20px;
+  color: #EDEDED;
+  overflow: hidden;
+  z-index: 999999;
 }/*# sourceMappingURL=style.min.css.map */

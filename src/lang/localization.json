@@ -70,6 +70,11 @@
         "ru": "ОТПРАВИТЬ"
     },
 
+    "notification": {
+        "en": "Message has been successfuly sent!",
+        "ru": "Ваше сообщение успешно отправлено!"
+    },
+
     "contact-descr": {
         "en": "Please, fill out this short form, and we'll contact you",
         "ru": "Заполните короткую форму, и мы свяжемся с вами"

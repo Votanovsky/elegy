@@ -58,7 +58,7 @@ $green-color: #556158;
 @mixin list-null {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0;;
 }
 
 // PAGE ANIMATIONS
@@ -214,4 +214,21 @@ canvas {
 // }
 .bg-green {
     background: $green-color;
+}
+
+.message-sent-notification {
+    padding: 20px;
+    display: none; // gsap меняет на flex с небольшой задержкой, чтобы текст локализации успел отобразиться
+    position: fixed;
+    top: 14rem;
+    left: 42%;
+    width: fit-content;
+    height: 5rem;
+    background: $black-color;
+    font-family: 'Inter-regular';
+    src: url(../fonts/Inter-Regular.otf);
+    font-size: 20px;
+    color: $gray-color;
+    overflow: hidden;
+    z-index: 999999;
 }
