@@ -72,15 +72,15 @@ async function loadPage() {
         setCookie('locale', locale, 30);
     }));
     
-    validateForm(loadPage);
-
+    
     locale = getCookie('locale'); // достаём локаль из куки
     if (!locale) { // если куки нет
         // locale = getLocale(); // получаем локаль пользователя
         locale = 'en';
         setCookie('locale', locale, 30);
     }
-
+    
+    validateForm(locale);
     await localize(locale);
 
 

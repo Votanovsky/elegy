@@ -11,15 +11,22 @@ function showNotification() {
     gsap.set(notification, {display: "none", delay: 3.2});
 }
 
-export function validateForm(loadPage) {                        // валидация ввода формы контактов
+export function validateForm(locale) {                        // валидация ввода формы контактов
     const delay = (ms) => new Promise(res => setTimeout(res, ms));
+
     const   form        = document.querySelector('form.form'), 
             messenger   = document.querySelector('#messenger'),
             nickname    = document.querySelector('#nickname'),
             email       = document.querySelector('#email'),
             phone       = document.querySelector('#phone'),
-            message     = document.querySelector('#message');
-
+            message     = document.querySelector('#message'),
+            contDescr   = document.querySelector('#contact-descr');
+            
+    const submitMessage = { "contact-descr-submit": {
+            "en": "Thank you, we'll review your request as soon as possible",
+            "ru": "Спасибо, мы рассмотрим вашу заяку в ближайшее время" 
+        }
+    }
     // messenger.setCustomValidity(document.getElementById('contact_error').innerHTML);                                                         // а также поле message
     // message.setCustomValidity(document.getElementById('message_error').innerHTML);
 
@@ -34,7 +41,8 @@ export function validateForm(loadPage) {                        // валида�
         else {                                  // если все нужные поля заполнены, убираем предупреждения, отправляем форму и показываем сообщение об отправке
             messenger.setCustomValidity("");
             message.setCustomValidity("");
-            let body = JSON.stringify({ "messenger": messenger.value, "nickname": nickname.value, "email": email.value, "phone": phone.value, "message": message.value })
+            let body = JSON.stringify({ "messenger": messenger.value, "nickname": nickname.value, "email": email.value, "phone": phone.value, "message": message.value });
+            gsap.to(contDescr, {opacity: 0, duration: 0.7, ease: 'power4.out'});
             await delay(500);                   // маленькая задержка перед отправкой (опционально)
             // form.submit();
             fetch('/php/mail_form.php', {
@@ -45,10 +53,14 @@ export function validateForm(loadPage) {                        // валида�
                 },
                 body: body
             })
-            .then(response => response.text())
-            .then(response => console.log(response));
-            loadPage();
-            showNotification();
+            .then(response => response.text());
+            // .then(response => console.log(response));
+            form.reset();
+            contDescr.innerHTML = submitMessage['contact-descr-submit'][locale];
+            contDescr.id = 'contact-descr-submit';
+            gsap.to(contDescr, {opacity: 1, duration: 0.7, ease: 'power4.in'});
+            // loadPage();
+            // showNotification();
             // console.log(JSON.stringify({ "messenger": messenger.value, "nicknme": nickname.value, "email": email.value, "phone": phone.value, "message": message.value }));
         }
     });
