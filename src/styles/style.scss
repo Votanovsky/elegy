@@ -126,7 +126,11 @@ a {
     color: $black-color;
     text-decoration: none;
 }
-
+input {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
 //Three.js canvas
 canvas {
     position: absolute;
