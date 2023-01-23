@@ -77,7 +77,7 @@ class Mailer extends PHPMailer {
         // echo $OAUTH_REFRESH_TOKEN ."<br>";
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            $mail->SMTPDebug = 3;//SMTP::DEBUG_SERVER;                      //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
             $mail->CharSet = "UTF-8";
             $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
