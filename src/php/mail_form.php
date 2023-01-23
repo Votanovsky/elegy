@@ -15,21 +15,21 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
 $dotenv->load();
 
 // Processing form input and constructing message body
-$requestBody = file_get_contents('php://input');
-$requestBody = json_decode($requestBody, true);
+// $requestBody = file_get_contents('php://input');
+// $requestBody = json_decode($requestBody, true);
 // foreach ($requestBody as $key => $value) {
 //     echo $key.": ".$value." ";
 // }
 if ($requestBody["messenger"] && $requestBody["nickname"]) {
     $messengerNickname = [
-        "messenger" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["messenger"]),
-        "nickname" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["nickname"])
+        "messenger" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["messenger"]),
+        "nickname" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["nickname"])
     ];
 }
 
-$email = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["email"]);
-$phone = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["phone"]);
-$message = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["message"]);
+$email      = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["email"]);
+$phone      = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["phone"]);
+$message    = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["message"]);
 
 $messageBody = "<html>
                 <head>
@@ -128,7 +128,7 @@ class Mailer extends PHPMailer {
         }
     }
 }
-// echo $messageBody;
+echo $messageBody;
 Mailer::sendMail($email, $messageBody);
     // echo $_POST["messenger"]."<br>";
     // echo $_POST["nickname"]."<br>";

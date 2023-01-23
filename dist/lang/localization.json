@@ -31,7 +31,7 @@
 
     "messenger": {
         "en": "CHOOSE PREFERRED MESSENGER",
-        "ru": "КАКОЙ МЕССЕНДЖЕР ПРЕДПОЧИТАЕТЕ"
+        "ru": "УДОБНЫЙ ДЛЯ ВАС МЕССЕНДЖЕР"
     },
 
     "nickname": {
@@ -97,7 +97,7 @@
     
     "we-create": {
         "en": "We create modern web products that cause new emotions!",
-        "ru": "Мы разрабатываем современные веб-решения, которые создают новые эмоции!"
+        "ru": "Мы разрабатываем современные веб-продукты, которые создают эмоции!"
     },
 
     "about": {
@@ -285,7 +285,7 @@
 
     "work-descr-1": {
         "en": "While creating unique experience for brands and organizations, we thoroughly investigate competitors and the market, research various user experience and analyze current trends. Quality analysis allows us to create the most effective and competitive products.",
-        "ru": "При создании уникального опыта для брендов и организаций, мы тщательно исследуем конкурентов и рынок, изучаем пользовательский опыт и анализируем современные тенденции. Качественный анализ позволяет нам создавать наиболее эффективные и конкурентноспособные продукты."
+        "ru": "При создании уникального опыта для брендов и организаций, мы тщательно исследуем конкурентов и рынок, изучаем потенциальных пользователей и анализируем современные тенденции. Качественный анализ позволяет нам создавать наиболее эффективные и конкурентноспособные продукты."
     },
 
     "work-descr-2": {
@@ -299,18 +299,18 @@
     },
 
     "work-descr-4": {
-        "en": "We use advanced program libraries to create colorful, stunning, and at the same time lightweight visual effects. As a result, we get an impressive picture plus good performance",
-        "ru": "С помощью продвинутых программных библиотек мы создаем красочные, потрясающие, и в то же время легковесные визуальные эффекты. В итоге получается впечатляющий дизайн + производительность"
+        "en": "With modern web solutions, we create spectacular animations that give the user completely new emotions when visiting the site",
+        "ru": "С помощью современных веб - решений, мы создаем эффектные анимации, которые дарят пользователю совершенно новые эмоции при посещение сайта"
     },
 
     "work-descr-5": {
-        "en": "By performing internal site optimization, we also take care of SEO, ensuring that the site's parameters meet all essential requirements so that search engines index them more willingly",
-        "ru": "Благодаря внутренней оптимизации ресурсов, мы также достигаем улучшения показателей SEO. Мы заботимся о том, чтобы наши сайты соответствовали всем необходимым требованиям для того, чтобы поисковики охотнее индексировали их"
+        "en": "Internal optimization of resources helps us to achieve improved SEO performance. We make sure that our sites meet all necessary requirements",
+        "ru": "Внутренняя оптимизации ресурсов помогает нам достигать улучшения показателей SEO. Мы заботимся о том, чтобы наши сайты соответствовали всем необходимым требованиям"
     },
 
     "work-descr-6": {
-        "en": "Support and maintenance are provided for all our products. After deploying a website, we're also glad to take orders for further changes to make it even better",
-        "ru": "Всем нашим продуктам предоставляются поддержка и сопровождение. После запуска веб-сайта мы также будем рады вносить дальнейшие изменения, чтобы сделать ваш продукт еще лучше"
+        "en": "You can also not worry about staying with the complex web-product one on one, because we help our customers in support and development of previously launched sites",
+        "ru": "Вы так же можете не переживать остаться со сложным веб - продуктом один на один, ведь мы помогаем нашим клиентам в поддержке и развитии запущенных ранее сайтов"
     },
     
     "research": {
