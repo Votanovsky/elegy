@@ -85,8 +85,8 @@ class Mailer extends PHPMailer {
             $mail->AuthType = 'XOAUTH2';
             // $mail->Username   = $GOOGLE_SMTP_USERNAME;                     //SMTP username
             // $mail->Password   = $GOOGLE_SMTP_PASS;                               //SMTP password
-            // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
-            $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+            // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             // Setting OAuth authentication
@@ -111,8 +111,7 @@ class Mailer extends PHPMailer {
             //Recipients
             $mail->Subject = "Новое сообщение из формы";
             $mail->setFrom('mailbot@elegy.studio');
-            // $mail->addAddress('ourmail@elegy.studio');     //Add a recipient
-            $mail->addAddress('ivan.elegystudio@gmail.com');     //Add a recipient
+            $mail->addAddress('ourmail@elegy.studio');     //Add a recipient
             if ($email) {
                 $mail->addReplyTo($email);
             }
@@ -123,6 +122,7 @@ class Mailer extends PHPMailer {
             $mail->Body    = $messageBody;
             $mail->AltBody = $messageBody;
 
+            echo 'Sending...';
             $mail->send();
             echo 'Message has been sent';
         } catch (Exception $e) {
