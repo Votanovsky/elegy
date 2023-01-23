@@ -128,7 +128,7 @@ class Mailer extends PHPMailer {
         }
     }
 }
-echo $messageBody;
+// echo $messageBody;
 Mailer::sendMail($email, $messageBody);
     // echo $_POST["messenger"]."<br>";
     // echo $_POST["nickname"]."<br>";
