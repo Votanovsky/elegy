@@ -85,7 +85,8 @@ class Mailer extends PHPMailer {
             $mail->AuthType = 'XOAUTH2';
             // $mail->Username   = $GOOGLE_SMTP_USERNAME;                     //SMTP username
             // $mail->Password   = $GOOGLE_SMTP_PASS;                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+            // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+            $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             // Setting OAuth authentication
@@ -95,17 +96,17 @@ class Mailer extends PHPMailer {
                     'clientSecret' => $OAUTH_CLIENT_SECRET
                 ]
             );
-            $mail->setOAuth(
-                new OAuth(
-                    [
-                        'provider' => $provider,
-                        'clientId' => $OAUTH_CLIENT_ID,
-                        'clientSecret' => $OAUTH_CLIENT_SECRET,
-                        'refreshToken' => $OAUTH_REFRESH_TOKEN,
-                        'userName' => $OAUTH_USER_EMAIL,
-                    ]
-                    )
-                );
+            // $mail->setOAuth(
+            //     new OAuth(
+            //         [
+            //             'provider' => $provider,
+            //             'clientId' => $OAUTH_CLIENT_ID,
+            //             'clientSecret' => $OAUTH_CLIENT_SECRET,
+            //             'refreshToken' => $OAUTH_REFRESH_TOKEN,
+            //             'userName' => $OAUTH_USER_EMAIL,
+            //         ]
+            //         )
+            //     );
 
             //Recipients
             $mail->Subject = "Новое сообщение из формы";
