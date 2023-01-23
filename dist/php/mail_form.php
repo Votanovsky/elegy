@@ -111,7 +111,8 @@ class Mailer extends PHPMailer {
             //Recipients
             $mail->Subject = "Новое сообщение из формы";
             $mail->setFrom('mailbot@elegy.studio');
-            $mail->addAddress('ourmail@elegy.studio');     //Add a recipient
+            // $mail->addAddress('ourmail@elegy.studio');     //Add a recipient
+            $mail->addAddress('ivan.elegystudio@gmail.com');     //Add a recipient
             if ($email) {
                 $mail->addReplyTo($email);
             }
