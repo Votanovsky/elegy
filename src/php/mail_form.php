@@ -20,7 +20,7 @@ $dotenv->load();
 // foreach ($requestBody as $key => $value) {
 //     echo $key.": ".$value." ";
 // }
-if ($requestBody["messenger"] && $requestBody["nickname"]) {
+if ($_POST["messenger"] && $_POST["nickname"]) {
     $messengerNickname = [
         "messenger" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["messenger"]),
         "nickname" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["nickname"])
