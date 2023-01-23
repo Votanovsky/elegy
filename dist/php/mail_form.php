@@ -85,9 +85,10 @@ class Mailer extends PHPMailer {
             $mail->AuthType = 'XOAUTH2';
             // $mail->Username   = $GOOGLE_SMTP_USERNAME;                     //SMTP username
             // $mail->Password   = $GOOGLE_SMTP_PASS;                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
-            // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            // $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             // Setting OAuth authentication
             $provider = new Google(
@@ -122,7 +123,7 @@ class Mailer extends PHPMailer {
             $mail->Body    = $messageBody;
             $mail->AltBody = $messageBody;
 
-            echo 'Sending...';
+            echo "Sending...<br>";
             $mail->send();
             echo 'Message has been sent';
         } catch (Exception $e) {
