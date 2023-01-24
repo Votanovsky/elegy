@@ -53,8 +53,8 @@ export function validateForm(locale) {                        // валидац�
                 },
                 body: body
             })
-            .then(response => response.text());
-            // .then(response => console.log(response));
+            .then(response => response.text())
+            .then(response => console.log(response));
             form.reset();
             contDescr.innerHTML = submitMessage['contact-descr-submit'][locale];
             contDescr.id = 'contact-descr-submit';

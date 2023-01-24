@@ -16,24 +16,25 @@ $dotenv->load();
 
 // Processing form input and constructing message body
 $requestBody = file_get_contents('php://input');
-parse_str($requestBody, $requestBody);
+// $decodedBody = array();
+// parse_str($requestBody, $decodedBody);
+$decodedBody = json_decode($requestBody, true);
 // foreach ($requestBody as $key => $value) {
 //     echo $key.": ".$value." ";
 // }
 // var_dump($requestBody);
+var_dump($decodedBody);
 
-if ($requestBody["messenger"] && $requestBody["nickname"]) {
+if ($decodedBody["messenger"] && $decodedBody["nickname"]) {
     $messengerNickname = [
-        "messenger" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["messenger"]),
-        "nickname" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["nickname"])
+        "messenger" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $decodedBody["messenger"]),
+        "nickname" => str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $decodedBody["nickname"])
     ];
 }
 
-$email      = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["email"]);
-$phone      = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["phone"]);
-$message    = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $requestBody["message"]);
-
-$messageBody = "{$messengerNickname['messenger']}, {$messengerNickname['nickname']}, {$email}, {$phone}, {$message}";
+$email      = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $decodedBody["email"]);
+$phone      = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $decodedBody["phone"]);
+$message    = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $decodedBody["message"]);
 
 $messageBody = "<html>
                 <head>
@@ -123,7 +124,7 @@ $mail->isHTML(true);                                  //Set email format to HTML
 $mail->Body    = $messageBody;
 // $mail->AltBody = $messageBody;
 
-// echo $mail->Body;
+echo $mail->Body;
 // echo $mail->AltBody;
 // echo 'Message has been sent';
 // send the message, check for errors
