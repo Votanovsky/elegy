@@ -68,13 +68,9 @@ class Mailer extends PHPMailer {
     public static function sendMail($email, $messageBody) {
         $mail = new PHPMailer(true); 
         $OAUTH_USER_EMAIL    = $_ENV['OAUTH_USER_EMAIL'];
-        $OAUTH_CLIENT_ID     = 'a';
-        $OAUTH_CLIENT_SECRET = 'a';
-        $OAUTH_REFRESH_TOKEN = 'a';
-        // $OAUTH_USER_EMAIL    = $_ENV['OAUTH_USER_EMAIL'];
-        // $OAUTH_CLIENT_ID     = $_ENV['OAUTH_CLIENT_ID'];
-        // $OAUTH_CLIENT_SECRET = $_ENV['OAUTH_CLIENT_SECRET'];
-        // $OAUTH_REFRESH_TOKEN = $_ENV['OAUTH_REFRESH_TOKEN'];
+        $OAUTH_CLIENT_ID     = $_ENV['OAUTH_CLIENT_ID'];
+        $OAUTH_CLIENT_SECRET = $_ENV['OAUTH_CLIENT_SECRET'];
+        $OAUTH_REFRESH_TOKEN = $_ENV['OAUTH_REFRESH_TOKEN'];
         // echo $OAUTH_USER_EMAIL    ."<br>";
         // echo $OAUTH_CLIENT_ID     ."<br>";
         // echo $OAUTH_CLIENT_SECRET ."<br>";
@@ -101,17 +97,17 @@ class Mailer extends PHPMailer {
                     'clientSecret' => $OAUTH_CLIENT_SECRET
                 ]
             );
-            // $mail->setOAuth(
-            //     new OAuth(
-            //         [
-            //             'provider' => $provider,
-            //             'clientId' => $OAUTH_CLIENT_ID,
-            //             'clientSecret' => $OAUTH_CLIENT_SECRET,
-            //             'refreshToken' => $OAUTH_REFRESH_TOKEN,
-            //             'userName' => $OAUTH_USER_EMAIL,
-            //         ]
-            //         )
-            //     );
+            $mail->setOAuth(
+                new OAuth(
+                    [
+                        'provider' => $provider,
+                        'clientId' => $OAUTH_CLIENT_ID,
+                        'clientSecret' => $OAUTH_CLIENT_SECRET,
+                        'refreshToken' => $OAUTH_REFRESH_TOKEN,
+                        'userName' => $OAUTH_USER_EMAIL,
+                    ]
+                    )
+                );
 
             //Recipients
             $mail->Subject = "Новое сообщение из формы";
