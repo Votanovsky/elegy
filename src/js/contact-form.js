@@ -31,7 +31,7 @@ export function validateForm(locale) {                        // валидац�
     // message.setCustomValidity(document.getElementById('message_error').innerHTML);
 
     form.addEventListener('submit', async (event) => {
-        // event.preventDefault();
+        event.preventDefault();
         if (!(messenger.value && nickname.value) && !email.value && !phone.value) {         // проверяем, чтобы были заполнены либо поля messenger+nickname, либо email, либо phone
             messenger.setCustomValidity(document.getElementById('contact_error').innerHTML);
         }
