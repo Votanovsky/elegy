@@ -31,31 +31,33 @@ $email      = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), 
 $phone      = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["phone"]);
 $message    = str_replace(array("&", "<", ">"), array("&amp;", "&lt;", "&gt;"), $_POST["message"]);
 
-$messageBody = "<html>
-                <head>
-                <style>
-                    body {
-                        font-family: Verdana, sans-serif;
-                        display: block;
-                        color: #282828;
-                    }
-                    b { display: inline; }
-                    h1 { font-family:georgia,garamond,serif;
-                        font-size: 50px;
-                        text-decoration: underline; }
-                    h2 { font-family:Verdana, sans-serif;
-                        font-size: 30px; }
-                </style>
-                </head>
-                <body>
-                    <h1>Новое сообщение из формы: </h1>
-                    <p><b>Мессенджер: </b>{$messengerNickname['messenger']}</p>
-                    <p><b>Ник: </b>{$messengerNickname['nickname']}</p>
-                    <p><b>Email: </b>{$email}</p>
-                    <p><b>Телефон: </b>{$phone}</p>
-                    <h2>Сообщение: </h2>
-                    <p>{$message}</p>
-                </body></html>";
+$messageBody = "{$messengerNickname['messenger']}, {$messengerNickname['nickname']}, {$email}, {$phone}, {$message}";
+
+// $messageBody = "<html>
+//                 <head>
+//                 <style>
+//                     body {
+//                         font-family: Verdana, sans-serif;
+//                         display: block;
+//                         color: #282828;
+//                     }
+//                     b { display: inline; }
+//                     h1 { font-family:georgia,garamond,serif;
+//                         font-size: 50px;
+//                         text-decoration: underline; }
+//                     h2 { font-family:Verdana, sans-serif;
+//                         font-size: 30px; }
+//                 </style>
+//                 </head>
+//                 <body>
+//                     <h1>Новое сообщение из формы: </h1>
+//                     <p><b>Мессенджер: </b>{$messengerNickname['messenger']}</p>
+//                     <p><b>Ник: </b>{$messengerNickname['nickname']}</p>
+//                     <p><b>Email: </b>{$email}</p>
+//                     <p><b>Телефон: </b>{$phone}</p>
+//                     <h2>Сообщение: </h2>
+//                     <p>{$message}</p>
+//                 </body></html>";
 // echo $messageBody;
 // echo $messengerNickname["messenger"]."<br>".$messengerNickname["nickname"]."<br>";
 // echo $email."<br>";
@@ -117,22 +119,21 @@ if ($email) {
 
 //Content
 $mail->isHTML(true);                                  //Set email format to HTML
-// $mail->Subject = 'Here is the subject';
 $mail->Body    = $messageBody;
 // $mail->AltBody = $messageBody;
 
-// echo $mail->Body;
+echo $mail->Body;
 // echo $mail->AltBody;
-// echo 'Message has been sent';
-//send the message, check for errors
+echo 'Message has been sent';
+// send the message, check for errors
 if (!$mail->send()) {
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
     echo 'Message sent!';
 }
 
-echo $messageBody;
-echo $mail->Body;
+echo $messageBody.'<br>';
+// echo $mail->Body;
     // echo $_POST["messenger"]."<br>";
     // echo $_POST["nickname"]."<br>";
     // echo $_POST["email"]."<br>";
