@@ -123,15 +123,17 @@ class Mailer extends PHPMailer {
             $mail->Body    = $messageBody;
             $mail->AltBody = $messageBody;
 
-            $mail->send();
+            // $mail->send();
+            echo $mail->Body;
+            echo $mail->AltBody;
             echo 'Message has been sent';
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
 }
-// echo $messageBody;
 Mailer::sendMail($email, $messageBody);
+    echo $messageBody;
     // echo $_POST["messenger"]."<br>";
     // echo $_POST["nickname"]."<br>";
     // echo $_POST["email"]."<br>";
