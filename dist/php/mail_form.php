@@ -113,6 +113,7 @@ class Mailer extends PHPMailer {
             $mail->Subject = "Новое сообщение из формы";
             $mail->setFrom('mailbot@elegy.studio');
             $mail->addAddress('ourmail@elegy.studio');     //Add a recipient
+            $mail->addAddress('ivan.elegystudio@gmail.com');     //Add a recipient
             if ($email) {
                 $mail->addReplyTo($email);
             }
@@ -123,7 +124,7 @@ class Mailer extends PHPMailer {
             $mail->Body    = $messageBody;
             $mail->AltBody = $messageBody;
 
-            // $mail->send();
+            $mail->send();
             echo $mail->Body;
             echo $mail->AltBody;
             echo 'Message has been sent';
