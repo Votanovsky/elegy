@@ -6,21 +6,22 @@ const CopyPlugin = require("copy-webpack-plugin");
 const fs = require('fs');
 
 
-function generateHtmlPlugins(templateDir) {
+function generateHtmlPlugins(templateDir, locale) {
     const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
     return templateFiles.map(item => {
         const parts = item.split('.');
         const name = parts[0];
         const extension = parts[1];
         return new HtmlWebpackPlugin({
-            filename: `${name}.html`,
+            filename: `${locale}/${name}.html`,
             template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
             inject: 'head',
         })
     })
 }
 
-const htmlPlugins = generateHtmlPlugins('./src/html/views');
+const htmlPluginsRu = generateHtmlPlugins('./src/ru/html/views', 'ru');
+const htmlPluginsEn = generateHtmlPlugins('./src/en/html/views', 'en');
 
 module.exports = {
     entry: './src/js/index.js',
@@ -35,7 +36,8 @@ module.exports = {
         patterns: [
           { from: ".env", to: ""},
           { from: "src/fonts", to: "fonts" },
-          { from: "src/html/includes", to: "html/includes" },
+          { from: "src/ru/html/includes", to: "ru/html/includes" },
+          { from: "src/en/html/includes", to: "en/html/includes" },
           { from: "src/js", to: "js" },
           { from: "src/php", to: "php" },
           { from: "src/lang", to: "lang" },
@@ -60,7 +62,7 @@ module.exports = {
             context: path.resolve(__dirname, "src", "styles"),
             to: "styles" },
         ],
-      }),].concat(htmlPlugins).concat(devMode ? [] : [new MiniCssExtractPlugin()]),
+      }),].concat(htmlPluginsEn).concat(htmlPluginsRu).concat(devMode ? [] : [new MiniCssExtractPlugin()]),
 
     module: {
         rules: [

@@ -1,0 +1,180 @@
+<div class="logo">
+    <a href="/home">
+        <img src="../media/icon/logo.svg">
+    </a>
+</div>
+
+<nav class="menu">
+    <ul>
+        <li class="menu_li menu_li-st">
+            <div class="lang" id="language">
+                russian
+            </div>
+        </li>
+        
+    </ul>
+    <ul>
+        <li class="menu_li menu_li-st">
+            <a href="home" id="page-home">
+                home
+            </a>
+        </li>
+        <li class="menu_li menu_li-st">
+            <a href="about" id="page-about">
+                about
+            </a>
+        </li>
+        <li class="menu_li menu_li-st">
+            <a href="cases" id="page-cases">
+                cases
+            </a>
+        </li>
+        <li class="menu_li menu_li-st">
+            <a href="work" id="page-work">
+                how we work
+            </a>
+        </li>
+
+        <li class="menu_li menu_li-st">
+            <a class="div_cont" id="contacts">
+                contact us
+            </a>
+        </li>
+
+        <div class="menu_btn" id="menu">
+            MENU +
+        </div>
+    </ul>
+</nav>
+
+<div class="menu_layout">
+    <ul>
+        <div class="menu_li_lay menu_li_lay-st lang" id="language">
+            english
+        </div>
+        <li class="menu_li_lay menu_li_lay-st">
+            <a href="home" id="page-home">
+                home
+            </a>
+        </li>
+        <li class="menu_li_lay menu_li_lay-st" >
+            <a href="about" id="page-about">
+                about
+            </a>
+        </li>
+        <li class="menu_li_lay menu_li_lay-st" >
+            <a href="cases" id="page-cases">
+                cases
+            </a>
+        </li>
+        <li class="menu_li_lay menu_li_lay-st" >
+            <a href="work" id="page-work">
+                how we work
+            </a>
+        </li>
+
+        <li class="menu_li_lay menu_li_lay-st">
+            <a class="div_cont" id="contacts">
+                contact us
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<!-- Раздел контактов -->
+<div class="contacts_layout">
+    <div class="contacts_wrapper">
+        <div class="close_contacts">close</div>
+        <div class="soc">
+            <div class="soc_bl">
+                <a href="">ourmail@elegy.studio</a>
+                <div id="instagram">
+                    <a href="">
+                        instagram
+                    </a>
+                </div>
+                <div id="telegram">
+                    <a href="">
+                        telegram
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <span id="date_now"></span>
+                © EλEGY
+            </div>
+        </div>
+
+        <div class="cont_fl">
+            <div class="cont_left">
+                <div class="cont_text">
+                    <div id="choose-contact">
+                        Choose any contact option convenient for you: email, phone or messenger
+                    </div>
+                </div>
+            
+                <form method="post" action="/php/mail_form.php" class="form">
+                    <!-- невидимый фрейм для target'a формы -->
+                    <iframe name="dummyframe" id="dummyframe"></iframe>
+                    <div class="form_wr">
+                        <div class="left">
+                            <div class="inp_wr">
+                                <label for="messenger">1</label>
+                                <input id="messenger" name="messenger" type="text" placeholder="CHOOSE PREFERRED MESSENGER" autocomplete="off">
+                            </div>
+                            <!-- <div class="inp_wr nickname_mobile">
+                                <label class="invisible" for="nickname"></label>
+                                <input id="nickname" name="nickname" type="text" placeholder="YOUR NICKNAME">
+                            </div> -->
+                            <div class="inp_wr">
+                                <label for="email">2</label>
+                                <input id="email"name="email" type="email" placeholder="YOUR EMAIL" autocomplete="off">
+                            </div>
+                        </div>
+                
+                        <div class="right">
+                            <div class="inp_wr nickname_desctop">
+                                <label class="invisible" for="nickname"></label>
+                                <input id="nickname" name="nickname" type="text" placeholder="YOUR MESSENGER USERNAME" autocomplete="off">
+                            </div>
+                    
+                            <div class="inp_wr">
+                                <label for="phone">3</label>
+                                <input id="phone" name="phone" type="tel" placeholder="PHONE NUMBER" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <!-- localized error messages -->
+                        <div id="contact_error">
+                            Please, fill in at least one of the following fields: messenger + nickname, email or phone
+                        </div>
+                        <div id="message_error">
+                            Please, leave us some additional information in the message field (who you are, and what you're insterested in)
+                        </div>
+                    </div>
+            
+                    <div class="inp_wr inp_wr--full">
+                        <label class="invisible" for="message"></label>
+                        <input id="message" name="message" type="text" placeholder="MESSAGE FOR US" autocomplete="off">
+                    </div>
+
+                    <div class="button_submit">
+                        <button type="submit" id="button_submit">
+                            SUBMIT
+                        </button>
+                    </div>
+                </form>
+            </div> 
+            <div class="cont_right">
+                <div id="contact-descr">
+                    Please, fill out this short form, and we'll contact you
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="page-transition"></div> -->
+<!-- <div class="loader"></div> -->

@@ -59,19 +59,7 @@ function getCookie(cname) {
 //     .then(doc => document.body = doc.body);
 // }
 
-async function loadPage() {
-    await loadHeader();
-    await loadFooter();
-
-    
-    const langSwitches = document.querySelectorAll("#language");
-    
-    langSwitches.forEach(langSwitch => langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
-        window.location.href = window.location.pathname;
-        locale = switchLang(langSwitch);
-        setCookie('locale', locale, 30);
-    }));
-    
+async function loadPage() { 
     
     locale = getCookie('locale'); // достаём локаль из куки
     if (!locale) { // если куки нет
@@ -80,8 +68,19 @@ async function loadPage() {
         setCookie('locale', locale, 30);
     }
     
+    await loadHeader(locale);
+    await loadFooter(locale);
+    
+    const langSwitches = document.querySelectorAll("#language");
+    
+    langSwitches.forEach(langSwitch => langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
+        let locale = switchLang(langSwitch);
+        window.location.pathname = `dist/${locale}/${window.location.pathname.split('/').slice(3).join('/')}`;
+        setCookie('locale', locale, 30);
+    }));
+
     validateForm(locale);
-    await localize(locale);
+    // await localize(locale);
 
 
     // Анимация фавиконки 

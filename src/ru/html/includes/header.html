@@ -1,32 +1,44 @@
 <div class="logo">
     <a href="/home">
-        <img src="media/icon/logo.svg">
+        <img src="../media/icon/logo.svg">
     </a>
 </div>
 
 <nav class="menu">
     <ul>
         <li class="menu_li menu_li-st">
-            <div class="lang" id="language"> </div>
+            <div class="lang" id="language">
+                english
+            </div>
         </li>
         
     </ul>
     <ul>
         <li class="menu_li menu_li-st">
-            <a href="home" id="page-home"> </a>
+            <a href="home" id="page-home">
+                главная
+            </a>
         </li>
         <li class="menu_li menu_li-st">
-            <a href="about" id="page-about"> </a>
+            <a href="about" id="page-about">
+                о нас
+            </a>
         </li>
         <li class="menu_li menu_li-st">
-            <a href="cases" id="page-cases"> </a>
+            <a href="cases" id="page-cases">
+                кейсы
+            </a>
         </li>
         <li class="menu_li menu_li-st">
-            <a href="work" id="page-work"> </a>
+            <a href="work" id="page-work">
+                как мы работаем
+            </a>
         </li>
 
         <li class="menu_li menu_li-st">
-            <a class="div_cont" id="contacts"> </a>
+            <a class="div_cont" id="contacts">
+                контакты
+            </a>
         </li>
 
         <div class="menu_btn" id="menu">
@@ -37,22 +49,34 @@
 
 <div class="menu_layout">
     <ul>
-        <div class="menu_li_lay menu_li_lay-st lang" id="language"></div>
+        <div class="menu_li_lay menu_li_lay-st lang" id="language">
+            english
+        </div>
         <li class="menu_li_lay menu_li_lay-st">
-            <a href="home" id="page-home"> </a>
+            <a href="home" id="page-home">
+                главная
+            </a>
         </li>
         <li class="menu_li_lay menu_li_lay-st" >
-            <a href="about" id="page-about"> </a>
+            <a href="about" id="page-about">
+                о нас
+            </a>
         </li>
         <li class="menu_li_lay menu_li_lay-st" >
-            <a href="cases" id="page-cases"> </a>
+            <a href="cases" id="page-cases">
+                кейсы
+            </a>
         </li>
         <li class="menu_li_lay menu_li_lay-st" >
-            <a href="work" id="page-work"> </a>
+            <a href="work" id="page-work">
+                как мы работаем
+            </a>
         </li>
 
         <li class="menu_li_lay menu_li_lay-st">
-            <a class="div_cont" id="contacts"> </a>
+            <a class="div_cont" id="contacts">
+                контакты
+            </a>
         </li>
     </ul>
 </div>
@@ -86,7 +110,9 @@
         <div class="cont_fl">
             <div class="cont_left">
                 <div class="cont_text">
-                    <div id="choose-contact"> </div>
+                    <div id="choose-contact">
+                        Выберите любой удобный для вас способ связи: email, телефон или мессенджер
+                    </div>
                 </div>
             
                 <form method="post" action="/php/mail_form.php" class="form">
@@ -96,7 +122,7 @@
                         <div class="left">
                             <div class="inp_wr">
                                 <label for="messenger">1</label>
-                                <input id="messenger" name="messenger" type="text" placeholder="TAG MESSENGER" autocomplete="off">
+                                <input id="messenger" name="messenger" type="text" placeholder="УДОБНЫЙ ДЛЯ ВАС МЕССЕНДЖЕР" autocomplete="off">
                             </div>
                             <!-- <div class="inp_wr nickname_mobile">
                                 <label class="invisible" for="nickname"></label>
@@ -104,39 +130,47 @@
                             </div> -->
                             <div class="inp_wr">
                                 <label for="email">2</label>
-                                <input id="email"name="email" type="email" placeholder="YOUR EMAIL" autocomplete="off">
+                                <input id="email"name="email" type="email" placeholder="ВАШ EMAIL" autocomplete="off">
                             </div>
                         </div>
                 
                         <div class="right">
                             <div class="inp_wr nickname_desctop">
                                 <label class="invisible" for="nickname"></label>
-                                <input id="nickname" name="nickname" type="text" placeholder="YOUR NICKNAME" autocomplete="off">
+                                <input id="nickname" name="nickname" type="text" placeholder="ИМЯ ПОЛЬЗОВАТЕЛЯ В МЕССЕНДЖЕРЕ" autocomplete="off">
                             </div>
                     
                             <div class="inp_wr">
                                 <label for="phone">3</label>
-                                <input id="phone" name="phone" type="tel" placeholder="PHONE NUMBER" autocomplete="off">
+                                <input id="phone" name="phone" type="tel" placeholder="НОМЕР ТЕЛЕФОНА" autocomplete="off">
                             </div>
                         </div>
 
                         <!-- localized error messages -->
-                        <div id="contact_error"> </div>
-                        <div id="message_error"> </div>
+                        <div id="contact_error">
+                            Пожалуйста, заполните хотя бы одно из полей: мессенджер + имя пользователя, email или телефон
+                        </div>
+                        <div id="message_error">
+                            Сообщите нам какую-нибудь информацию о себе в поле \"сообщение\" (кто вы и что вас заинтересовало)
+                        </div>
                     </div>
             
                     <div class="inp_wr inp_wr--full">
                         <label class="invisible" for="message"></label>
-                        <input id="message" name="message" type="text" placeholder="MESSAGE FOR US" autocomplete="off">
+                        <input id="message" name="message" type="text" placeholder="СООБЩЕНИЕ ДЛЯ НАС" autocomplete="off">
                     </div>
 
                     <div class="button_submit">
-                        <button type="submit" id="button_submit"> </button>
+                        <button type="submit" id="button_submit">
+                            ОТПРАВИТЬ
+                        </button>
                     </div>
                 </form>
             </div> 
             <div class="cont_right">
-                <div id="contact-descr"> </div>
+                <div id="contact-descr">
+                    Заполните короткую форму, и мы свяжемся с вами
+                </div>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
-export async function loadHeader() {
-    await fetch("html/includes/header.html")
+export async function loadHeader(locale) {
+    await fetch(`html/includes/header.html`)
     .then(response => response.text())
     .then(text => document.body.querySelector("header").innerHTML = text);
 
