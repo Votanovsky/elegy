@@ -137,7 +137,7 @@ async function loadPage() {
         let locale = switchLang(langSwitch);
         // console.log(`result: ${locale}`)
         window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
-        console.log(locale)
+        // console.log(locale)
         if (cookieConsent)
             setCookie('locale', locale, 30);
     }));

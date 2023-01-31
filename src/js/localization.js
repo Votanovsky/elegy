@@ -16,7 +16,7 @@ export function switchLang(language){
 
     let locale;
     for (let key in strings["language"]){
-        locale = (language.innerText === strings["language"][key]) ? key : locale;
+        locale = (language.innerText.toLowerCase() === strings["language"][key]) ? key : locale;
     }
 
     locale = languages[
