@@ -18,6 +18,7 @@ import {localize, switchLang, getLocale} from './localization.js';
 import {pagesTransitionsEx} from './pages.js';
 
 let locale;
+let cookieConsent;
 const mobileWidth = 992;
 
 gsap.registerPlugin(ScrollTrigger);
@@ -60,21 +61,64 @@ function getCookie(cname) {
 // }
 
 async function loadPage() { 
-    
     locale = getCookie('locale'); // достаём локаль из куки
-    if (!locale) { // если куки нет
-        // locale = getLocale(); // получаем локаль пользователя
-        locale = 'en';
-        setCookie('locale', locale, 30);
+    if (locale) {
+        // cookieConsent = true;
+        if (window.location.pathname.split('/')[2] !== locale) {
+            window.location.pathname = `dist/${locale}/${window.location.pathname.split('/').slice(3).join('/')}`;
+        }
+        await loadHeader();
+        await loadFooter();
     }
-    
-    await loadHeader(locale);
-    await loadFooter(locale);
+    else { // если куки нет
+        // locale = getLocale(); // получаем локаль пользователя
+        locale = window.location.pathname.split('/')[2];
+        
+        await loadHeader();
+        await loadFooter();
+
+        let cookieDialogue = document.createElement('div');
+        let buttonSection = document.createElement('div');
+        let cookieAccept = document.createElement('button');
+        let cookieReject = document.createElement('button');
+        let cookieText = document.createElement('div');
+
+        cookieDialogue.className = "cookie-dialogue";
+        buttonSection.className = "button-section";
+        
+        let cookie_text = {
+            text: {
+                "en": `Our website uses cookies to provide you with better experience. For more information, visit our&nbsp;<a href='cookie-policy.html' data-barba-prevent="self">cookie policy page</a>`,
+                "ru": `Наш сайт использует файлы cookie для обеспечения удобства пользования. Для подробной информации посетите&nbsp;<a href='cookie-policy.html' data-barba-prevent="self">страницу политики cookies</a>`
+            },
+            accept: {
+                "en": `Accept`,
+                "ru": `Принять`
+            },
+            reject: {
+                "en": `Reject`,
+                "ru": `Отклонить`
+            },
+        }
+        cookieText.innerHTML = cookie_text.text[locale];
+        cookieAccept.innerHTML = cookie_text.accept[locale];
+        cookieReject.innerHTML = cookie_text.reject[locale];
+        cookieAccept.id = "cookie-accept";
+        cookieReject.id = "cookie-reject";
+        cookieDialogue.appendChild(cookieText);
+        buttonSection.appendChild(cookieAccept);
+        buttonSection.appendChild(cookieReject);
+        cookieDialogue.appendChild(buttonSection);
+        document.body.insertAdjacentElement('afterbegin', cookieDialogue);
+    }
+
+    // setCookie('locale', locale, 30);
     
     const langSwitches = document.querySelectorAll("#language");
     
     langSwitches.forEach(langSwitch => langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
         let locale = switchLang(langSwitch);
+        // console.log(`result: ${locale}`)
         window.location.pathname = `dist/${locale}/${window.location.pathname.split('/').slice(3).join('/')}`;
         setCookie('locale', locale, 30);
     }));
@@ -472,8 +516,9 @@ async function loadPage() {
 
         return year_js+"."+month_js+"."+day_js
     }
-    document.getElementById('date_now').innerHTML = addDateNow();
-
+    document.querySelectorAll('#date_now').forEach((element) => {
+        element.innerHTML = addDateNow();
+    });
     pagesTransitionsEx(loadPage);
 }
 

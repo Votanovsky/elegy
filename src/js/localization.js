@@ -2,6 +2,7 @@ const strings = require('../lang/localization.json');
 
 const languages = ["en", "ru"];
 
+
 export function getLocale() {
     
     let userLocale =
@@ -15,13 +16,15 @@ export function switchLang(language){
 
     let locale;
     for (let key in strings["language"]){
-        locale = (language.innerHTML === strings["language"][key]) ? key : locale;
+        locale = (language.innerText === strings["language"][key]) ? key : locale;
+        console.log(key)
+        console.log(locale)
     }
 
     locale = languages[
-        (languages.indexOf(locale) + 1 >= languages.length) ? 
-        0 : 
-        (languages.indexOf(locale) + 1)]
+        (languages.indexOf(locale) + 1 >= languages.length) 
+        ? 0
+        : (languages.indexOf(locale) + 1)]
     
     // localize(locale);
     return locale;

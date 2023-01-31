@@ -76,11 +76,16 @@ export function pagesTransitionsEx(loadPage) {
     
     // BARBA SETUP
     barba.init({
-        sync: true,
+        // sync: true,
     
         transitions: [{
+            // namespace: 'site',
+            // to: {
+            //     namespace: [
+            //         'site'
+            //     ]
+            // },
             async leave () {
-    
                 pageAnimation();
                 await delay(2000);
                 // killAnimations();

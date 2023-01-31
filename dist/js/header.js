@@ -1,7 +1,7 @@
-export async function loadHeader(locale) {
+export async function loadHeader() {
     await fetch(`html/includes/header.html`)
     .then(response => response.text())
-    .then(text => document.body.querySelector("header").innerHTML = text);
+    .then(text => document.querySelector("header").innerHTML = text);
 
     const mobileMenu  = document.querySelectorAll('li.menu_li_lay');
     switch(document.title) {

@@ -236,3 +236,109 @@ canvas {
     overflow: hidden;
     z-index: 999999;
 }
+
+.cookie-dialogue {
+    background-color: $black-color;
+    border-radius: 100px;
+    padding: 20px;
+    display: flex;
+    position: sticky;
+    height: fit-content;
+    align-items: center;
+    // justify-content: center;
+    width: 60vw;
+    top: 75vh;
+    left: 20vw;
+    margin: 0;
+    z-index: 1000;
+    @media  (max-width: $breakpoint-lg-min) {
+        width: 70vw;
+        // top: 75vh;
+        left: 15vw;
+    }
+    @media  (max-width: $breakpoint-md-min) {
+        width: 80vw;
+        // top: 75vh;
+        left: 10vw;
+    }
+    @media  (max-width: $breakpoint-sm-min) {
+        border-radius: 0;
+        width: 100vw;
+        top: 70vh;
+        left: 0;
+    }
+    div {
+        // display: flex;
+        // align-items: flex-start;
+        // justify-content: center;
+        margin: 0 20px;
+        color: $gray-color;
+        font-size: 14px;
+        width: 60%;
+        a {
+            color: $brown-color;
+            text-decoration: underline;
+        }
+        @media  (max-width: $breakpoint-lg-min) {
+            width: 50%;
+            // top: 75vh;
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            width: 60%;
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+    .button-section {
+        display: flex;
+        margin: 0;
+        width: 40%;
+        @media  (max-width: $breakpoint-lg-min) {
+            width: 50%;
+        }
+        @media  (max-width: $breakpoint-sm-min) {
+            display: grid;
+            width: 40%;
+            height: 100px;
+        }
+        button {
+            margin: auto;
+            width: 45%;
+            height: fit-content;
+            padding: 10px 0;
+            font-family: 'Inter-regular';
+            font-style: italic;
+            font-size: 14px;
+            // padding: 1px 8px 2px;
+            border-radius: 22px;
+            @media  (max-width: $breakpoint-lg-min) {
+                // width: 20%;
+            }
+            @media  (max-width: $breakpoint-sm-min) {
+                width: 55%;
+                height: 80%;
+                font-size: 12px;
+            }
+            &#cookie-accept {
+                border: $brown-color;
+                background: $brown-color;
+                color: $gray-color;
+                &:hover {
+                    border: $green-color;
+                    background: $green-color;
+                    color: $white-color;
+                }
+            }
+            &#cookie-reject {
+                border: $black-color;
+                background: $gray-color;
+                color: $black-color;
+                &:hover {
+                    border: $green-color;
+                    background: $green-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}

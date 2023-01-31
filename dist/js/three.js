@@ -84,11 +84,11 @@ export function init(mobileWidth) {
     camera.lookAt(meshPosition.x, meshPosition.y, meshPosition.z);
 
     const loader = new THREE.TextureLoader();
-    const texture = loader.load("media/img/blob/coal-texture.webp");
-    const normal = loader.load("media/img/blob/NormalMap.webp");
-    const displacement = loader.load("media/img/blob/DisplacementMap.webp");
-    const ao = loader.load("media/img/blob/AmbientOcclusionMap.webp");
-    const specular = loader.load("media/img/blob/SpecularMap.webp");
+    const texture = loader.load("../media/img/blob/coal-texture.webp");
+    const normal = loader.load("../media/img/blob/NormalMap.webp");
+    const displacement = loader.load("../media/img/blob/DisplacementMap.webp");
+    const ao = loader.load("../media/img/blob/AmbientOcclusionMap.webp");
+    const specular = loader.load("../media/img/blob/SpecularMap.webp");
     texture.anisotropy = 16;
 
     scale = {
