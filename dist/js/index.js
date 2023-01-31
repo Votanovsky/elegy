@@ -65,7 +65,7 @@ async function loadPage() {
     if (locale) {
         cookieConsent = true;
         if (window.location.pathname.split('/')[1] !== locale) {
-            // window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
+            window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
         }
         await loadHeader();
         await loadFooter();
@@ -136,7 +136,7 @@ async function loadPage() {
     langSwitches.forEach(langSwitch => langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
         let locale = switchLang(langSwitch);
         // console.log(`result: ${locale}`)
-        // window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
+        window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
         console.log(locale)
         if (cookieConsent)
             setCookie('locale', locale, 30);

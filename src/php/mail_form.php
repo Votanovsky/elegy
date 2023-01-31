@@ -15,10 +15,11 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
 $dotenv->load();
 
 // Processing form input and constructing message body
-$requestBody = file_get_contents('php://input');
+// $requestBody = file_get_contents('php://input');
+$decodedBody = json_decode(file_get_contents('php://input'), true);
 // $decodedBody = array();
 // parse_str($requestBody, $decodedBody);
-$decodedBody = json_decode($requestBody, true);
+// $decodedBody = json_decode($requestBody, true);
 // foreach ($requestBody as $key => $value) {
 //     echo $key.": ".$value." ";
 // }
