@@ -13,15 +13,15 @@ function generateHtmlPlugins(templateDir, locale) {
         const name = parts[0];
         const extension = parts[1];
         return new HtmlWebpackPlugin({
-            filename: `${locale}/${name}.html`,
+            filename: `html/${locale}/${name}.html`,
             template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
             inject: 'head',
         })
     })
 }
 
-const htmlPluginsRu = generateHtmlPlugins('./src/ru/html/views', 'ru');
-const htmlPluginsEn = generateHtmlPlugins('./src/en/html/views', 'en');
+const htmlPluginsRu = generateHtmlPlugins('./src/html/ru/views', 'ru');
+const htmlPluginsEn = generateHtmlPlugins('./src/html/en/views', 'en');
 
 module.exports = {
     entry: './src/js/index.js',
@@ -36,8 +36,8 @@ module.exports = {
         patterns: [
           { from: ".env", to: ""},
           { from: "src/fonts", to: "fonts" },
-          { from: "src/ru/html/includes", to: "ru/html/includes" },
-          { from: "src/en/html/includes", to: "en/html/includes" },
+          { from: "src/html/ru/includes", to: "html/ru/includes" },
+          { from: "src/html/en/includes", to: "html/en/includes" },
           { from: "src/js", to: "js" },
           { from: "src/php", to: "php" },
           { from: "src/lang", to: "lang" },
