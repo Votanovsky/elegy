@@ -64,15 +64,15 @@ async function loadPage() {
     locale = getCookie('locale'); // достаём локаль из куки
     if (locale) {
         cookieConsent = true;
-        if (window.location.pathname.split('/')[2] !== locale) {
-            window.location.pathname = `dist/${locale}/${window.location.pathname.split('/').slice(3).join('/')}`;
+        if (window.location.pathname.split('/')[1] !== locale) {
+            window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
         }
         await loadHeader();
         await loadFooter();
     }
     else { // если куки нет
         // locale = getLocale(); // получаем локаль пользователя
-        locale = window.location.pathname.split('/')[2];
+        locale = window.location.pathname.split('/')[1];
         
         await loadHeader();
         await loadFooter();
@@ -126,14 +126,13 @@ async function loadPage() {
             }
         })
     }
-    console.log(cookieConsent);
     
     const langSwitches = document.querySelectorAll("#language");
     
     langSwitches.forEach(langSwitch => langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
         let locale = switchLang(langSwitch);
         // console.log(`result: ${locale}`)
-        window.location.pathname = `dist/${locale}/${window.location.pathname.split('/').slice(3).join('/')}`;
+        window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
         if (cookieConsent)
             setCookie('locale', locale, 30);
     }));
