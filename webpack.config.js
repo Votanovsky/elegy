@@ -7,7 +7,8 @@ const fs = require('fs');
 
 
 function generateHtmlPlugins(templateDir, locale) {
-    const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+    let templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+    templateFiles = templateFiles.filter(item => !item.split('.')[0].includes('policy'));
     return templateFiles.map(item => {
         const parts = item.split('.');
         const name = parts[0];
@@ -16,7 +17,7 @@ function generateHtmlPlugins(templateDir, locale) {
             filename: `html/${locale}/${name}.html`,
             template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
             inject: 'head',
-        })
+        });
     })
 }
 
@@ -38,6 +39,10 @@ module.exports = {
           { from: "src/fonts", to: "fonts" },
           { from: "src/html/ru/includes", to: "html/ru/includes" },
           { from: "src/html/en/includes", to: "html/en/includes" },
+          { from: "src/html/ru/views/cookie-policy.html", to: "html/ru/cookie-policy.html" },
+          { from: "src/html/en/views/cookie-policy.html", to: "html/en/cookie-policy.html" },
+          { from: "src/html/ru/views/privacy-policy.html", to: "html/ru/privacy-policy.html" },
+          { from: "src/html/en/views/privacy-policy.html", to: "html/en/privacy-policy.html" },
           { from: "src/js", to: "js" },
           { from: "src/php", to: "php" },
           { from: "src/lang", to: "lang" },
