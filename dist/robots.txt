@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /php/
-Disallow: /html/includes
+Disallow: /html/en/includes
+Disallow: /html/ru/includes
