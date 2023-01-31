@@ -93,9 +93,10 @@ export function pagesTransitionsEx(loadPage) {
 
             },
             async enter() {
-                
                 const done = this.async();
-
+                let cookieDialogue = document.querySelector(".cookie-dialogue");
+                if (cookieDialogue)
+                    cookieDialogue.remove();
                 // console.log(gsap.globalTimeline.getChildren());
                 loadPage()
                 window.scroll(0, 0);

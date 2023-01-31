@@ -107,8 +107,7 @@ $green-color: #556158;
 body {
     font-family: 'Inter-regular';
     color: $black-color;
-    background: $gray-color
-    
+    background: $gray-color;
       
 }
 body::-webkit-scrollbar {
@@ -242,7 +241,8 @@ canvas {
     border-radius: 100px;
     padding: 20px;
     display: flex;
-    position: sticky;
+    // position: sticky;
+    position: fixed;
     height: fit-content;
     align-items: center;
     // justify-content: center;

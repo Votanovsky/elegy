@@ -77,54 +77,58 @@ async function loadPage() {
         await loadHeader();
         await loadFooter();
 
-        let cookieDialogue = document.createElement('div');
-        let buttonSection = document.createElement('div');
-        let cookieAccept = document.createElement('button');
-        let cookieReject = document.createElement('button');
-        let cookieText = document.createElement('div');
+        if (cookieConsent == null) {
+            let cookieDialogue = document.createElement('div');
+            let buttonSection = document.createElement('div');
+            let cookieAccept = document.createElement('button');
+            let cookieReject = document.createElement('button');
+            let cookieText = document.createElement('div');
 
-        cookieDialogue.className = "cookie-dialogue";
-        buttonSection.className = "button-section";
-        
-        let cookie_text = {
-            text: {
-                "en": `Our website uses cookies to provide you with better experience. For more information, visit our&nbsp;<a href='cookie-policy.html' data-barba-prevent="self">cookie policy page</a>`,
-                "ru": `Наш сайт использует файлы cookie для обеспечения удобства пользования. Для подробной информации посетите&nbsp;<a href='cookie-policy.html' data-barba-prevent="self">страницу политики cookies</a>`
-            },
-            accept: {
-                "en": `Accept`,
-                "ru": `Принять`
-            },
-            reject: {
-                "en": `Reject`,
-                "ru": `Отклонить`
-            },
+            cookieDialogue.className = "cookie-dialogue";
+            buttonSection.className = "button-section";
+            
+            let cookie_text = {
+                text: {
+                    "en": `Our website uses cookies to provide you with better experience. For more information, visit our&nbsp;<a href='cookie-policy.html' data-barba-prevent="self">cookie policy page</a>`,
+                    "ru": `Наш сайт использует файлы cookie для обеспечения удобства пользования. Для подробной информации посетите&nbsp;<a href='cookie-policy.html' data-barba-prevent="self">страницу политики cookies</a>`
+                },
+                accept: {
+                    "en": `Accept`,
+                    "ru": `Принять`
+                },
+                reject: {
+                    "en": `Reject`,
+                    "ru": `Отклонить`
+                },
+            }
+            cookieText.innerHTML = cookie_text.text[locale];
+            cookieAccept.innerHTML = cookie_text.accept[locale];
+            cookieReject.innerHTML = cookie_text.reject[locale];
+            cookieAccept.id = "cookie-accept";
+            cookieReject.id = "cookie-reject";
+            cookieDialogue.appendChild(cookieText);
+            buttonSection.appendChild(cookieAccept);
+            buttonSection.appendChild(cookieReject);
+            cookieDialogue.appendChild(buttonSection);
+            document.body.insertAdjacentElement('afterbegin', cookieDialogue);
+            // cookieDialogue.showModal();
+            // document.body.focus();
+            cookieAccept.addEventListener('click', () => {
+                if (cookieConsent == null) {
+                    cookieConsent = true;
+                    setCookie('locale', locale, 30);
+                    gsap.to(cookieDialogue, {opacity: 0, duration: 0.5});
+                    gsap.to(cookieDialogue, {display: 'none', duration: 0}, '>');
+                }
+            })
+            cookieReject.addEventListener('click', () => {
+                if (cookieConsent == null) {
+                    cookieConsent = false;
+                    gsap.to(cookieDialogue, {opacity: 0, duration: 0.5});
+                    gsap.to(cookieDialogue, {display: 'none', duration: 0}, '>');
+                }
+            })
         }
-        cookieText.innerHTML = cookie_text.text[locale];
-        cookieAccept.innerHTML = cookie_text.accept[locale];
-        cookieReject.innerHTML = cookie_text.reject[locale];
-        cookieAccept.id = "cookie-accept";
-        cookieReject.id = "cookie-reject";
-        cookieDialogue.appendChild(cookieText);
-        buttonSection.appendChild(cookieAccept);
-        buttonSection.appendChild(cookieReject);
-        cookieDialogue.appendChild(buttonSection);
-        document.body.insertAdjacentElement('afterbegin', cookieDialogue);
-        cookieAccept.addEventListener('click', () => {
-            if (cookieConsent == null) {
-                cookieConsent = true;
-                setCookie('locale', locale, 30);
-                gsap.to(cookieDialogue, {opacity: 0, duration: 0.5});
-                gsap.to(cookieDialogue, {display: 'none', duration: 0}, '>');
-            }
-        })
-        cookieReject.addEventListener('click', () => {
-            if (cookieConsent == null) {
-                cookieConsent = false;
-                gsap.to(cookieDialogue, {opacity: 0, duration: 0.5});
-                gsap.to(cookieDialogue, {display: 'none', duration: 0}, '>');
-            }
-        })
     }
     
     const langSwitches = document.querySelectorAll("#language");
@@ -148,7 +152,7 @@ async function loadPage() {
     function animateFavicons() {
         favicons.forEach(link => {
             if (link.getAttribute('rel').indexOf('icon') >= 0) {
-                link.setAttribute('href', '../media/icon/favicons/' + count + '.png')
+                link.setAttribute('href', '../../media/icon/favicons/' + count + '.png')
             }
         })
         count ++

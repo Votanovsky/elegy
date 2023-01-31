@@ -1691,8 +1691,7 @@ canvas {
   border-radius: 100px;
   padding: 20px;
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
