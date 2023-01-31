@@ -70,10 +70,11 @@ $messageBody = "<html>
 //Create an instance; passing `true` enables exceptions
 
 $mail = new PHPMailer(true); 
-$OAUTH_USER_EMAIL    = $_ENV['OAUTH_USER_EMAIL'];
-$OAUTH_CLIENT_ID     = $_ENV['OAUTH_CLIENT_ID'];
-$OAUTH_CLIENT_SECRET = $_ENV['OAUTH_CLIENT_SECRET'];
-$OAUTH_REFRESH_TOKEN = $_ENV['OAUTH_REFRESH_TOKEN'];
+// $OAUTH_USER_EMAIL    = $_ENV['OAUTH_USER_EMAIL'];
+// $OAUTH_CLIENT_ID     = $_ENV['OAUTH_CLIENT_ID'];
+// $OAUTH_CLIENT_SECRET = $_ENV['OAUTH_CLIENT_SECRET'];
+// $OAUTH_REFRESH_TOKEN = $_ENV['OAUTH_REFRESH_TOKEN'];
+$GOOGLE_APP_PASSWORD = $_ENV['GOOGLE_APP_PASSWORD'];
 // echo $OAUTH_USER_EMAIL    ."<br>";
 // echo $OAUTH_CLIENT_ID     ."<br>";
 // echo $OAUTH_CLIENT_SECRET ."<br>";
@@ -85,7 +86,9 @@ $mail->isSMTP();                                            //Send using SMTP
 $mail->CharSet = PHPMailer::CHARSET_UTF8;
 $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-$mail->AuthType = 'XOAUTH2';
+$mail->Username = 'ivan.elegystudio@gmail.com';
+$mail->Password = $GOOGLE_APP_PASSWORD;
+// $mail->AuthType = 'XOAUTH2';
 // $mail->Username   = $GOOGLE_SMTP_USERNAME;                     //SMTP username
 // $mail->Password   = $GOOGLE_SMTP_PASS;                               //SMTP password
 // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
@@ -94,23 +97,23 @@ $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TL
 $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
 // Setting OAuth authentication
-$provider = new Google(
-    [
-        'clientId' => $OAUTH_CLIENT_ID,
-        'clientSecret' => $OAUTH_CLIENT_SECRET
-    ]
-);
-$mail->setOAuth(
-    new OAuth(
-        [
-            'provider' => $provider,
-            'clientId' => $OAUTH_CLIENT_ID,
-            'clientSecret' => $OAUTH_CLIENT_SECRET,
-            'refreshToken' => $OAUTH_REFRESH_TOKEN,
-            'userName' => $OAUTH_USER_EMAIL,
-        ]
-        )
-    );
+// $provider = new Google(
+//     [
+//         'clientId' => $OAUTH_CLIENT_ID,
+//         'clientSecret' => $OAUTH_CLIENT_SECRET
+//     ]
+// );
+// $mail->setOAuth(
+//     new OAuth(
+//         [
+//             'provider' => $provider,
+//             'clientId' => $OAUTH_CLIENT_ID,
+//             'clientSecret' => $OAUTH_CLIENT_SECRET,
+//             'refreshToken' => $OAUTH_REFRESH_TOKEN,
+//             'userName' => $OAUTH_USER_EMAIL,
+//         ]
+//         )
+//     );
 
 //Recipients
 $mail->Subject = "Новое сообщение из формы";
