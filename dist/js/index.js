@@ -63,7 +63,7 @@ function getCookie(cname) {
 async function loadPage() { 
     locale = getCookie('locale'); // достаём локаль из куки
     if (locale) {
-        // cookieConsent = true;
+        cookieConsent = true;
         if (window.location.pathname.split('/')[2] !== locale) {
             window.location.pathname = `dist/${locale}/${window.location.pathname.split('/').slice(3).join('/')}`;
         }
@@ -110,9 +110,23 @@ async function loadPage() {
         buttonSection.appendChild(cookieReject);
         cookieDialogue.appendChild(buttonSection);
         document.body.insertAdjacentElement('afterbegin', cookieDialogue);
+        cookieAccept.addEventListener('click', () => {
+            if (cookieConsent == null) {
+                cookieConsent = true;
+                setCookie('locale', locale, 30);
+                gsap.to(cookieDialogue, {opacity: 0, duration: 0.5});
+                gsap.to(cookieDialogue, {display: 'none', duration: 0}, '>');
+            }
+        })
+        cookieReject.addEventListener('click', () => {
+            if (cookieConsent == null) {
+                cookieConsent = false;
+                gsap.to(cookieDialogue, {opacity: 0, duration: 0.5});
+                gsap.to(cookieDialogue, {display: 'none', duration: 0}, '>');
+            }
+        })
     }
-
-    // setCookie('locale', locale, 30);
+    console.log(cookieConsent);
     
     const langSwitches = document.querySelectorAll("#language");
     
@@ -120,7 +134,8 @@ async function loadPage() {
         let locale = switchLang(langSwitch);
         // console.log(`result: ${locale}`)
         window.location.pathname = `dist/${locale}/${window.location.pathname.split('/').slice(3).join('/')}`;
-        setCookie('locale', locale, 30);
+        if (cookieConsent)
+            setCookie('locale', locale, 30);
     }));
 
     validateForm(locale);
@@ -134,7 +149,7 @@ async function loadPage() {
     function animateFavicons() {
         favicons.forEach(link => {
             if (link.getAttribute('rel').indexOf('icon') >= 0) {
-                link.setAttribute('href', 'media/icon/favicons/' + count + '.png')
+                link.setAttribute('href', '../media/icon/favicons/' + count + '.png')
             }
         })
         count ++
