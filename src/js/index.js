@@ -65,7 +65,7 @@ async function loadPage() {
     if (locale) {
         cookieConsent = true;
         if (window.location.pathname.split('/')[1] !== locale) {
-            window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
+            // window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
         }
         await loadHeader();
         await loadFooter();
@@ -136,7 +136,8 @@ async function loadPage() {
     langSwitches.forEach(langSwitch => langSwitch.addEventListener('click', () => { // смена языка по нажатию на кнопку
         let locale = switchLang(langSwitch);
         // console.log(`result: ${locale}`)
-        window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
+        // window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
+        console.log(locale)
         if (cookieConsent)
             setCookie('locale', locale, 30);
     }));
@@ -146,22 +147,22 @@ async function loadPage() {
 
 
     // Анимация фавиконки 
-    let count = 1
-    let favicons = document.querySelectorAll('link')
+    // let count = 1
+    // let favicons = document.querySelectorAll('link')
 
-    function animateFavicons() {
-        favicons.forEach(link => {
-            if (link.getAttribute('rel').indexOf('icon') >= 0) {
-                link.setAttribute('href', '../../media/icon/favicons/' + count + '.png')
-            }
-        })
-        count ++
+    // function animateFavicons() {
+    //     favicons.forEach(link => {
+    //         if (link.getAttribute('rel').indexOf('icon') >= 0) {
+    //             link.setAttribute('href', '../../media/icon/favicons/' + count + '.png')
+    //         }
+    //     })
+    //     count ++
 
-        if(count == 11) {
-            count = 1
-        }
-    }
-    setInterval(animateFavicons, 700);
+    //     if(count == 11) {
+    //         count = 1
+    //     }
+    // }
+    // setInterval(animateFavicons, 700);
     // /Анимация фавиконки 
 
 
