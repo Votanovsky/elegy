@@ -1,0 +1,39 @@
+body {
+    font-family: Arial;
+    padding: 5vh 5vw;
+    line-height: 2;
+}
+
+#disclaimer {
+    font-size: 17px;
+    font-style: italic;
+    color: #595959;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.last-update {
+    font-size: 14px;
+    color: #595959;
+
+}
+
+.main-text {
+    color: #595959;
+    font-size: 14px;
+}
+
+.h2 {
+    color: #000;
+    font-size: 19px;
+}
+
+.h3 {
+    color: #000;
+    font-size: 17px;
+}
