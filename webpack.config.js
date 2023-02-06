@@ -62,6 +62,9 @@ module.exports = {
           { from: "cases/*.webp",
             context: path.resolve(__dirname, "src", "media", "img"),
             to: "media/img" },
+          { from: "cases/*.png",
+            context: path.resolve(__dirname, "src", "media", "img"),
+            to: "media/img" },
         // {from: "src/styles", to: "styles"}
           { from: "*.css(.*)?", 
             context: path.resolve(__dirname, "src", "styles"),

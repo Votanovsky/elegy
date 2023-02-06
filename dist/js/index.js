@@ -65,7 +65,7 @@ async function loadPage() {
     if (locale) {
         cookieConsent = true;
         if (window.location.pathname.split('/')[1] !== locale) {
-            // window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
+            window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
         }
         await loadHeader();
         await loadFooter();
