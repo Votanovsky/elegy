@@ -65,7 +65,7 @@ async function loadPage() {
     if (locale) {
         cookieConsent = true;
         if (window.location.pathname.split('/')[1] !== locale) {
-            window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
+            // window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
         }
         await loadHeader();
         await loadFooter();
@@ -179,6 +179,7 @@ async function loadPage() {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
         // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
     })
+    .to('.h1-a', {opacity: 1, duration: 0}, '<');
     
     // /Разделение h1 заголовков на главной странице и анимация их повяления
 
@@ -244,7 +245,7 @@ async function loadPage() {
     if (window.textInterval) {
         clearInterval(window.textInterval);
     }
-    if (window.innerWidth < mobileWidth && document.title !== 'About Elegy') {
+    if (window.innerWidth < mobileWidth && document.title !== 'About Elegy' && document.title !== 'О Elegy') {
 
         function animateFontColor () {
             const h1FontFamily = gsap.utils.shuffle([...document.querySelectorAll('.char')].filter(()=> 
@@ -473,7 +474,7 @@ async function loadPage() {
     // });
     // Ховер стерлочек для кейсов на главной странице 
 
-    if (document.title === 'About Elegy') {
+    if (document.title === 'About Elegy' || document.title === 'О Elegy') {
         if (!document.querySelector('canvas')) {
             init(mobileWidth);
             tick();
@@ -507,10 +508,10 @@ async function loadPage() {
                 clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
             })
         }
-        else if (document.title === 'Our cases') {
+        else if (document.title === 'Our cases' || document.title === 'Наши кейсы') {
             loadCases();
         }
-        else if (document.title === 'How we work') {
+        else if (document.title === 'How we work' || document.title === 'Как мы работаем') {
             loadWork();
         }
     }

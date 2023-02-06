@@ -65,7 +65,7 @@ async function loadPage() {
     if (locale) {
         cookieConsent = true;
         if (window.location.pathname.split('/')[1] !== locale) {
-            window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
+            // window.location.pathname = `${locale}/${window.location.pathname.split('/').slice(2).join('/')}`;
         }
         await loadHeader();
         await loadFooter();
@@ -179,6 +179,7 @@ async function loadPage() {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
         // clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
     })
+    .to('.h1-a', {opacity: 1, duration: 0}, '<');
     
     // /Разделение h1 заголовков на главной странице и анимация их повяления
 
