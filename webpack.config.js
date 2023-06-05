@@ -14,7 +14,7 @@ function generateHtmlPlugins(templateDir, locale) {
         const name = parts[0];
         const extension = parts[1];
         return new HtmlWebpackPlugin({
-            filename: `html/${locale}/${name}.html`,
+            filename: `${locale}/${name}.html`,
             template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
             inject: 'head',
         });
@@ -37,12 +37,12 @@ module.exports = {
         patterns: [
           { from: ".env", to: ""},
           { from: "src/fonts", to: "fonts" },
-          { from: "src/html/ru/includes", to: "html/ru/includes" },
-          { from: "src/html/en/includes", to: "html/en/includes" },
-          { from: "src/html/ru/views/cookie-policy.html", to: "html/ru/cookie-policy.html" },
-          { from: "src/html/en/views/cookie-policy.html", to: "html/en/cookie-policy.html" },
-          { from: "src/html/ru/views/privacy-policy.html", to: "html/ru/privacy-policy.html" },
-          { from: "src/html/en/views/privacy-policy.html", to: "html/en/privacy-policy.html" },
+          { from: "src/html/ru/includes", to: "ru/includes" },
+          { from: "src/html/en/includes", to: "en/includes" },
+          { from: "src/html/ru/views/cookie-policy.html", to: "ru/cookie-policy.html" },
+          { from: "src/html/en/views/cookie-policy.html", to: "en/cookie-policy.html" },
+          { from: "src/html/ru/views/privacy-policy.html", to: "ru/privacy-policy.html" },
+          { from: "src/html/en/views/privacy-policy.html", to: "en/privacy-policy.html" },
           { from: "src/js", to: "js" },
           { from: "src/php", to: "php" },
           { from: "src/lang", to: "lang" },

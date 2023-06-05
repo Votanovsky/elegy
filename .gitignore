@@ -108,3 +108,5 @@ vendor/
 
 .env
 .env.test
+
+.htaccess
